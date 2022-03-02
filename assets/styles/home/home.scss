@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+// color variables
+@import "../colors";
+
+@import "../button";
+
+// toggle button
+@import "../hover";
+
+// border radius
+$radius: 0.3rem;
+
+@mixin container-style() {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: $radius;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+  background-color: aliceblue;
+  color: $clr-grey-dark;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 2fr 8fr;
+  grid-template-rows: 0fr 1fr 0fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "footer footer footer footer";
+
+  &__nav {
+    grid-area: nav;
+    @include container-style();
+    margin: 0;
+    border-radius: 0;
+    background-color: #a1d6eb;
+  }
+
+  &__sidebar {
+    grid-area: sidebar;
+    @include container-style();
+    margin-right: 0;
+    background-color: #a1ebc6;
+  }
+
+  &__main {
+    grid-area: main;
+    @include container-style();
+    background-color: #f7c5ff;
+  }
+
+  &__footer {
+    grid-area: footer;
+    @include container-style();
+    margin: 0;
+    border-radius: 0;
+    background-color: #ebe6a1;
+  }
+}
+
+.nav {
+  display: flex;
+  padding: 0.2rem;
+
+  &__title {
+    flex: 1;
+    font-size: 2rem;
+  }
+
+  &__btn-login {
+    @include btn-design($clr-purple, $clr-purple-hover);
+    @include hover-content();
+    margin-right: 0.3rem;
+    padding: 0.8rem;
+  }
+
+  &__btn-login:hover {
+    @include hover-state();
+  }
+
+  &__btn-register {
+    @include btn-design($clr-blue, $clr-blue-hover);
+    @include hover-content();
+    margin-left: 0.3rem;
+    padding: 0.8rem;
+  }
+
+  &__btn-register:hover {
+    @include hover-state();
+  }
+}
+
+.main {
+  display: grid;
+  grid-template-areas:
+    "search"
+    "content";
+
+  &__search {
+    grid-area: search;
+    @include container-style();
+    @include hover-content();
+    background-color: #b5a1eb;
+  }
+
+  &__search:hover {
+    @include hover-state();
+  }
+
+  &__content {
+    grid-area: content;
+    @include container-style();
+    background-color: #ebc2a1;
+  }
+}
+
+.search {
+  display: flex;
+
+  &__icon {
+    font-size: 20px;
+    padding: 0.2rem;
+    margin-right: 0.2rem;
+    color: white;
+  }
+
+  &__box {
+    flex: 1;
+    border: none;
+    border-radius: $radius;
+    outline: none;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    padding-left: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 6fr 1fr;
+    grid-template-areas:
+      "nav nav nav nav"
+      "sidebar sidebar sidebar sidebar"
+      "main main main main"
+      "footer footer footer footer";
+
+    &__sidebar {
+      margin-right: 0.5rem;
+      margin-bottom: 0;
+    }
+  }
+}

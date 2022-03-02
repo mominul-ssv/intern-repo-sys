@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../../assets/styles/login/login.css">
+
+  <title>Login Portal</title>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <button class="card__toggle-btn-student" onclick="loginStudent()">Student</button>
+    <button class="card__toggle-btn-employer" onclick="loginEmployer()">employer</button>
+    <button class="card__toggle-btn-faculty" onclick="loginFaculty()">Faculty</button>
+
+    <!-- ================================ [student card] ================================  -->
+    <div id="card__student">
+
+      <!-- student profile -->
+      <div class="card__profile">
+        <img class="card__profile-img" src="../../assets/img/student.png" alt="">
+        <h2 class="card__profile-text">Student Login</h2>
+      </div>
+
+      <form action="">
+
+        <!-- student email -->
+        <div class="card__group">
+          <input type="email" id="email" class="card__input" placeholder=" " required>
+          <label for="email" class="card__label">Email</label>
+        </div>
+
+        <!-- student password -->
+        <div class="card__group">
+          <input type="password" id="password" class="card__input" placeholder=" " required>
+          <label for="password" class="card__label">Password</label>
+        </div>
+
+        <!-- student login button -->
+        <button type="submit" class="card__submit-btn-student">Login</button>
+
+        <!-- student forgot password -->
+        <a class="card__forgot-password-student" href="#">Forgot Password?</a>
+        <hr class="card__hr-student">
+      </form>
+
+      <!-- student register now -->
+      <div class="card__register-block">
+        <span>Not Registered?</span>
+        <a class="card__register-now-student" href="../registration/reg-student.html">Register Now!</a>
+      </div>
+
+    </div>
+    <!-- ================================ [student card] ================================  -->
+
+    <!-- ================================ [employer card] ================================  -->
+    <div id="card__employer" style="display: none;">
+
+      <!-- employer profile -->
+      <div class="card__profile">
+        <img class="card__profile-img" src="../../assets/img/employer.png" alt="">
+        <h2 class="card__profile-text">employer Login</h2>
+      </div>
+
+      <form action="">
+
+        <!-- employer email -->
+        <div class="card__group">
+          <input type="email" id="email" class="card__input" placeholder=" " required>
+          <label for="email" class="card__label">Email</label>
+        </div>
+
+        <!-- employer password -->
+        <div class="card__group">
+          <input type="password" id="password" class="card__input" placeholder=" " required>
+          <label for="password" class="card__label">Password</label>
+        </div>
+
+        <!-- employer login button -->
+        <button class="card__submit-btn-employer">Login</button>
+
+        <!-- employer forgot password -->
+        <a class="card__forgot-password-employer" href="#">Forgot Password?</a>
+        <hr class="card__hr-employer">
+
+      </form>
+
+      <!-- employer register now -->
+      <div class="card__register-block">
+        <form action="post" action="../registration/reg-student.php">
+          <span>Not Registered?</span>
+          <a class="card__register-now-employer" href="../registration/reg-employer.html">Register Now!</a>
+        </form>
+      </div>
+
+    </div>
+    <!-- ================================ [employer card] ================================  -->
+
+    <!-- ================================ [faculty card] ================================  -->
+    <!-- faculty card -->
+    <div id="card__faculty" style="display: none;">
+
+      <!-- faculty profile -->
+      <div class="card__profile">
+        <img class="card__profile-img" src="../../assets/img/faculty.png" alt="">
+        <h2 class="card__profile-text">Faculty Login</h2>
+      </div>
+
+      <form action="">
+
+        <!-- faculty email -->
+        <div class="card__group">
+          <input type="email" id="email" class="card__input" placeholder=" " required>
+          <label for="email" class="card__label">Email</label>
+        </div>
+
+        <!-- faculty password -->
+        <div class="card__group">
+          <input type="password" id="password" class="card__input" placeholder=" " required>
+          <label for="password" class="card__label">Password</label>
+        </div>
+
+        <!-- faculty login button -->
+        <button class="card__submit-btn-faculty">Login</button>
+
+        <!-- faculty forgot password -->
+        <a class="card__forgot-password-faculty" href="#">Forgot Password?</a>
+        <hr class="card__hr-faculty">
+
+      </form>
+
+      <!-- faculty register now -->
+      <div class="card__register-block">
+        <span>Not Registered?</span>
+        <a class="card__register-now-faculty" href="../registration/reg-faculty.html">Register Now!</a>
+      </div>
+
+    </div>
+    <!-- ================================ [faculty card] ================================  -->
+
+  </div>
+
+</body>
+
+<script src="../../assets/js/login/login.js"></script>
+
+</html>

@@ -1,0 +1,290 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+// color variables
+@import "../colors";
+
+// toggle button
+@import "../button";
+
+// input box
+@import "../input";
+
+// login button
+@mixin btn-login($btn-color, $btn-color-hover) {
+  @include btn-design($btn-color, $btn-color-hover);
+  width: 100%;
+  font-size: medium;
+}
+
+// login home button
+@mixin btn-login-home($btn-color, $btn-color-hover) {
+  @include btn-design($btn-color, $btn-color-hover);
+  padding: 1rem 1rem;
+  border-radius: 5px 20px 5px;
+}
+
+// forgot password
+@mixin link-forgot-password($color) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  color: $color;
+}
+
+// horizontal line
+@mixin horizontal-line($color) {
+  margin: 1rem;
+  border: none;
+  height: 3px;
+  border-radius: 0.1rem;
+  background: $color;
+}
+
+// border radius
+$radius: 0.3rem;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+  background-color: aliceblue;
+  color: $clr-grey-dark;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: $radius;
+  padding: 1.2rem;
+  margin: 0.5rem;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+
+  // =============================== toggle buttons =============================== //
+  &__toggle-btn-student {
+    @include btn-design($clr-purple, $clr-purple-hover);
+  }
+
+  &__toggle-btn-employer {
+    @include btn-design($clr-blue, $clr-blue-hover);
+  }
+
+  &__toggle-btn-faculty {
+    @include btn-design($clr-green, $clr-green-hover);
+  }
+
+  // =============================== profile text =============================== //
+  &__profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__profile-img {
+    height: 6rem;
+    width: 6rem;
+    margin: 1.5rem 0 1rem 0;
+  }
+
+  &__profile-text {
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  // =============================== user input =============================== //
+  &__input {
+    @include input();
+  }
+
+  &__label {
+    @include label();
+  }
+
+  .card__input:focus ~ .card__label,
+  .card__input:not(:placeholder-shown).card__input:not(:focus) ~ .card__label {
+    top: -3.88rem;
+    left: 0.8rem;
+    padding: 5px;
+    font-size: 0.8rem;
+    background-color: rgb(255, 255, 255);
+  }
+
+  @include input-autocomplete-animation();
+
+  // =============================== submit button =============================== //
+  &__submit-btn-student {
+    @include btn-login($clr-purple, $clr-purple-hover);
+  }
+
+  &__submit-btn-employer {
+    @include btn-login($clr-blue, $clr-blue-hover);
+  }
+
+  &__submit-btn-faculty {
+    @include btn-login($clr-green, $clr-green-hover);
+  }
+
+  // =============================== forgot password link =============================== //
+  &__forgot-password-student {
+    @include link-forgot-password($clr-purple);
+  }
+
+  &__forgot-password-employer {
+    @include link-forgot-password($clr-blue);
+  }
+
+  &__forgot-password-faculty {
+    @include link-forgot-password($clr-green);
+  }
+
+  // =============================== register now link =============================== //
+  &__register-block {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  &__register-now-student {
+    color: $clr-purple;
+  }
+
+  &__register-now-employer {
+    color: $clr-blue;
+  }
+
+  &__register-now-faculty {
+    color: $clr-green;
+  }
+
+  // =============================== horizontal line =============================== //
+  &__hr-student {
+    @include horizontal-line($clr-purple);
+  }
+
+  &__hr-employer {
+    @include horizontal-line($clr-blue);
+  }
+
+  &__hr-faculty {
+    @include horizontal-line($clr-green);
+  }
+
+  // =============================== registration page =============================== //
+  &__student-login-home {
+    @include btn-login-home($clr-purple, $clr-purple-hover);
+  }
+
+  &__employer-login-home {
+    @include btn-login-home($clr-blue, $clr-blue-hover);
+  }
+
+  &__faculty-login-home {
+    @include btn-login-home($clr-green, $clr-green-hover);
+  }
+}
+
+// =============================== registration grid =============================== //
+.grid-container-student {
+  display: grid;
+  gap: 4px;
+  grid-template-areas:
+    "fName fName lName lName"
+    "email email phone phone"
+    "dob dob country country"
+    "university university sid sid"
+    "password password confirm confirm"
+    "register register register register";
+}
+
+.grid-container-employer {
+  display: grid;
+  gap: 4px;
+  grid-template-areas:
+    "fName fName lName lName"
+    "email email phone phone"
+    "dob dob country country"
+    "company company company company"
+    "password password confirm confirm"
+    "register register register register";
+}
+
+.grid-container-faculty {
+  display: grid;
+  gap: 4px;
+  grid-template-areas:
+    "fName fName lName lName"
+    "email email phone phone"
+    "dob dob country country"
+    "university university university university"
+    "password password confirm confirm"
+    "register register register register";
+}
+
+.grid-item-first-name {
+  grid-area: fName;
+}
+
+.grid-item-last-name {
+  grid-area: lName;
+}
+
+.grid-item-email {
+  grid-area: email;
+}
+
+.grid-item-phone {
+  grid-area: phone;
+}
+
+.grid-item-dob {
+  grid-area: dob;
+}
+
+.grid-item-country {
+  grid-area: country;
+}
+
+.grid-item-company {
+  grid-area: company;
+}
+
+.grid-item-university {
+  grid-area: university;
+}
+
+.grid-item-student-id {
+  grid-area: sid;
+}
+
+.grid-item-password {
+  grid-area: password;
+}
+
+.grid-item-confirm-password {
+  grid-area: confirm;
+}
+
+.grid-item-register {
+  grid-area: register;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-container-student {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-container-employer {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,510 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+  background-color: aliceblue;
+  color: #5e6e75;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.3rem;
+  padding: 1.2rem;
+  margin: 0.5rem;
+  -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card__toggle-btn-student {
+  padding: 1rem 1.2rem;
+  background-color: #b74eb7;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.card__toggle-btn-student:hover {
+  background-color: #db5fdb;
+}
+
+.card__toggle-btn-employer {
+  padding: 1rem 1.2rem;
+  background-color: #0d6efd;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.card__toggle-btn-employer:hover {
+  background-color: #3f8bfd;
+}
+
+.card__toggle-btn-faculty {
+  padding: 1rem 1.2rem;
+  background-color: #3eb769;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.card__toggle-btn-faculty:hover {
+  background-color: #39c96b;
+}
+
+.card__profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card__profile-img {
+  height: 6rem;
+  width: 6rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.card__profile-text {
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.card__input {
+  border: 2.5px solid #cfd8dc;
+  border-radius: 0.3rem;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 1rem;
+  color: inherit;
+  text-align: left;
+  outline: none;
+  background: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 0.8rem;
+}
+
+.card__input:hover {
+  border-color: #5e6e75;
+}
+
+.card__label {
+  position: relative;
+  left: 0.8rem;
+  top: -2.32rem;
+  cursor: text;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.card .card__input:focus ~ .card__label,
+.card .card__input:not(:placeholder-shown).card__input:not(:focus) ~ .card__label {
+  top: -3.88rem;
+  left: 0.8rem;
+  padding: 5px;
+  font-size: 0.8rem;
+  background-color: white;
+}
+
+.card input:-webkit-autofill,
+.card textarea:-webkit-autofill,
+.card select:-webkit-autofill {
+  -webkit-box-shadow: inset;
+          box-shadow: inset;
+  text-align: center;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-input-placeholder: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #5e6e75 !important;
+}
+
+.card__submit-btn-student {
+  padding: 1rem 1.2rem;
+  background-color: #b74eb7;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  width: 100%;
+  font-size: medium;
+}
+
+.card__submit-btn-student:hover {
+  background-color: #db5fdb;
+}
+
+.card__submit-btn-employer {
+  padding: 1rem 1.2rem;
+  background-color: #0d6efd;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  width: 100%;
+  font-size: medium;
+}
+
+.card__submit-btn-employer:hover {
+  background-color: #3f8bfd;
+}
+
+.card__submit-btn-faculty {
+  padding: 1rem 1.2rem;
+  background-color: #3eb769;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  width: 100%;
+  font-size: medium;
+}
+
+.card__submit-btn-faculty:hover {
+  background-color: #39c96b;
+}
+
+.card__forgot-password-student {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1rem;
+  color: #b74eb7;
+}
+
+.card__forgot-password-employer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1rem;
+  color: #0d6efd;
+}
+
+.card__forgot-password-faculty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 1rem;
+  color: #3eb769;
+}
+
+.card__register-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card__register-now-student {
+  color: #b74eb7;
+}
+
+.card__register-now-employer {
+  color: #0d6efd;
+}
+
+.card__register-now-faculty {
+  color: #3eb769;
+}
+
+.card__hr-student {
+  margin: 1rem;
+  border: none;
+  height: 3px;
+  border-radius: 0.1rem;
+  background: #b74eb7;
+}
+
+.card__hr-employer {
+  margin: 1rem;
+  border: none;
+  height: 3px;
+  border-radius: 0.1rem;
+  background: #0d6efd;
+}
+
+.card__hr-faculty {
+  margin: 1rem;
+  border: none;
+  height: 3px;
+  border-radius: 0.1rem;
+  background: #3eb769;
+}
+
+.card__student-login-home {
+  padding: 1rem 1.2rem;
+  background-color: #b74eb7;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  padding: 1rem 1rem;
+  border-radius: 5px 20px 5px;
+}
+
+.card__student-login-home:hover {
+  background-color: #db5fdb;
+}
+
+.card__employer-login-home {
+  padding: 1rem 1.2rem;
+  background-color: #0d6efd;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  padding: 1rem 1rem;
+  border-radius: 5px 20px 5px;
+}
+
+.card__employer-login-home:hover {
+  background-color: #3f8bfd;
+}
+
+.card__faculty-login-home {
+  padding: 1rem 1.2rem;
+  background-color: #3eb769;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  padding: 1rem 1rem;
+  border-radius: 5px 20px 5px;
+}
+
+.card__faculty-login-home:hover {
+  background-color: #39c96b;
+}
+
+.grid-container-student {
+  display: -ms-grid;
+  display: grid;
+  gap: 4px;
+      grid-template-areas: "fName fName lName lName" "email email phone phone" "dob dob country country" "university university sid sid" "password password confirm confirm" "register register register register";
+}
+
+.grid-container-employer {
+  display: -ms-grid;
+  display: grid;
+  gap: 4px;
+      grid-template-areas: "fName fName lName lName" "email email phone phone" "dob dob country country" "company company company company" "password password confirm confirm" "register register register register";
+}
+
+.grid-container-faculty {
+  display: -ms-grid;
+  display: grid;
+  gap: 4px;
+      grid-template-areas: "fName fName lName lName" "email email phone phone" "dob dob country country" "university university university university" "password password confirm confirm" "register register register register";
+}
+
+.grid-item-first-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: fName;
+}
+
+.grid-item-last-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: lName;
+}
+
+.grid-item-email {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: email;
+}
+
+.grid-item-phone {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: phone;
+}
+
+.grid-item-dob {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: dob;
+}
+
+.grid-item-country {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: country;
+}
+
+.grid-item-company {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: company;
+}
+
+.grid-item-university {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: university;
+}
+
+.grid-item-student-id {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: sid;
+}
+
+.grid-item-password {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: password;
+}
+
+.grid-item-confirm-password {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: confirm;
+}
+
+.grid-item-register {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: register;
+}
+
+@media only screen and (max-width: 768px) {
+  .grid-container-student {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .grid-container-employer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=login.css.map */
