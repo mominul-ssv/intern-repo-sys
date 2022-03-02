@@ -10,15 +10,41 @@ body {
   font-weight: 900;
   background-color: aliceblue;
   color: #5e6e75;
+}
+
+.box {
   display: -ms-grid;
   display: grid;
   height: 100vh;
   place-items: center;
+      grid-template-areas: "navbar" "main" "footer";
+}
+
+.box__navbar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: navbar;
+  width: 90vw;
+  border-bottom: 2px solid #cfd8dc;
+}
+
+.box__main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+}
+
+.box__footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
+  width: 95vw;
+  border-top: 2px solid #cfd8dc;
 }
 
 .card {
   background-color: white;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   padding: 1.2rem;
   margin: 0.5rem;
   -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -33,7 +59,7 @@ body {
   font-weight: bold;
   font-size: small;
   text-transform: uppercase;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -53,7 +79,7 @@ body {
   font-weight: bold;
   font-size: small;
   text-transform: uppercase;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -73,7 +99,7 @@ body {
   font-weight: bold;
   font-size: small;
   text-transform: uppercase;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -114,7 +140,7 @@ body {
 
 .card__input {
   border: 2.5px solid #cfd8dc;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   font-family: inherit;
   font-weight: inherit;
   font-size: 1rem;
@@ -169,7 +195,7 @@ body {
   font-weight: bold;
   font-size: small;
   text-transform: uppercase;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -191,7 +217,7 @@ body {
   font-weight: bold;
   font-size: small;
   text-transform: uppercase;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -213,7 +239,7 @@ body {
   font-weight: bold;
   font-size: small;
   text-transform: uppercase;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -277,7 +303,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 1rem;
-  padding: 1rem;
 }
 
 .card__register-now-student {
@@ -324,7 +349,7 @@ body {
   font-weight: bold;
   font-size: small;
   text-transform: uppercase;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -346,7 +371,7 @@ body {
   font-weight: bold;
   font-size: small;
   text-transform: uppercase;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -368,7 +393,7 @@ body {
   font-weight: bold;
   font-size: small;
   text-transform: uppercase;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -498,6 +523,15 @@ body {
             flex-direction: column;
   }
   .grid-container-employer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .grid-container-faculty {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

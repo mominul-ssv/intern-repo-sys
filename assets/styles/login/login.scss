@@ -42,7 +42,7 @@
 }
 
 // border radius
-$radius: 0.3rem;
+$radius: 0.5rem;
 
 * {
   margin: 0;
@@ -55,9 +55,32 @@ body {
   font-weight: 900;
   background-color: aliceblue;
   color: $clr-grey-dark;
+}
+
+.box {
   display: grid;
   height: 100vh;
   place-items: center;
+  grid-template-areas:
+    "navbar"
+    "main"
+    "footer";
+
+  &__navbar {
+    grid-area: navbar;
+    width: 90vw;
+    border-bottom: 2px solid $clr-grey;
+  }
+
+  &__main {
+    grid-area: main;
+  }
+
+  &__footer {
+    grid-area: footer;
+    width: 95vw;
+    border-top: 2px solid $clr-grey;
+  }
 }
 
 .card {
@@ -150,7 +173,6 @@ body {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    padding: 1rem;
   }
 
   &__register-now-student {
@@ -284,6 +306,11 @@ body {
   }
 
   .grid-container-employer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-container-faculty {
     display: flex;
     flex-direction: column;
   }
