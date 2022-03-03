@@ -94,17 +94,17 @@ body {
   // =============================== toggle buttons =============================== //
   &__toggle-btn-student {
     @include btn-design($clr-purple, $clr-purple-hover);
-    padding: 1rem 1rem;
+    padding: 1rem 1.2rem;
   }
 
   &__toggle-btn-employer {
     @include btn-design($clr-blue, $clr-blue-hover);
-    padding: 1rem 1rem;
+    padding: 1rem 1.2rem;
   }
 
   &__toggle-btn-faculty {
     @include btn-design($clr-green, $clr-green-hover);
-    padding: 1rem 1rem;
+    padding: 1rem 1.2rem;
   }
 
   // =============================== profile text =============================== //

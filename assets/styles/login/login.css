@@ -52,7 +52,7 @@ body {
 }
 
 .card__toggle-btn-student {
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   background-color: #b74eb7;
   color: white;
   font-family: inherit;
@@ -65,7 +65,7 @@ body {
   cursor: pointer;
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
-  padding: 1rem 1rem;
+  padding: 1rem 1.2rem;
 }
 
 .card__toggle-btn-student:hover {
@@ -73,7 +73,7 @@ body {
 }
 
 .card__toggle-btn-employer {
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   background-color: #0d6efd;
   color: white;
   font-family: inherit;
@@ -86,7 +86,7 @@ body {
   cursor: pointer;
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
-  padding: 1rem 1rem;
+  padding: 1rem 1.2rem;
 }
 
 .card__toggle-btn-employer:hover {
@@ -94,7 +94,7 @@ body {
 }
 
 .card__toggle-btn-faculty {
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   background-color: #3eb769;
   color: white;
   font-family: inherit;
@@ -107,7 +107,7 @@ body {
   cursor: pointer;
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
-  padding: 1rem 1rem;
+  padding: 1rem 1.2rem;
 }
 
 .card__toggle-btn-faculty:hover {
@@ -154,7 +154,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  padding: 0.8rem 0 0.8rem 0;
+  padding: 0.8rem;
 }
 
 .card__input:hover {
@@ -191,7 +191,7 @@ body {
 }
 
 .card__submit-btn-student {
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   background-color: #b74eb7;
   color: white;
   font-family: inherit;
@@ -214,7 +214,7 @@ body {
 }
 
 .card__submit-btn-employer {
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   background-color: #0d6efd;
   color: white;
   font-family: inherit;
@@ -237,7 +237,7 @@ body {
 }
 
 .card__submit-btn-faculty {
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   background-color: #3eb769;
   color: white;
   font-family: inherit;
@@ -348,7 +348,7 @@ body {
 }
 
 .card__student-login-home {
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   background-color: #b74eb7;
   color: white;
   font-family: inherit;
@@ -370,7 +370,7 @@ body {
 }
 
 .card__employer-login-home {
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   background-color: #0d6efd;
   color: white;
   font-family: inherit;
@@ -392,7 +392,7 @@ body {
 }
 
 .card__faculty-login-home {
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   background-color: #3eb769;
   color: white;
   font-family: inherit;

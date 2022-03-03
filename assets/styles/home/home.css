@@ -111,7 +111,7 @@ a {
 }
 
 .nav__btn-register {
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   background-color: #0d6efd;
   color: white;
   font-family: inherit;
@@ -142,7 +142,7 @@ a {
 }
 
 .nav__btn-login {
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 1rem;
   background-color: #b74eb7;
   color: white;
   font-family: inherit;
