@@ -14,6 +14,7 @@
   @include btn-design($btn-color, $btn-color-hover);
   width: 100%;
   font-size: medium;
+  padding: 1rem 1rem;
 }
 
 // login home button
@@ -42,7 +43,7 @@
 }
 
 // border radius
-$radius: 0.5rem;
+$radius: 0.3rem;
 
 * {
   margin: 0;
@@ -93,14 +94,17 @@ body {
   // =============================== toggle buttons =============================== //
   &__toggle-btn-student {
     @include btn-design($clr-purple, $clr-purple-hover);
+    padding: 1rem 1rem;
   }
 
   &__toggle-btn-employer {
     @include btn-design($clr-blue, $clr-blue-hover);
+    padding: 1rem 1rem;
   }
 
   &__toggle-btn-faculty {
     @include btn-design($clr-green, $clr-green-hover);
+    padding: 1rem 1rem;
   }
 
   // =============================== profile text =============================== //

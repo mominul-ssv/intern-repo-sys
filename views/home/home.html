@@ -7,13 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" type="text/css" href="../../assets/styles/home/home.css">
 
-  <title>Internship Repository System</title>
+  <title>Internship Repository</title>
 
 </head>
 
@@ -22,15 +22,30 @@
   <div class="container">
 
     <!-- Navbar -->
-    <nav class="container__nav">
+    <header class="container__nav">
 
-      <div class="nav">
-        <h1 class="nav__title">Internship Repository System</h1>
-        <button class="nav__btn-login" onclick="window.location.href='../login/login.html'">Login</button>
-        <button class="nav__btn-register">Register</button>
-      </div>
+      <nav class="nav">
 
-    </nav>
+        <a href="#" class="nav__branding">Internship Repository</a>
+
+        <ul class="nav__menu">
+          <li class="nav__item">
+            <button class="nav__btn-register">Register</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav__btn-login" onclick="window.location.href='../login/login.html'">Login</button>
+          </li>
+        </ul>
+
+        <div class="nav__hamburger">
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+          <span class="nav__bar"></span>
+        </div>
+
+      </nav>
+
+    </header>
     <!-- /Navbar -->
 
     <!-- Sidebar -->
@@ -69,5 +84,7 @@
   </div>
 
 </body>
+
+<script src="../../assets/js/home.js"></script>
 
 </html>
