@@ -14,13 +14,11 @@
   @include btn-design($btn-color, $btn-color-hover);
   width: 100%;
   font-size: medium;
-  padding: 1rem 1rem;
 }
 
 // login home button
 @mixin btn-login-home($btn-color, $btn-color-hover) {
   @include btn-design($btn-color, $btn-color-hover);
-  padding: 1rem 1rem;
   border-radius: 5px 20px 5px;
 }
 
@@ -28,7 +26,6 @@
 @mixin link-forgot-password($color) {
   display: flex;
   justify-content: center;
-  align-items: center;
   padding-top: 1rem;
   color: $color;
 }
@@ -87,30 +84,35 @@ body {
 .card {
   background-color: white;
   border-radius: $radius;
-  padding: 1.2rem;
-  margin: 0.5rem;
+  padding: 1rem;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
   // =============================== toggle buttons =============================== //
+  &__toggle-btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.2rem;
+  }
+
   &__toggle-btn-student {
     @include btn-design($clr-purple, $clr-purple-hover);
-    padding: 1rem 1.2rem;
+    width: 100%;
   }
 
   &__toggle-btn-employer {
     @include btn-design($clr-blue, $clr-blue-hover);
-    padding: 1rem 1.2rem;
+    width: 100%;
   }
 
   &__toggle-btn-faculty {
     @include btn-design($clr-green, $clr-green-hover);
-    padding: 1rem 1.2rem;
+    width: 100%;
   }
 
   // =============================== profile text =============================== //
   &__profile {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
   }

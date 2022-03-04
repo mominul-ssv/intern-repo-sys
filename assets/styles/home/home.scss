@@ -178,6 +178,7 @@ a {
 
   &__box {
     flex: 1;
+    width: 0;
     border: none;
     border-radius: $radius;
     outline: none;

@@ -45,10 +45,23 @@ body {
 .card {
   background-color: white;
   border-radius: 0.3rem;
-  padding: 1.2rem;
-  margin: 0.5rem;
+  padding: 1rem;
   -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card__toggle-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0.2rem;
 }
 
 .card__toggle-btn-student {
@@ -65,7 +78,7 @@ body {
   cursor: pointer;
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
-  padding: 1rem 1.2rem;
+  width: 100%;
 }
 
 .card__toggle-btn-student:hover {
@@ -86,7 +99,7 @@ body {
   cursor: pointer;
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
-  padding: 1rem 1.2rem;
+  width: 100%;
 }
 
 .card__toggle-btn-employer:hover {
@@ -107,7 +120,7 @@ body {
   cursor: pointer;
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
-  padding: 1rem 1.2rem;
+  width: 100%;
 }
 
 .card__toggle-btn-faculty:hover {
@@ -118,9 +131,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -206,7 +216,6 @@ body {
   transition: background-color 200ms linear;
   width: 100%;
   font-size: medium;
-  padding: 1rem 1rem;
 }
 
 .card__submit-btn-student:hover {
@@ -229,7 +238,6 @@ body {
   transition: background-color 200ms linear;
   width: 100%;
   font-size: medium;
-  padding: 1rem 1rem;
 }
 
 .card__submit-btn-employer:hover {
@@ -252,7 +260,6 @@ body {
   transition: background-color 200ms linear;
   width: 100%;
   font-size: medium;
-  padding: 1rem 1rem;
 }
 
 .card__submit-btn-faculty:hover {
@@ -266,9 +273,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 1rem;
   color: #b74eb7;
 }
@@ -280,9 +284,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 1rem;
   color: #0d6efd;
 }
@@ -294,9 +295,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-top: 1rem;
   color: #3eb769;
 }
@@ -361,7 +359,6 @@ body {
   cursor: pointer;
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
-  padding: 1rem 1rem;
   border-radius: 5px 20px 5px;
 }
 
@@ -383,7 +380,6 @@ body {
   cursor: pointer;
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
-  padding: 1rem 1rem;
   border-radius: 5px 20px 5px;
 }
 
@@ -405,7 +401,6 @@ body {
   cursor: pointer;
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
-  padding: 1rem 1rem;
   border-radius: 5px 20px 5px;
 }
 
