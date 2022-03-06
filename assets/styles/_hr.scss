@@ -1,0 +1,7 @@
+@mixin horizontal-line($color) {
+  margin: 1rem;
+  border: none;
+  height: 3px;
+  border-radius: 0.1rem;
+  background: $color;
+}

@@ -1,7 +1,7 @@
 @import ".../../colors";
 
 @mixin input() {
-  border: 2.5px solid $clr-grey;
+  border: 2.5px solid $grey-400;
   border-radius: $radius;
   font-family: inherit;
   font-weight: inherit;
@@ -15,7 +15,7 @@
   padding: 0.8rem;
 
   &:hover {
-    border-color: $clr-grey-dark;
+    border-color: $grey-700;
   }
 }
 
@@ -35,6 +35,6 @@
     text-align: center;
     -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
     -webkit-input-placeholder: 0 0 0 1000px #ffffff inset !important;
-    -webkit-text-fill-color: $clr-grey-dark !important;
+    -webkit-text-fill-color: $grey-700 !important;
   }
 }

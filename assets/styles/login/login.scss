@@ -9,6 +9,9 @@
 // input box
 @import "../input";
 
+// horizontal line
+@import "../hr";
+
 // login button
 @mixin btn-login($btn-color, $btn-color-hover) {
   @include btn-design($btn-color, $btn-color-hover);
@@ -30,15 +33,6 @@
   color: $color;
 }
 
-// horizontal line
-@mixin horizontal-line($color) {
-  margin: 1rem;
-  border: none;
-  height: 3px;
-  border-radius: 0.1rem;
-  background: $color;
-}
-
 // border radius
 $radius: 0.3rem;
 
@@ -51,8 +45,9 @@ html,
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 900;
+  letter-spacing: 0.05rem;
   background-color: aliceblue;
-  color: $clr-grey-dark;
+  color: $grey-700;
 }
 
 .box {
@@ -67,7 +62,7 @@ body {
   &__navbar {
     grid-area: navbar;
     width: 90vw;
-    border-bottom: 2px solid $clr-grey;
+    border-bottom: 2px solid $grey-500;
   }
 
   &__main {
@@ -75,9 +70,12 @@ body {
   }
 
   &__footer {
+    display: flex;
+    justify-content: center;
     grid-area: footer;
+    font-size: 0.8rem;
     width: 95vw;
-    border-top: 2px solid $clr-grey;
+    border-top: 2px solid $grey-500;
   }
 }
 
@@ -96,17 +94,17 @@ body {
   }
 
   &__toggle-btn-student {
-    @include btn-design($clr-purple, $clr-purple-hover);
+    @include btn-design($purple-400, $purple-300);
     width: 100%;
   }
 
   &__toggle-btn-employer {
-    @include btn-design($clr-blue, $clr-blue-hover);
+    @include btn-design($blue-500, $blue-300);
     width: 100%;
   }
 
   &__toggle-btn-faculty {
-    @include btn-design($clr-green, $clr-green-hover);
+    @include btn-design($green-500, $green-300);
     width: 100%;
   }
 
@@ -150,28 +148,28 @@ body {
 
   // =============================== submit button =============================== //
   &__submit-btn-student {
-    @include btn-login($clr-purple, $clr-purple-hover);
+    @include btn-login($purple-400, $purple-300);
   }
 
   &__submit-btn-employer {
-    @include btn-login($clr-blue, $clr-blue-hover);
+    @include btn-login($blue-500, $blue-300);
   }
 
   &__submit-btn-faculty {
-    @include btn-login($clr-green, $clr-green-hover);
+    @include btn-login($green-500, $green-300);
   }
 
   // =============================== forgot password link =============================== //
   &__forgot-password-student {
-    @include link-forgot-password($clr-purple);
+    @include link-forgot-password($purple-400);
   }
 
   &__forgot-password-employer {
-    @include link-forgot-password($clr-blue);
+    @include link-forgot-password($blue-500);
   }
 
   &__forgot-password-faculty {
-    @include link-forgot-password($clr-green);
+    @include link-forgot-password($green-500);
   }
 
   // =============================== register now link =============================== //
@@ -182,41 +180,41 @@ body {
   }
 
   &__register-now-student {
-    color: $clr-purple;
+    color: $purple-400;
   }
 
   &__register-now-employer {
-    color: $clr-blue;
+    color: $blue-500;
   }
 
   &__register-now-faculty {
-    color: $clr-green;
+    color: $green-500;
   }
 
   // =============================== horizontal line =============================== //
   &__hr-student {
-    @include horizontal-line($clr-purple);
+    @include horizontal-line($purple-400);
   }
 
   &__hr-employer {
-    @include horizontal-line($clr-blue);
+    @include horizontal-line($blue-500);
   }
 
   &__hr-faculty {
-    @include horizontal-line($clr-green);
+    @include horizontal-line($green-500);
   }
 
   // =============================== registration page =============================== //
   &__student-login-home {
-    @include btn-login-home($clr-purple, $clr-purple-hover);
+    @include btn-login-home($purple-400, $purple-300);
   }
 
   &__employer-login-home {
-    @include btn-login-home($clr-blue, $clr-blue-hover);
+    @include btn-login-home($blue-500, $blue-300);
   }
 
   &__faculty-login-home {
-    @include btn-login-home($clr-green, $clr-green-hover);
+    @include btn-login-home($green-500, $green-300);
   }
 }
 

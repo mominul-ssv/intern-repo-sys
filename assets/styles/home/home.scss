@@ -9,6 +9,9 @@
 // toggle button
 @import "../hover";
 
+// horizontal line
+@import "../hr";
+
 // border radius
 $radius: 0.3rem;
 
@@ -27,8 +30,9 @@ html,
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 900;
-  background-color: aliceblue;
-  color: $clr-grey-dark;
+  letter-spacing: 0.05rem;
+  background-color: $white;
+  color: $white;
 }
 
 li {
@@ -36,7 +40,7 @@ li {
 }
 
 a {
-  color: white;
+  color: $white;
   text-decoration: none;
 }
 
@@ -44,7 +48,7 @@ a {
 .container {
   display: grid;
   height: 100vh;
-  grid-template-columns: 2fr 8fr;
+  grid-template-columns: 1.5fr 8fr;
   grid-template-rows: 0fr 1fr 0fr;
   grid-template-areas:
     "nav nav nav nav"
@@ -56,20 +60,20 @@ a {
     @include container-style();
     margin: 0;
     border-radius: 0;
-    background-color: #36afdf;
+    background-color: $blue-700;
   }
 
   &__sidebar {
     grid-area: sidebar;
     @include container-style();
     margin-right: 0;
-    background-color: #a1ebc6;
+    border: 0.15rem solid $blue-100;
   }
 
   &__main {
     grid-area: main;
     @include container-style();
-    background-color: #f7c5ff;
+    border: 0.15rem solid $blue-100;
   }
 
   &__footer {
@@ -77,7 +81,7 @@ a {
     @include container-style();
     margin: 0;
     border-radius: 0;
-    background-color: #ebe6a1;
+    background-color: $blue-700;
   }
 }
 // ============================================= container ============================================= //
@@ -101,7 +105,7 @@ a {
   }
 
   &__btn-register {
-    @include btn-design($clr-blue, $clr-blue-hover);
+    @include btn-design($green-700, $green-500);
     @include hover-content();
     padding: 0.6rem;
     font-size: 0.9rem;
@@ -112,7 +116,7 @@ a {
   }
 
   &__btn-login {
-    @include btn-design($clr-purple, $clr-purple-hover);
+    @include btn-design($purple-500, $purple-300);
     @include hover-content();
     padding: 0.6rem;
     font-size: 0.9rem;
@@ -134,10 +138,62 @@ a {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: rgb(250, 255, 224);
+    background-color: $white;
   }
 }
 // ============================================= navbar ============================================= //
+
+// ============================================= sidebar ============================================= //
+.sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &__archives {
+    width: 100%;
+    margin: 0.5rem;
+  }
+
+  &__archives-btn {
+    @include btn-design($pink-800, $pink-600);
+    @include hover-content();
+    padding: 0.8rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  &__archives-btn:hover {
+    @include hover-state();
+  }
+
+  &__hr {
+    width: 100%;
+    margin: 0.5rem;
+  }
+
+  &__hr-archives-filter {
+    @include horizontal-line($blue-800);
+    margin: 0;
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+    width: 100%;
+  }
+
+  &__filter-btn {
+    @include btn-design($blue-800, $blue-600);
+    padding: 0.5rem;
+    width: 100%;
+    margin: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+// ============================================= sidebar ============================================= //
 
 // ============================================= main ============================================= //
 .main {
@@ -150,7 +206,7 @@ a {
     grid-area: search;
     @include container-style();
     @include hover-content();
-    background-color: #b5a1eb;
+    background-color: $pink-300;
   }
 
   &__search:hover {
@@ -160,7 +216,7 @@ a {
   &__content {
     grid-area: content;
     @include container-style();
-    background-color: #ebc2a1;
+    background-color: $blue-grey-700;
   }
 }
 // ============================================= main ============================================= //
@@ -173,7 +229,7 @@ a {
     font-size: 20px;
     padding: 0.2rem;
     margin-right: 0.2rem;
-    color: white;
+    color: $white;
   }
 
   &__box {
@@ -184,11 +240,17 @@ a {
     outline: none;
     font-family: inherit;
     font-weight: inherit;
-    color: inherit;
     padding-left: 0.8rem;
   }
 }
 // ============================================= search ============================================= //
+
+// ============================================= footer ============================================= //
+.footer {
+  display: flex;
+  justify-content: center;
+}
+// ============================================= footer ============================================= //
 
 // mobile device optimization
 @media only screen and (max-width: 768px) {
@@ -229,7 +291,7 @@ a {
       left: -100%;
       gap: 0;
       flex-direction: column;
-      background-color: #f7cfea;
+      background-color: $blue-400;
       width: 100%;
       text-align: center;
       transition: 0.4s;
