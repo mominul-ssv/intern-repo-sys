@@ -46,8 +46,8 @@ a {
   display: -ms-grid;
   display: grid;
   height: 100vh;
-  -ms-grid-columns: 1.5fr 8fr;
-      grid-template-columns: 1.5fr 8fr;
+  -ms-grid-columns: 2fr 8fr;
+      grid-template-columns: 2fr 8fr;
   -ms-grid-rows: 0fr 1fr 0fr;
       grid-template-rows: 0fr 1fr 0fr;
       grid-template-areas: "nav nav nav nav" "sidebar main main main" "footer footer footer footer";
