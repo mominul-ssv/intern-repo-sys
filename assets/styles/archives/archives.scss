@@ -60,20 +60,20 @@ a {
     @include container-style();
     margin: 0;
     border-radius: 0;
-    background-color: $blue-700;
+    background-color: $teal-700;
   }
 
   &__sidebar {
     grid-area: sidebar;
     @include container-style();
     margin-right: 0;
-    border: 0.15rem solid $blue-100;
+    border: 0.15rem solid $teal-100;
   }
 
   &__main {
     grid-area: main;
     @include container-style();
-    border: 0.15rem solid $blue-100;
+    border: 0.15rem solid $teal-100;
   }
 
   &__footer {
@@ -81,7 +81,7 @@ a {
     @include container-style();
     margin: 0;
     border-radius: 0;
-    background-color: $blue-700;
+    background-color: $teal-700;
   }
 }
 // ============================================= container ============================================= //
@@ -150,33 +150,6 @@ a {
   justify-content: center;
   flex-direction: column;
 
-  &__archives {
-    width: 100%;
-    margin: 0.5rem;
-  }
-
-  &__archives-btn {
-    @include btn-design($teal-800, $teal-600);
-    @include hover-content();
-    padding: 0.8rem;
-    font-size: 1rem;
-    width: 100%;
-  }
-
-  &__archives-btn:hover {
-    @include hover-state();
-  }
-
-  &__hr {
-    width: 100%;
-    margin: 0.5rem;
-  }
-
-  &__hr-archives-filter {
-    @include horizontal-line($blue-800);
-    margin: 0;
-  }
-
   &__filter {
     display: flex;
     flex-direction: column;
@@ -185,7 +158,7 @@ a {
   }
 
   &__filter-btn {
-    @include btn-design($blue-800, $blue-600);
+    @include btn-design($teal-800, $teal-600);
     padding: 0.5rem;
     width: 100%;
     margin: 0.2rem;
@@ -206,8 +179,8 @@ a {
     grid-area: search;
     @include container-style();
     @include hover-content();
-    border: 0.15rem solid $blue-400;
-    background-color: $blue-100;
+    border: 0.15rem solid $teal-400;
+    background-color: $teal-100;
   }
 
   &__search:hover {
@@ -218,17 +191,12 @@ a {
   &__content {
     grid-area: content;
     @include container-style();
-    @include hover-content();
-    // border: 0.15rem solid $blue-100;
-    color: $grey-700;
-  }
-
-  &__content:hover {
-    @include hover-state();
+    background-color: $blue-grey-700;
   }
 }
+// ============================================= main ============================================= //
 
-// --------------------------------------------- search --------------------------------------------- //
+// ============================================= search ============================================= //
 .search {
   display: flex;
 
@@ -236,7 +204,7 @@ a {
     font-size: 20px;
     padding: 0.2rem;
     margin-right: 0.2rem;
-    color: $blue-500;
+    color: $teal-500;
   }
 
   &__box {
@@ -244,108 +212,14 @@ a {
     width: 0;
     border: none;
     border-radius: 2rem;
-    border: 0.1rem solid $blue-400;
+    border: 0.1rem solid $teal-400;
     outline: none;
     font-family: inherit;
     font-weight: inherit;
     padding-left: 0.8rem;
   }
 }
-// --------------------------------------------- search --------------------------------------------- //
-
-// --------------------------------------------- job --------------------------------------------- //
-.job-short {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-
-  &__left {
-    width: 80%;
-    @include container-style();
-    border: 2px solid $blue-100;
-  }
-
-  &__title {
-    font-size: 1.5rem;
-  }
-
-  &__company {
-    font-size: 1rem;
-  }
-
-  &__company span {
-    margin-right: 0.2rem;
-  }
-
-  &__city {
-    font-size: 0.8rem;
-  }
-
-  &__city span {
-    margin-right: 0.1rem;
-  }
-
-  &__country {
-    font-size: 0.8rem;
-  }
-
-  &__country span {
-    margin-right: 0.2rem;
-  }
-
-  &__right {
-    width: 20%;
-    @include btn-design($lime-500, $lime-300);
-    font-size: 2rem;
-    padding: 0;
-    margin: 0.5rem;
-  }
-}
-
-.job {
-  display: none;
-  flex-direction: column;
-
-  &__group {
-    padding: 0.3rem;
-    margin: 0.2rem 0.5rem 0rem 0.5rem;
-    border: 0.1rem solid $blue-100;
-    border-radius: $radius;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "text data";
-    gap: 1rem;
-    font-size: 0.9rem;
-    white-space: pre-line;
-  }
-
-  &__card-text {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    border-radius: $radius;
-    padding: 0.3rem;
-  }
-  &__card-data {
-    grid-area: data;
-    border-radius: $radius;
-    padding: 0.3rem;
-  }
-
-  &__apply {
-    @include btn-design($pink-700, $pink-500);
-    margin: 0.5rem;
-    text-align: center;
-    font-size: large;
-  }
-
-  #title {
-    font-size: 1.3rem;
-  }
-}
-// --------------------------------------------- job --------------------------------------------- //
-
-// ============================================= main ============================================= //
+// ============================================= search ============================================= //
 
 // ============================================= footer ============================================= //
 .footer {
@@ -363,13 +237,12 @@ a {
 
 @media only screen and (max-width: 768px) {
   .container {
-    grid-template-columns: 1fr;
     grid-template-rows: 0fr 1fr 4fr 0fr;
     grid-template-areas:
-      "nav"
-      "sidebar"
-      "main"
-      "footer";
+      "nav nav nav nav"
+      "sidebar sidebar sidebar sidebar"
+      "main main main main"
+      "footer footer footer footer";
 
     &__sidebar {
       margin-right: 0.5rem;
@@ -400,7 +273,7 @@ a {
       left: -100%;
       gap: 0;
       flex-direction: column;
-      background-color: $blue-400;
+      background-color: $teal-400;
       width: 100%;
       text-align: center;
       transition: 0.4s;
