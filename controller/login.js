@@ -25,7 +25,7 @@ function loginStudent(e) {
 
       if (obj[0].email !== undefined) {
         console.log("Success!");
-        window.location.replace("../home/home.html");
+        window.location.replace("../student/student-home.php");
       } else {
         console.log("Failure.");
       }

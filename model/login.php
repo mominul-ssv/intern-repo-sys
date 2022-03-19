@@ -18,6 +18,9 @@ try {
       $data[] = $row;
     }
   }
+
+  session_start();
+  $_SESSION['data'] = $data;
 } catch (Exception $e) {
   echo $e->getMessage();
 }
