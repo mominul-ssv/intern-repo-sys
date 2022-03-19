@@ -1,4 +1,9 @@
 let hamburger = document.querySelector(".nav__hamburger");
+
+// hamburger.alert();
+
+
+
 let navMenu = document.querySelector(".nav__menu");
 let jobShortBtn = document.querySelector(".job-short__right");
 let job = document.querySelector(".job");

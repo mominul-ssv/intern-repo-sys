@@ -94,6 +94,7 @@ body {
   background-color: white;
   border-radius: 0.3rem;
   padding: 1rem;
+  margin: 1rem;
   -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
@@ -469,7 +470,7 @@ body {
   display: -ms-grid;
   display: grid;
   gap: 4px;
-      grid-template-areas: "fName fName lName lName" "email email phone phone" "dob dob country country" "university university sid sid" "password password confirm confirm" "register register register register";
+      grid-template-areas: "fName fName lName lName" "email email phone phone" "dob dob country country" "address address address address" "university university sid sid" "password password confirm confirm" "register register register register";
 }
 
 .grid-container-employer {
@@ -528,6 +529,13 @@ body {
   grid-area: country;
 }
 
+.grid-item-address {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: address;
+}
+
 .grid-item-company {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
@@ -543,7 +551,7 @@ body {
 }
 
 .grid-item-student-id {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 3;
   -ms-grid-column-span: 2;
   grid-area: sid;

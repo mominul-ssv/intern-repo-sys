@@ -83,6 +83,7 @@ body {
   background-color: white;
   border-radius: $radius;
   padding: 1rem;
+  margin: 1rem;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
   // =============================== toggle buttons =============================== //
@@ -226,6 +227,7 @@ body {
     "fName fName lName lName"
     "email email phone phone"
     "dob dob country country"
+    "address address address address"
     "university university sid sid"
     "password password confirm confirm"
     "register register register register";
@@ -277,6 +279,10 @@ body {
 
 .grid-item-country {
   grid-area: country;
+}
+
+.grid-item-address {
+  grid-area: address;
 }
 
 .grid-item-company {
