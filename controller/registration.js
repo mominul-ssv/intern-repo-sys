@@ -1,3 +1,5 @@
+
+// =============================== student reg =============================== //
 document.getElementById("register-btn").addEventListener("click", registerStudent);
 
 function registerStudent(e) {
