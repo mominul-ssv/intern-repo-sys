@@ -90,6 +90,46 @@ body {
   border-top: 2px solid #9e9e9e;
 }
 
+#error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ef5350;
+  color: #ffffff;
+  font-size: small;
+  padding: 0.4rem;
+}
+
+#error-close-btn {
+  padding: 0.8rem;
+  background-color: #ef5350;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  font-family: none;
+  font-size: 1.3rem;
+  padding: 0.2rem;
+}
+
+#error-close-btn:hover {
+  background-color: #ef5350;
+}
+
 .card {
   background-color: white;
   border-radius: 0.3rem;
@@ -230,6 +270,18 @@ body {
   cursor: text;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.card__email-error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .card .card__input:focus ~ .card__label,

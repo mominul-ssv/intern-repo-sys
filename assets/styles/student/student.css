@@ -30,7 +30,7 @@ body {
   font-weight: 900;
   letter-spacing: 0.05rem;
   background-color: #ffffff;
-  color: #ffffff;
+  color: #424242;
 }
 
 li {
@@ -63,7 +63,7 @@ a {
   border-radius: 0.3rem;
   margin: 0;
   border-radius: 0;
-  background-color: #1976d2;
+  background-color: #7b1fa2;
 }
 
 .container__sidebar {
@@ -74,7 +74,7 @@ a {
   padding: 0.5rem;
   border-radius: 0.3rem;
   margin-right: 0;
-  border: 0.15rem solid #bbdefb;
+  border: 0.15rem solid #ce93d8;
 }
 
 .container__main {
@@ -85,7 +85,7 @@ a {
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.3rem;
-  border: 0.15rem solid #bbdefb;
+  border: 0.15rem solid #ce93d8;
 }
 
 .container__footer {
@@ -98,7 +98,7 @@ a {
   border-radius: 0.3rem;
   margin: 0;
   border-radius: 0;
-  background-color: #1976d2;
+  background-color: #7b1fa2;
 }
 
 .nav {
@@ -131,9 +131,9 @@ a {
   padding-right: 0.5rem;
 }
 
-.nav__btn-register {
+.nav__btn-logout {
   padding: 0.8rem;
-  background-color: #4caf50;
+  background-color: #b71c1c;
   color: white;
   font-family: inherit;
   font-weight: bold;
@@ -150,31 +150,8 @@ a {
   font-size: 0.9rem;
 }
 
-.nav__btn-register:hover {
-  background-color: #388e3c;
-}
-
-.nav__btn-login {
-  padding: 0.8rem;
-  background-color: #9c27b0;
-  color: white;
-  font-family: inherit;
-  font-weight: bold;
-  font-size: small;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  border-radius: 0.3rem;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 200ms linear;
-  transition: background-color 200ms linear;
-  padding: 0.6rem;
-  font-size: 0.9rem;
-}
-
-.nav__btn-login:hover {
-  background-color: #7b1fa2;
+.nav__btn-logout:hover {
+  background-color: #d32f2f;
 }
 
 .nav__hamburger {
@@ -208,58 +185,6 @@ a {
           flex-direction: column;
 }
 
-.sidebar__archives {
-  width: 100%;
-  margin: 0.5rem;
-}
-
-.sidebar__archives-btn {
-  padding: 0.8rem;
-  background-color: #00695c;
-  color: white;
-  font-family: inherit;
-  font-weight: bold;
-  font-size: small;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  border-radius: 0.3rem;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 200ms linear;
-  transition: background-color 200ms linear;
-  -webkit-box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  padding: 0.8rem;
-  font-size: 1rem;
-  width: 100%;
-}
-
-.sidebar__archives-btn:hover {
-  background-color: #00897b;
-}
-
-.sidebar__archives-btn:hover {
-  -webkit-box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.sidebar__hr {
-  width: 100%;
-  margin: 0.5rem;
-}
-
-.sidebar__hr-archives-filter {
-  margin: 1rem;
-  border: none;
-  height: 3px;
-  border-radius: 0.1rem;
-  background: #1565c0;
-  margin: 0;
-}
-
 .sidebar__filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,13 +193,13 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0.5rem;
+  margin: 0.2rem;
   width: 100%;
 }
 
 .sidebar__filter-btn {
   padding: 0.8rem;
-  background-color: #1565c0;
+  background-color: #ab47bc;
   color: white;
   font-family: inherit;
   font-weight: bold;
@@ -287,19 +212,51 @@ a {
   cursor: pointer;
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
-  padding: 0.5rem;
   width: 100%;
-  margin: 0.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .sidebar__filter-btn:hover {
-  background-color: #1e88e5;
+  background-color: #ad1457;
+}
+
+.sidebar__filter-btn-archive {
+  padding: 0.8rem;
+  background-color: #616161;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sidebar__filter-btn-archive:hover {
+  background-color: #2e7d32;
+}
+
+.sidebar__icon {
+  padding-right: 0.5rem;
+  font-family: none;
+  font-size: 1.2rem;
 }
 
 .main {
@@ -319,8 +276,8 @@ a {
           box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  border: 0.15rem solid #42a5f5;
-  background-color: #bbdefb;
+  border: 0.15rem solid #ab47bc;
+  background-color: #e1bee7;
 }
 
 .main__search:hover {
@@ -356,10 +313,11 @@ a {
 }
 
 .search__icon {
+  font-family: none;
   font-size: 20px;
   padding: 0.2rem;
   margin-right: 0.2rem;
-  color: #2196f3;
+  color: #9c27b0;
 }
 
 .search__box {
@@ -369,7 +327,7 @@ a {
   width: 0;
   border: none;
   border-radius: 2rem;
-  border: 0.1rem solid #42a5f5;
+  border: 0.1rem solid #ab47bc;
   outline: none;
   font-family: inherit;
   font-weight: inherit;
@@ -392,7 +350,7 @@ a {
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.3rem;
-  border: 2px solid #bbdefb;
+  border: 2px solid #e1bee7;
 }
 
 .job-short__title {
@@ -459,7 +417,7 @@ a {
 .job__group {
   padding: 0.3rem;
   margin: 0.2rem 0.5rem 0rem 0.5rem;
-  border: 0.1rem solid #bbdefb;
+  border: 0.1rem solid #e1bee7;
   border-radius: 0.3rem;
   display: -ms-grid;
   display: grid;
@@ -526,6 +484,7 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 992px) {
@@ -570,7 +529,7 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: #42a5f5;
+    background-color: #ab47bc;
     width: 100%;
     text-align: center;
     -webkit-transition: 0.4s;
@@ -584,9 +543,9 @@ a {
     margin: 0.5rem 0 0 0;
     width: 10rem;
   }
-  .nav__btn-login {
+  .nav__btn-logout {
     margin: 0.5rem;
     width: 10rem;
   }
 }
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=student.css.map */

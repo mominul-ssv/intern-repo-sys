@@ -1,5 +1,6 @@
 // Ajax request for retrieving data
 document.getElementById("student-login-btn").addEventListener("click", loginStudent);
+document.getElementById("error-close-btn").addEventListener("click", closeError);
 
 function loginStudent(e) {
 
@@ -8,41 +9,60 @@ function loginStudent(e) {
   let studentEmail = document.getElementById("student-email").value;
   let studentPassword = document.getElementById("student-password").value;
 
-  // Creating xhr object
-  const xhr = new XMLHttpRequest();
+  if (studentEmail.length !== 0 && studentPassword.length !== 0) {
 
-  // Initialize ("true" means asynchronous request)
-  xhr.open("POST", "../../model/login.php", true);
+    // Creating xhr object
+    const xhr = new XMLHttpRequest();
 
-  // Set request header
-  xhr.setRequestHeader("Content-Type", "application/json");
+    // Initialize ("true" means asynchronous request)
+    xhr.open("POST", "../../model/login.php", true);
 
-  // Handle response
-  xhr.onload = function () {
-    if (xhr.status === 200) {
-      // console.log(xhr.response);
-      const obj = JSON.parse(xhr.response);
+    // Set request header
+    xhr.setRequestHeader("Content-Type", "application/json");
 
-      if (obj[0].email !== undefined) {
-        console.log("Success!");
-        window.location.replace("../student/student-home.php");
+    // Handle response
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        // console.log(xhr.response);
+        const obj = JSON.parse(xhr.response);
+
+        if (obj.email !== undefined) {
+          window.location.replace("../student/student-home.php");
+        } else {
+          // Response handling code
+          let loginError = document.querySelector(".login-error");
+          let errorText = document.querySelector("#error-text");
+
+          loginError.style.display = "inline";
+          errorText.innerText = "Incorrect email or password!";
+        }
       } else {
-        console.log("Failure.");
+        console.log("Problem Occurred!");
       }
-    } else {
-      console.log("Problem Occurred!");
-    }
-  };
+    };
 
-  // JavaScript object
-  const myData = {
-    dataStudentEmail: studentEmail,
-    dataStudentPassword: studentPassword,
-  };
+    // JavaScript object
+    const myData = {
+      dataStudentEmail: studentEmail,
+      dataStudentPassword: studentPassword,
+    };
 
-  // Converts JavaScript objects to JSON string 
-  const data = JSON.stringify(myData);
+    // Converts JavaScript objects to JSON string 
+    const data = JSON.stringify(myData);
 
-  // Send request with data
-  xhr.send(data);
+    // Send request with data
+    xhr.send(data);
+
+  } else {
+    let loginError = document.querySelector(".login-error");
+    let errorText = document.querySelector("#error-text");
+
+    loginError.style.display = "inline";
+    errorText.innerText = "All fields must be filled.";
+  }
+}
+
+function closeError() {
+  let loginError = document.querySelector(".login-error");
+  loginError.style.display = "none";
 }

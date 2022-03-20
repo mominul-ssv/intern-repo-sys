@@ -32,7 +32,7 @@ body {
   font-weight: 900;
   letter-spacing: 0.05rem;
   background-color: $white;
-  color: $white;
+  color: $grey-800;
 }
 
 li {
@@ -60,20 +60,20 @@ a {
     @include container-style();
     margin: 0;
     border-radius: 0;
-    background-color: $blue-700;
+    background-color: $purple-700;
   }
 
   &__sidebar {
     grid-area: sidebar;
     @include container-style();
     margin-right: 0;
-    border: 0.15rem solid $blue-100;
+    border: 0.15rem solid $purple-200;
   }
 
   &__main {
     grid-area: main;
     @include container-style();
-    border: 0.15rem solid $blue-100;
+    border: 0.15rem solid $purple-200;
   }
 
   &__footer {
@@ -81,7 +81,7 @@ a {
     @include container-style();
     margin: 0;
     border-radius: 0;
-    background-color: $blue-700;
+    background-color: $purple-700;
   }
 }
 // ============================================= container ============================================= //
@@ -104,14 +104,8 @@ a {
     padding-right: 0.5rem;
   }
 
-  &__btn-register {
-    @include btn-design($green-500, $green-700);
-    padding: 0.6rem;
-    font-size: 0.9rem;
-  }
-
-  &__btn-login {
-    @include btn-design($purple-500, $purple-700);
+  &__btn-logout {
+    @include btn-design($red-900, $red-700);
     padding: 0.6rem;
     font-size: 0.9rem;
   }
@@ -140,47 +134,31 @@ a {
   justify-content: center;
   flex-direction: column;
 
-  &__archives {
-    width: 100%;
-    margin: 0.5rem;
-  }
-
-  &__archives-btn {
-    @include btn-design($teal-800, $teal-600);
-    @include hover-content();
-    padding: 0.8rem;
-    font-size: 1rem;
-    width: 100%;
-  }
-
-  &__archives-btn:hover {
-    @include hover-state();
-  }
-
-  &__hr {
-    width: 100%;
-    margin: 0.5rem;
-  }
-
-  &__hr-archives-filter {
-    @include horizontal-line($blue-800);
-    margin: 0;
-  }
-
   &__filter {
     display: flex;
     flex-direction: column;
-    margin: 0.5rem;
+    margin: 0.2rem;
     width: 100%;
   }
 
   &__filter-btn {
-    @include btn-design($blue-800, $blue-600);
-    padding: 0.5rem;
+    @include btn-design($purple-400, $pink-800);
     width: 100%;
-    margin: 0.2rem;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__filter-btn-archive {
+    @include btn-design($grey-700, $green-800);
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    padding-right: 0.5rem;
+    font-family: none;
+    font-size: 1.2rem;
   }
 }
 // ============================================= sidebar ============================================= //
@@ -196,8 +174,8 @@ a {
     grid-area: search;
     @include container-style();
     @include hover-content();
-    border: 0.15rem solid $blue-400;
-    background-color: $blue-100;
+    border: 0.15rem solid $purple-400;
+    background-color: $purple-100;
   }
 
   &__search:hover {
@@ -209,7 +187,6 @@ a {
     grid-area: content;
     @include container-style();
     @include hover-content();
-    // border: 0.15rem solid $blue-100;
     color: $grey-700;
   }
 
@@ -223,10 +200,11 @@ a {
   display: flex;
 
   &__icon {
+    font-family: none;
     font-size: 20px;
     padding: 0.2rem;
     margin-right: 0.2rem;
-    color: $blue-500;
+    color: $purple-500;
   }
 
   &__box {
@@ -234,7 +212,7 @@ a {
     width: 0;
     border: none;
     border-radius: 2rem;
-    border: 0.1rem solid $blue-400;
+    border: 0.1rem solid $purple-400;
     outline: none;
     font-family: inherit;
     font-weight: inherit;
@@ -252,7 +230,7 @@ a {
   &__left {
     width: 80%;
     @include container-style();
-    border: 2px solid $blue-100;
+    border: 2px solid $purple-100;
   }
 
   &__title {
@@ -299,7 +277,7 @@ a {
   &__group {
     padding: 0.3rem;
     margin: 0.2rem 0.5rem 0rem 0.5rem;
-    border: 0.1rem solid $blue-100;
+    border: 0.1rem solid $purple-100;
     border-radius: $radius;
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -341,6 +319,7 @@ a {
 .footer {
   display: flex;
   justify-content: center;
+  color: $white;
 }
 // ============================================= footer ============================================= //
 
@@ -390,7 +369,7 @@ a {
       left: -100%;
       gap: 0;
       flex-direction: column;
-      background-color: $blue-400;
+      background-color: $purple-400;
       width: 100%;
       text-align: center;
       transition: 0.4s;
@@ -405,7 +384,7 @@ a {
       margin: 0.5rem 0 0 0;
       width: 10rem;
     }
-    &__btn-login {
+    &__btn-logout {
       margin: 0.5rem;
       width: 10rem;
     }

@@ -79,6 +79,24 @@ body {
   }
 }
 
+// =============================== error handling =============================== //
+#error {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $red-400;
+  color: $white;
+  font-size: small;
+  padding: 0.4rem;
+}
+
+#error-close-btn {
+  @include btn-design($red-400, $red-400);
+  font-family: none;
+  font-size: 1.3rem;
+  padding: 0.2rem;
+}
+
 .card {
   background-color: white;
   border-radius: $radius;
@@ -134,6 +152,12 @@ body {
 
   &__label {
     @include label();
+  }
+
+  &__email-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .card__input:focus ~ .card__label,
