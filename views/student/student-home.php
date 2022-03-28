@@ -101,35 +101,35 @@ session_start();
             <table>
               <tr>
                 <th>Student ID</th>
-                <td><?php echo $student_reg['student_id'] ?></td>
+                <td id="student-id-td"><?php echo $student_reg['student_id'] ?></td>
               </tr>
               <tr>
                 <th>Name</th>
-                <td><?php echo $student_reg['first_name'] . " " . $student_reg['last_name'] ?></td>
+                <td id="name-td"><?php echo $student_reg['first_name'] . " " . $student_reg['last_name'] ?></td>
               </tr>
               <tr>
                 <th>Email</th>
-                <td><?php echo $student_reg['email'] ?></td>
+                <td id="email-td"><?php echo $student_reg['email'] ?></td>
               </tr>
               <tr>
                 <th>Phone</th>
-                <td><?php echo $student_reg['phone'] ?></td>
+                <td id="phone-td"><?php echo $student_reg['phone'] ?></td>
               </tr>
               <tr>
                 <th>Date of Birth</th>
-                <td><?php echo $student_reg['dob'] ?></td>
+                <td id="dob-td"><?php echo $student_reg['dob'] ?></td>
               </tr>
               <tr>
                 <th>Country</th>
-                <td><?php echo $student_reg['country'] ?></td>
+                <td id="country-td"><?php echo $student_reg['country'] ?></td>
               </tr>
               <tr>
                 <th>Address</th>
-                <td><?php echo $student_reg['address'] ?></td>
+                <td id="address-td"><?php echo $student_reg['address'] ?></td>
               </tr>
               <tr>
                 <th>University</th>
-                <td><?php echo $student_reg['university_name'] ?></td>
+                <td id="university-name-td"><?php echo $student_reg['university_name'] ?></td>
               </tr>
             </table>
           </div>
@@ -227,7 +227,7 @@ session_start();
                           <!-- student id -->
                           <div class="grid-item-student-id">
                             <div class="card__group">
-                              <input type="text" id="student-id" class="card__input" placeholder=" " value="<?php echo $student_reg['student_id'] ?>">
+                              <input type="number" id="student-id" class="card__input" placeholder=" " value="<?php echo $student_reg['student_id'] ?>">
                               <label for="student-id" class="card__label">Student ID</label>
                             </div>
                           </div>
@@ -235,7 +235,7 @@ session_start();
                         </div>
 
                         <div class="popup__submit">
-                          <button class="popup__submit-btn" id="update-btn">Update</button>
+                          <button class="popup__submit-btn" id="update-btn" onclick="togglePopup()">Update</button>
                         </div>
 
                       </form>

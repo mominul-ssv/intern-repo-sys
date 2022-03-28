@@ -28,6 +28,7 @@ $password = $myData['dataPassword'];
 
 $sql = "INSERT INTO student_reg(first_name, last_name, email, phone, dob, country, address, university_name, student_id, password) 
 VALUES(:first_name, :last_name, :email, :phone,:dob, :country, :address, :university_name, :student_id, :password)";
+
 $stm = $db->prepare($sql);
 $stm->bindValue(':first_name', $firstName);
 $stm->bindValue(':last_name', $lastName);

@@ -38,11 +38,16 @@ function updateStudent(e) {
     // Handle response
     xhr.onload = function () {
       if (xhr.status === 200) {
-        if (xhr.response === '1') {
-          window.location.replace("../student/student-home.php");
-        } else {
-          console.log("Error occurred!" + "\nxhr.response: " + xhr.response + "\nxhr.status: " + xhr.status);
-        }
+        const obj = JSON.parse(xhr.response);
+        document.getElementById("student-id-td").innerText = obj.student_id;
+        document.getElementById("name-td").innerText = obj.first_name + " " + obj.last_name;
+        document.getElementById("email-td").innerText = obj.email;
+        document.getElementById("phone-td").innerText = obj.phone;
+        document.getElementById("dob-td").innerText = obj.dob;
+        document.getElementById("country-td").innerText = obj.country;
+        document.getElementById("address-td").innerText = obj.address;
+        document.getElementById("university-name-td").innerText = obj.university_name;
+        document.getElementById("update-btn").classList.toggle("active");
       } else {
         console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
       }

@@ -69,10 +69,10 @@ if ($execute_success) {
       $student_reg_array['student_id'] = $std['student_id'];
     }
     $_SESSION['student_reg_array'] = $student_reg_array;
+    echo json_encode($student_reg_array);
   } catch (Exception $e) {
     echo $e->getMessage();
   }
-  echo $execute_success;
 } else {
   echo $stm->errorInfo()[2];
 }
