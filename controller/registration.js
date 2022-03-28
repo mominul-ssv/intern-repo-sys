@@ -6,17 +6,17 @@ function registerStudent(e) {
 
   e.preventDefault();
 
-  let firstName = document.getElementById("first-name").value;
-  let lastName = document.getElementById("last-name").value;
-  let email = document.getElementById("email").value;
-  let phone = document.getElementById("phone").value;
-  let dob = document.getElementById("dob").value;
-  let country = document.getElementById("country").value;
-  let address = document.getElementById("address").value;
-  let universityName = document.getElementById("university-name").value;
-  let studentId = document.getElementById("student-id").value;
-  let password = document.getElementById("password").value;
-  let confirmPassword = document.getElementById("confirm-password").value;
+  const firstName = document.getElementById("first-name").value;
+  const lastName = document.getElementById("last-name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const dob = document.getElementById("dob").value;
+  const country = document.getElementById("country").value;
+  const address = document.getElementById("address").value;
+  const universityName = document.getElementById("university-name").value;
+  const studentId = document.getElementById("student-id").value;
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirm-password").value;
 
   if (firstName.length !== 0
     && lastName.length !== 0
@@ -30,7 +30,7 @@ function registerStudent(e) {
     && password.length !== 0
     && confirmPassword.length !== 0) {
 
-    if (password === confirmPassword) {
+    if (password == confirmPassword) {
 
       // Creating xhr object
       const xhr = new XMLHttpRequest();

@@ -1,13 +1,15 @@
 // Ajax request for retrieving data
 document.getElementById("student-login-btn").addEventListener("click", loginStudent);
 document.getElementById("error-close-btn").addEventListener("click", closeError);
+let loginError = document.querySelector(".login-error");
+let errorText = document.querySelector("#error-text");
 
 function loginStudent(e) {
 
   e.preventDefault();
 
-  let studentEmail = document.getElementById("student-email").value;
-  let studentPassword = document.getElementById("student-password").value;
+  const studentEmail = document.getElementById("student-email").value;
+  const studentPassword = document.getElementById("student-password").value;
 
   if (studentEmail.length !== 0 && studentPassword.length !== 0) {
 
@@ -23,16 +25,13 @@ function loginStudent(e) {
     // Handle response
     xhr.onload = function () {
       if (xhr.status === 200) {
-        // console.log(xhr.response);
+
         const obj = JSON.parse(xhr.response);
 
         if (obj.email !== undefined) {
           window.location.replace("../student/student-home.php");
         } else {
           // Response handling code
-          let loginError = document.querySelector(".login-error");
-          let errorText = document.querySelector("#error-text");
-
           loginError.style.display = "inline";
           errorText.innerText = "Incorrect email or password!";
         }
@@ -54,9 +53,6 @@ function loginStudent(e) {
     xhr.send(data);
 
   } else {
-    let loginError = document.querySelector(".login-error");
-    let errorText = document.querySelector("#error-text");
-
     loginError.style.display = "inline";
     errorText.innerText = "All fields must be filled.";
   }

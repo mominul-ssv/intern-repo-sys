@@ -46,7 +46,7 @@
 
 html,
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Open Sans", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   font-weight: 900;
   letter-spacing: 0.05rem;
   background-color: aliceblue;

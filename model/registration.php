@@ -1,5 +1,5 @@
 <?php
-include('../connection/db_connection.php');
+include('../connection/db_connect.php');
 /**
  * [1] stripslashes function can be used to clean up data retrieved from
  *     a database or from an HTML form. 
@@ -26,7 +26,8 @@ $universityName = $myData['dataUniversityName'];
 $studentId = $myData['dataStudentId'];
 $password = $myData['dataPassword'];
 
-$sql = "INSERT INTO student_reg(first_name, last_name, email, phone, dob, country, address, university_name, student_id, password) 
+try {
+  $sql = "INSERT INTO student_reg(first_name, last_name, email, phone, dob, country, address, university_name, student_id, password) 
   VALUES(
     '$firstName', 
     '$lastName', 
@@ -39,6 +40,9 @@ $sql = "INSERT INTO student_reg(first_name, last_name, email, phone, dob, countr
     '$studentId',
     '$password'
     )";
+} catch (Exception $e) {
+  echo $e->getMessage();
+}
 
 if ($conn->query($sql) == TRUE) {
   echo "Student saved successfully";

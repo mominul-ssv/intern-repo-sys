@@ -17,10 +17,8 @@ session_start();
 <body>
 
   <!-- check that the 'data' key exists -->
-  <?php if (isset($_SESSION['data'])) { ?>
-
-    <?php $myData = json_encode($_SESSION['data'], true); ?>
-
+  <?php if (isset($_SESSION['student_reg_array'])) { ?>
+    <?php $student_reg = $_SESSION['student_reg_array']; ?>
 
     <div class="container">
 
@@ -97,18 +95,59 @@ session_start();
       <main class="container__main">
 
         <div class="main-profile">
-          <?php echo $myData ?>
+
+          <div class="main-profile__table">
+            <table>
+              <tr>
+                <th>Student ID</th>
+                <td><?php echo $student_reg['student_id'] ?></td>
+              </tr>
+              <tr>
+                <th>Name</th>
+                <td><?php echo $student_reg['first_name'] . " " . $student_reg['last_name'] ?></td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td><?php echo $student_reg['email'] ?></td>
+              </tr>
+              <tr>
+                <th>Phone</th>
+                <td><?php echo $student_reg['phone'] ?></td>
+              </tr>
+              <tr>
+                <th>Date of Birth</th>
+                <td><?php echo $student_reg['dob'] ?></td>
+              </tr>
+              <tr>
+                <th>Country</th>
+                <td><?php echo $student_reg['country'] ?></td>
+              </tr>
+              <tr>
+                <th>Address</th>
+                <td><?php echo $student_reg['address'] ?></td>
+              </tr>
+              <tr>
+                <th>University</th>
+                <td><?php echo $student_reg['university_name'] ?></td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="main-profile__update">
+            <button class="profile-update-btn">Update Profile Information</button>
+          </div>
+
         </div>
 
         <div class="main-apply" style="display: none;">
-          <div class="main__search">
+          <div class="main-apply__search">
             <div class="search">
               <span class="search__icon"><i class="bi bi-search"></i></span>
               <input class="search__box" type="text" name="">
             </div>
           </div>
 
-          <div class="main__content">
+          <div class="main-apply__content">
             <div class="job-short">
 
               <div class="job-short__left">
