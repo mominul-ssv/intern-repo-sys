@@ -1,3 +1,4 @@
+// ======================================= hamburger toggle ======================================= //
 let hamburger = document.querySelector(".nav__hamburger");
 
 let navMenu = document.querySelector(".nav__menu");
@@ -19,3 +20,8 @@ jobShortBtn.addEventListener("click", () => {
     count--;
   }
 });
+
+// ======================================= popup toggle ======================================= //
+function togglePopup() {
+  document.getElementById("popup-update").classList.toggle("active");
+}

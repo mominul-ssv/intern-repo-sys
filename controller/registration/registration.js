@@ -36,7 +36,7 @@ function registerStudent(e) {
       const xhr = new XMLHttpRequest();
 
       // Initialize ("true" means asynchronous request)
-      xhr.open("POST", "../../model/registration.php", true);
+      xhr.open("POST", "../../model/registration/registration.php", true);
 
       // Set request header
       xhr.setRequestHeader("Content-Type", "application/json");
@@ -44,10 +44,13 @@ function registerStudent(e) {
       // Handle response
       xhr.onload = function () {
         if (xhr.status === 200) {
-          console.log(xhr.response);
-          window.location.replace("../login/login.html");
+          if (xhr.response === '1') {
+            window.location.replace("../login/login.html");
+          } else {
+            console.log("Error occurred!" + "\nxhr.response: " + xhr.response + "\nxhr.status: " + xhr.status);
+          }
         } else {
-          console.log("Error occurred!");
+          console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
         }
       };
 

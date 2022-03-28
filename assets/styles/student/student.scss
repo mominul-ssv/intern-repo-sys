@@ -12,6 +12,12 @@
 // horizontal line
 @import "../hr";
 
+// popup
+@import "../popup";
+
+// input box
+@import "../input";
+
 // border radius
 $radius: 0.3rem;
 
@@ -58,16 +64,16 @@ table:hover {
 
 th {
   color: $white;
-  background-color: $pink-800;
+  background-color: $purple-800;
   text-transform: uppercase;
   border-radius: $radius;
 }
 
 td {
-  color: $deep-purple-800;
-  background-color: $purple-100;
+  color: $purple-600;
+  border: 0.15rem solid $purple-600;
   border-radius: $radius;
-  padding: 0.8rem;
+  padding: 0.7rem;
 }
 
 // ============================================= container ============================================= //
@@ -190,6 +196,8 @@ td {
 // ============================================= sidebar ============================================= //
 
 // ============================================= main ============================================= //
+
+// ------------------------------------------- profile ------------------------------------------- //
 .main-profile {
   display: grid;
   grid-template-areas:
@@ -218,6 +226,108 @@ td {
   text-transform: capitalize;
 }
 
+@include popup();
+.popup {
+  & .popup__update-text {
+    @include hover-content();
+    background-color: $deep-orange-400;
+    color: $white;
+  }
+}
+
+.popup__submit {
+  width: 100%;
+}
+
+.popup__submit-btn {
+  @include btn-design($teal-600, $teal-400);
+  width: 100%;
+}
+
+// --------------- user input --------------- //
+.card {
+  padding: 1rem 0 0.5rem 0;
+  &__group {
+    height: 4rem;
+  }
+
+  &__input {
+    @include input();
+  }
+
+  &__label {
+    @include label();
+  }
+
+  &__email-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card__input:focus ~ .card__label,
+  .card__input:not(:placeholder-shown).card__input:not(:focus) ~ .card__label {
+    top: -3.88rem;
+    left: 0.8rem;
+    padding: 5px;
+    font-size: 0.8rem;
+    background-color: rgb(255, 255, 255);
+  }
+}
+@include input-autocomplete-animation();
+
+.grid-container-student {
+  display: grid;
+  gap: 4px;
+  grid-template-areas:
+    "fName fName lName lName"
+    "email email phone phone"
+    "dob dob country country"
+    "address address address address"
+    "university university sid sid";
+}
+
+.grid-item-first-name {
+  grid-area: fName;
+}
+
+.grid-item-last-name {
+  grid-area: lName;
+}
+
+.grid-item-email {
+  grid-area: email;
+}
+
+.grid-item-phone {
+  grid-area: phone;
+}
+
+.grid-item-dob {
+  grid-area: dob;
+}
+
+.grid-item-country {
+  grid-area: country;
+}
+
+.grid-item-address {
+  grid-area: address;
+}
+
+.grid-item-company {
+  grid-area: company;
+}
+
+.grid-item-university {
+  grid-area: university;
+}
+
+.grid-item-student-id {
+  grid-area: sid;
+}
+
+// ------------------------------------------- apply ------------------------------------------- //
 .main-apply {
   display: grid;
   grid-template-areas:
@@ -249,7 +359,7 @@ td {
   }
 }
 
-// --------------------------------------------- search --------------------------------------------- //
+// --------------- search --------------- //
 .search {
   display: flex;
 
@@ -273,9 +383,8 @@ td {
     padding-left: 0.8rem;
   }
 }
-// --------------------------------------------- search --------------------------------------------- //
 
-// --------------------------------------------- job --------------------------------------------- //
+// --------------- job --------------- //
 .job-short {
   display: flex;
   width: 100%;
@@ -342,6 +451,7 @@ td {
   }
 
   &__card-text {
+    grid-area: text;
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
@@ -365,7 +475,6 @@ td {
     font-size: 1.3rem;
   }
 }
-// --------------------------------------------- job --------------------------------------------- //
 
 // ============================================= main ============================================= //
 
@@ -382,6 +491,12 @@ td {
   .container {
     grid-template-columns: 3fr 8fr;
   }
+
+  .popup {
+    & .popup__content {
+      width: 80vw;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -394,9 +509,22 @@ td {
       "main"
       "footer";
 
+    &__nav {
+      grid-area: nav;
+    }
+
     &__sidebar {
+      grid-area: sidebar;
       margin-right: 0.5rem;
       margin-bottom: 0;
+    }
+
+    &__main {
+      grid-area: main;
+    }
+
+    &__footer {
+      grid-area: footer;
     }
   }
 
@@ -438,9 +566,32 @@ td {
       margin: 0.5rem 0 0 0;
       width: 10rem;
     }
+
     &__btn-logout {
       margin: 0.5rem;
-      width: 10rem;
+      width: 99%;
     }
+  }
+
+  .popup {
+    & .popup__content {
+      display: inline-block;
+      overflow: scroll;
+      width: 90vw;
+      height: 90vh;
+    }
+
+    & .popup__update-text {
+      font-size: large;
+    }
+
+    & .popup__close-btn {
+      font-size: 1.45rem;
+    }
+  }
+
+  .grid-container-student {
+    display: flex;
+    flex-direction: column;
   }
 }

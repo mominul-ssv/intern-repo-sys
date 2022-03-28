@@ -1,5 +1,5 @@
 <?php
-include('../connection/db_connect.php');
+include('../../connection/db_connect.php');
 /**
  * [1] stripslashes function can be used to clean up data retrieved from
  *     a database or from an HTML form. 
@@ -26,26 +26,24 @@ $universityName = $myData['dataUniversityName'];
 $studentId = $myData['dataStudentId'];
 $password = $myData['dataPassword'];
 
-try {
-  $sql = "INSERT INTO student_reg(first_name, last_name, email, phone, dob, country, address, university_name, student_id, password) 
-  VALUES(
-    '$firstName', 
-    '$lastName', 
-    '$email', 
-    '$phone', 
-    '$dob', 
-    '$country', 
-    '$address', 
-    '$universityName',
-    '$studentId',
-    '$password'
-    )";
-} catch (Exception $e) {
-  echo $e->getMessage();
-}
+$sql = "INSERT INTO student_reg(first_name, last_name, email, phone, dob, country, address, university_name, student_id, password) 
+VALUES(:first_name, :last_name, :email, :phone,:dob, :country, :address, :university_name, :student_id, :password)";
+$stm = $db->prepare($sql);
+$stm->bindValue(':first_name', $firstName);
+$stm->bindValue(':last_name', $lastName);
+$stm->bindValue(':email', $email);
+$stm->bindValue(':phone', $phone);
+$stm->bindValue(':dob', $dob);
+$stm->bindValue(':country', $country);
+$stm->bindValue(':address', $address);
+$stm->bindValue(':university_name', $universityName);
+$stm->bindValue(':student_id', $studentId);
+$stm->bindValue(':password', $password);
+$execute_success = $stm->execute();
+$stm->closeCursor();
 
-if ($conn->query($sql) == TRUE) {
-  echo "Student saved successfully";
+if ($execute_success) {
+  echo $execute_success;
 } else {
-  echo "Unable to save student";
+  echo $stm->errorInfo()[2];
 }

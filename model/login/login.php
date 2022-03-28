@@ -1,5 +1,5 @@
 <?php
-include('../connection/db_connect.php');
+include('../../connection/db_connect.php');
 
 $data = stripslashes(file_get_contents("php://input"));
 $myData = json_decode($data, true);
