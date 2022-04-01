@@ -136,7 +136,7 @@ session_start();
 
           <div class="main-profile__update">
 
-            <button class="profile-update-btn" onclick="togglePopup()">Update Profile Information</button>
+            <button class="profile-update-btn" onclick="togglePopupUpdate()">Update Profile Information</button>
 
             <div class="profile-update-popup">
 
@@ -148,7 +148,7 @@ session_start();
 
                   <div class="popup__title">
                     <h2 class="popup__update-text">Update Profile Information</h2>
-                    <div class="popup__close-btn" onclick="togglePopup()">&times;</div>
+                    <div class="popup__close-btn" onclick="togglePopupUpdate()">&times;</div>
                   </div>
 
                   <div class="popup__body">
@@ -235,7 +235,7 @@ session_start();
                         </div>
 
                         <div class="popup__submit">
-                          <button class="popup__submit-btn" id="update-btn" onclick="togglePopup()">Update</button>
+                          <button class="popup__submit-btn" id="update-btn" onclick="togglePopupUpdate()">Update</button>
                         </div>
 
                       </form>
@@ -255,103 +255,7 @@ session_start();
         </div>
 
         <div class="main-apply" style="display: none;">
-          <div class="main-apply__search">
-            <div class="search">
-              <span class="search__icon"><i class="bi bi-search"></i></span>
-              <input class="search__box" type="text" name="">
-            </div>
-          </div>
-
-          <div class="main-apply__content">
-            <div class="job-short">
-
-              <div class="job-short__left">
-
-                <div class="job-short__title">
-                  <span>Game Artist (2D)</span>
-                </div>
-
-                <div class="job-short__company">
-                  <span><i class="fa-solid fa-building"></i></span>
-                  <span>NapTech Games</span>
-                </div>
-
-                <div class="job-short__city">
-                  <span><i class="fa-solid fa-map-location"></i></span>
-                  <span>Dhaka</span>
-                </div>
-
-                <div class="job-short__country">
-                  <span><i class="fa-solid fa-earth-asia"></i></span>
-                  <span>Bangladesh</span>
-                </div>
-
-              </div>
-
-              <button class="job-short__right">+</button>
-
-            </div>
-            <div class="job">
-
-              <div class="job__group">
-                <span class="job__card-text">
-                  <span>Position</span>
-                  <span>:</span>
-                </span>
-                <span class="job__card-data">Graphic Designer (2D Artist)</span>
-              </div>
-
-              <div class="job__group">
-                <span class="job__card-text">
-                  <span>Responsibilities</span>
-                  <span>:</span>
-                </span>
-                <span class="job__card-data">• Create character concepts art,
-                  Illustration, environments, and backgrounds.
-                  • Props Common trees, bushes crates, barrels.
-                  • Characters Player Character Variants, Villager NPCs, Common
-                  Enemies.
-                  • Create a game icon, interface, and menus.
-                  • Create assets from scratch in Adobe Photoshop, Illustrator,
-                  or Inkscape.
-                  • Create artwork for game logos, symbols, objects, and other
-                  theme art.
-                  • Communicate with the rest of our development team.
-                  • Basic Knowledge of color theory, UX/UI, concept sketching,
-                  and storyboarding.</span>
-              </div>
-
-              <div class="job__group">
-                <span class="job__card-text">
-                  <span>Required Skills</span>
-                  <span>:</span>
-                </span>
-                <span class="job__card-data">Proficient in Adobe Illustrator and
-                  Adobe Photoshop or other equivalent
-                  software.</span>
-              </div>
-
-              <div class="job__group">
-                <span class="job__card-text">
-                  <span>Payment</span>
-                  <span>:</span>
-                </span>
-                <span class="job__card-data">Unpaid</span>
-              </div>
-
-              <div class="job__group">
-                <span class="job__card-text">
-                  <span>Benefits</span>
-                  <span>:</span>
-                </span>
-                <span class="job__card-data">Will be given an intern working
-                  certificate.</span>
-              </div>
-
-              <button class="job__apply">Apply</button>
-
-            </div>
-          </div>
+          Apply
         </div>
 
         <div class="main-status" style="display: none;">
@@ -363,9 +267,121 @@ session_start();
         </div>
 
         <div class="main-archive" style="display: none;">
-          Archive
-        </div>
+          <div class="archive">
+            <div class="archive__text">Archive Past Internships</div>
+            <button class="archive__add" onclick="togglePopupArchive()">+</button>
 
+          </div>
+          <hr class="archive-hr">
+          <div class="archive-history">
+            <div class="archive-history__text">Archive History</div>
+            <div class="profile-update-popup">
+
+              <div class="popup" id="popup-archive">
+                <div class="popup__overlay"></div>
+                <div class="popup__content">
+                  <div class="popup__title">
+                    <h2 class="popup__update-text">Archive Past Internship</h2>
+                    <div class="popup__close-btn" onclick="togglePopupArchive()">&times;</div>
+                  </div>
+                  <div class="popup__body">
+                    <div class="card">
+                      <form>
+                        <div class="grid-container-archive">
+
+                          <!-- company name -->
+                          <div class="grid-item-company-name">
+                            <div class="card__group">
+                              <input type="text" id="company-name" class="card__input" placeholder=" ">
+                              <label for="company-name" class="card__label">Company Name</label>
+                            </div>
+                          </div>
+
+                          <!-- company address -->
+                          <div class="grid-item-company-address">
+                            <div class="card__group">
+                              <input type="text" id="company-address" class="card__input" placeholder=" ">
+                              <label for="company-address" class="card__label">Company Address</label>
+                            </div>
+                          </div>
+
+                          <!-- city -->
+                          <div class="grid-item-company-city">
+                            <div class="card__group">
+                              <input type="text" id="company-city" class="card__input" placeholder=" ">
+                              <label for="company-city" class="card__label">City</label>
+                            </div>
+                          </div>
+
+                          <!-- country -->
+                          <div class="grid-item-company-country">
+                            <div class="card__group">
+                              <input type="text" id="company-country" class="card__input" placeholder=" ">
+                              <label for="company-country" class="card__label">Country</label>
+                            </div>
+                          </div>
+
+                          <!-- department -->
+                          <div class="grid-item-company-department">
+                            <div class="card__group">
+                              <input type="text" id="company-department" class="card__input" placeholder=" ">
+                              <label for="company-department" class="card__label">Department</label>
+                            </div>
+                          </div>
+
+                          <!-- position -->
+                          <div class="grid-item-company-position">
+                            <div class="card__group">
+                              <input type="text" id="company-position" class="card__input" placeholder=" ">
+                              <label for="company-position" class="card__label">Position</label>
+                            </div>
+                          </div>
+
+                          <!-- required skills -->
+                          <div class="grid-item-required-skills">
+                            <div class="card__group">
+                              <input type="text" id="required-skills" class="card__input" placeholder=" ">
+                              <label for="required-skills" class="card__label">Required Skills</label>
+                            </div>
+                          </div>
+
+                          <!-- start-date -->
+                          <div class="grid-item-start-date">
+                            <div class="card__group">
+                              <input type="date" id="start-date" class="card__input" placeholder=" ">
+                              <label for="start-date" class="card__label">Start Date</label>
+                            </div>
+                          </div>
+
+                          <!-- end-date -->
+                          <div class="grid-item-end-date">
+                            <div class="card__group">
+                              <input type="date" id="end-date" class="card__input" placeholder=" ">
+                              <label for="end-date" class="card__label">End Date</label>
+                            </div>
+                          </div>
+
+                          <!-- description -->
+                          <div class="grid-item-work-description">
+                            <div class="card__group">
+                              <textarea name="work-description" class="card__description" cols="1" rows="4"></textarea>
+                              <label class="card__label" id="description-label">Work Description</label>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <div class="popup__submit">
+                          <button class="popup__submit-btn" id="archive-btn" onclick="togglePopupArchive()">Archive</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
       <!-- /Main -->
 
@@ -376,7 +392,7 @@ session_start();
         </div>
       </footer>
       <!-- /Footer -->
-      <script src="../../assets/js/animation/animation.js"></script>
+      <script src="../../assets/js/animation/popup.js"></script>
       <script src="../../assets/js/student/student-sidebar.js"></script>
       <script src="../../controller/student/student.js"></script>
     </div>

@@ -524,6 +524,39 @@ td {
   background-color: white;
 }
 
+.card__description {
+  border: 2.5px solid #bdbdbd;
+  border-radius: 0.3rem;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 1rem;
+  color: inherit;
+  text-align: left;
+  outline: none;
+  background: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+.card__description:hover {
+  border-color: #616161;
+}
+
+#archive-btn {
+  margin-top: 4.5rem;
+}
+
+#description-label {
+  top: -8.2rem;
+  background-color: #ffffff;
+  padding: 0.1rem 0.25rem 0.1rem 0.25rem;
+  border: 2.5px solid #bdbdbd;
+  border-radius: 0.3rem;
+}
+
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
@@ -589,10 +622,6 @@ select:-webkit-autofill {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: address;
-}
-
-.grid-item-company {
-  grid-area: company;
 }
 
 .grid-item-university {
@@ -830,6 +859,146 @@ select:-webkit-autofill {
   font-size: 1.3rem;
 }
 
+.archive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem;
+  border: 0.15rem solid #e1bee7;
+  border-radius: 0.3rem;
+}
+
+.archive__text {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+.archive__add {
+  padding: 0.8rem;
+  background-color: #388e3c;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+  font-size: 1.8rem;
+  border-radius: 50%;
+  padding: 0.2rem 0.9rem 0.2rem 0.9rem;
+}
+
+.archive__add:hover {
+  background-color: #4caf50;
+}
+
+.archive-hr {
+  margin: 1rem;
+  border: none;
+  height: 3px;
+  border-radius: 0.1rem;
+  background: #e1bee7;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.archive-history__text {
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #e1bee7;
+  border-radius: 0.3rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.grid-container-archive {
+  display: -ms-grid;
+  display: grid;
+  gap: 4px;
+      grid-template-areas: "cName cName cName cName" "cAddress cAddress cAddress cAddress" "cCity cCity cCountry cCountry" "cDepartment cDepartment cPosition cPosition" "rSkills rSkills rSkills rSkills" "sDate sDate eDate eDate" "wDescription wDescription wDescription wDescription";
+}
+
+.grid-item-company-name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: cName;
+}
+
+.grid-item-company-address {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: cAddress;
+}
+
+.grid-item-company-city {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: cCity;
+}
+
+.grid-item-company-country {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: cCountry;
+}
+
+.grid-item-company-department {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: cDepartment;
+}
+
+.grid-item-company-position {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: cPosition;
+}
+
+.grid-item-required-skills {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: rSkills;
+}
+
+.grid-item-start-date {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: sDate;
+}
+
+.grid-item-end-date {
+  -ms-grid-row: 6;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: eDate;
+}
+
+.grid-item-work-description {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: wDescription;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -934,6 +1103,15 @@ select:-webkit-autofill {
     font-size: 1.45rem;
   }
   .grid-container-student {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .grid-container-archive {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

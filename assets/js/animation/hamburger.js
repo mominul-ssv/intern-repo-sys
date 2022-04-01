@@ -21,7 +21,3 @@ jobShortBtn.addEventListener("click", () => {
   }
 });
 
-// ======================================= popup toggle ======================================= //
-function togglePopup() {
-  document.getElementById("popup-update").classList.toggle("active");
-}

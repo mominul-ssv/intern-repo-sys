@@ -273,7 +273,25 @@ td {
     font-size: 0.8rem;
     background-color: rgb(255, 255, 255);
   }
+
+  &__description {
+    @include input();
+    margin-top: 0.3rem;
+  }
 }
+
+#archive-btn {
+  margin-top: 4.5rem;
+}
+
+#description-label {
+  top: -8.2rem;
+  background-color: $white;
+  padding: 0.1rem 0.25rem 0.1rem 0.25rem;
+  border: 2.5px solid $grey-400;
+  border-radius: $radius;
+}
+
 @include input-autocomplete-animation();
 
 .grid-container-student {
@@ -313,10 +331,6 @@ td {
 
 .grid-item-address {
   grid-area: address;
-}
-
-.grid-item-company {
-  grid-area: company;
 }
 
 .grid-item-university {
@@ -476,6 +490,96 @@ td {
   }
 }
 
+// ------------------------------------------- archive ------------------------------------------- //
+.archive {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border: 0.15rem solid $purple-100;
+  border-radius: $radius;
+  &__text {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+  }
+  &__add {
+    @include btn-design($green-700, $green-500);
+    font-size: 1.8rem;
+    border-radius: 50%;
+    padding: 0.2rem 0.9rem 0.2rem 0.9rem;
+  }
+}
+
+.archive-hr {
+  @include horizontal-line($purple-100);
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
+.archive-history {
+  &__text {
+    text-align: center;
+    padding: 0.5rem;
+    background-color: $purple-100;
+    border-radius: $radius;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+}
+
+.grid-container-archive {
+  display: grid;
+  gap: 4px;
+  grid-template-areas:
+    "cName cName cName cName"
+    "cAddress cAddress cAddress cAddress"
+    "cCity cCity cCountry cCountry"
+    "cDepartment cDepartment cPosition cPosition"
+    "rSkills rSkills rSkills rSkills"
+    "sDate sDate eDate eDate"
+    "wDescription wDescription wDescription wDescription";
+}
+
+.grid-item-company-name {
+  grid-area: cName;
+}
+
+.grid-item-company-address {
+  grid-area: cAddress;
+}
+
+.grid-item-company-city {
+  grid-area: cCity;
+}
+
+.grid-item-company-country {
+  grid-area: cCountry;
+}
+
+.grid-item-company-department {
+  grid-area: cDepartment;
+}
+
+.grid-item-company-position {
+  grid-area: cPosition;
+}
+
+.grid-item-required-skills {
+  grid-area: rSkills;
+}
+
+.grid-item-start-date {
+  grid-area: sDate;
+}
+
+.grid-item-end-date {
+  grid-area: eDate;
+}
+
+.grid-item-work-description {
+  grid-area: wDescription;
+}
+
 // ============================================= main ============================================= //
 
 // ============================================= footer ============================================= //
@@ -591,6 +695,11 @@ td {
   }
 
   .grid-container-student {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .grid-container-archive {
     display: flex;
     flex-direction: column;
   }

@@ -1,8 +1,8 @@
-let mainProfile = document.querySelector(".main-profile");
-let mainApply = document.querySelector(".main-apply");
-let mainStatus = document.querySelector(".main-status");
-let mainApproval = document.querySelector(".main-approval");
-let mainArchive = document.querySelector(".main-archive");
+const mainProfile = document.querySelector(".main-profile");
+const mainApply = document.querySelector(".main-apply");
+const mainStatus = document.querySelector(".main-status");
+const mainApproval = document.querySelector(".main-approval");
+const mainArchive = document.querySelector(".main-archive");
 
 function studentProfile() {
   mainProfile.style.display = "inline";
