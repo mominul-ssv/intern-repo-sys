@@ -1,16 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
 // color variables
-@import "../colors";
+@import "../collections/colors";
 
 // toggle button
-@import "../button";
+@import "../collections/button";
 
 // input box
-@import "../input";
+@import "../collections/input";
 
 // horizontal line
-@import "../hr";
+@import "../collections/hr";
 
 // login button
 @mixin btn-login($btn-color, $btn-color-hover) {
@@ -43,7 +41,7 @@ $radius: 0.3rem;
 
 html,
 body {
-  font-family: "Open Sans", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: 'Trebuchet MS';
   font-weight: 900;
   letter-spacing: 0.05rem;
   background-color: aliceblue;

@@ -1,0 +1,40 @@
+@import ".../../colors";
+
+@mixin input() {
+  border: 2.5px solid $grey-400;
+  border-radius: $radius;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 1rem;
+  color: inherit;
+  text-align: left;
+  outline: none;
+  background: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.8rem;
+
+  &:hover {
+    border-color: $grey-700;
+  }
+}
+
+@mixin label() {
+  position: relative;
+  left: 0.8rem;
+  top: -2.15rem;
+  cursor: text;
+  transition: 0.3s;
+}
+
+@mixin input-autocomplete-animation() {
+  input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  select:-webkit-autofill {
+    box-shadow: inset;
+    text-align: center;
+    -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+    -webkit-input-placeholder: 0 0 0 1000px #ffffff inset !important;
+    -webkit-text-fill-color: $grey-700 !important;
+  }
+}

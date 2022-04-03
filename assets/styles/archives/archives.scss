@@ -1,16 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
 // color variables
-@import "../colors";
+@import "../collections/colors";
 
 // button
-@import "../button";
+@import "../collections/button";
 
 // toggle button
-@import "../hover";
+@import "../collections/hover";
 
 // horizontal line
-@import "../hr";
+@import "../collections/hr";
 
 // border radius
 $radius: 0.3rem;
@@ -28,7 +26,7 @@ $radius: 0.3rem;
 
 html,
 body {
-  font-family: "Open Sans", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: 'Trebuchet MS';
   font-weight: 900;
   letter-spacing: 0.05rem;
   background-color: $white;

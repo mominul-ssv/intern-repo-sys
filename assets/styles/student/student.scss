@@ -1,22 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
-
 // color variables
-@import "../colors";
+@import "../collections/colors";
 
 // button
-@import "../button";
+@import "../collections/button";
 
 // toggle button
-@import "../hover";
+@import "../collections/hover";
 
 // horizontal line
-@import "../hr";
+@import "../collections/hr";
 
 // popup
-@import "../popup";
+@import "../collections/popup";
 
 // input box
-@import "../input";
+@import "../collections/input";
 
 // border radius
 $radius: 0.3rem;
@@ -34,7 +32,7 @@ $radius: 0.3rem;
 
 html,
 body {
-  font-family: "Open Sans", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: 'Trebuchet MS';
   font-weight: 900;
   letter-spacing: 0.05rem;
   background-color: $white;
@@ -267,7 +265,7 @@ td {
 
   .card__input:focus ~ .card__label,
   .card__input:not(:placeholder-shown).card__input:not(:focus) ~ .card__label {
-    top: -3.88rem;
+    top: -3.65rem;
     left: 0.8rem;
     padding: 5px;
     font-size: 0.8rem;
@@ -285,7 +283,7 @@ td {
 }
 
 #description-label {
-  top: -8.2rem;
+  top: -7.3rem;
   background-color: $white;
   padding: 0.1rem 0.25rem 0.1rem 0.25rem;
   border: 2.5px solid $grey-400;
@@ -410,7 +408,7 @@ td {
     border: 2px solid $purple-100;
   }
 
-  &__title {
+  &__name {
     font-size: 1.5rem;
   }
 
@@ -478,7 +476,7 @@ td {
     padding: 0.3rem;
   }
 
-  &__apply {
+  &__delete {
     @include btn-design($pink-700, $pink-500);
     margin: 0.5rem;
     text-align: center;
@@ -505,8 +503,7 @@ td {
   &__add {
     @include btn-design($green-700, $green-500);
     font-size: 1.8rem;
-    border-radius: 50%;
-    padding: 0.2rem 0.9rem 0.2rem 0.9rem;
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
   }
 }
 
@@ -520,6 +517,7 @@ td {
   &__text {
     text-align: center;
     padding: 0.5rem;
+    margin-bottom: 0.5rem;
     background-color: $purple-100;
     border-radius: $radius;
     text-transform: uppercase;

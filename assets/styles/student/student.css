@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 /* Red */
 /* Pink */
 /* Purple */
@@ -46,7 +45,7 @@
 
 html,
 body {
-  font-family: "Open Sans", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: 'Trebuchet MS';
   font-weight: 900;
   letter-spacing: 0.05rem;
   background-color: #ffffff;
@@ -497,7 +496,7 @@ td {
 .card__label {
   position: relative;
   left: 0.8rem;
-  top: -2.32rem;
+  top: -2.15rem;
   cursor: text;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -517,7 +516,7 @@ td {
 
 .card .card__input:focus ~ .card__label,
 .card .card__input:not(:placeholder-shown).card__input:not(:focus) ~ .card__label {
-  top: -3.88rem;
+  top: -3.65rem;
   left: 0.8rem;
   padding: 5px;
   font-size: 0.8rem;
@@ -550,7 +549,7 @@ td {
 }
 
 #description-label {
-  top: -8.2rem;
+  top: -7.3rem;
   background-color: #ffffff;
   padding: 0.1rem 0.25rem 0.1rem 0.25rem;
   border: 2.5px solid #bdbdbd;
@@ -732,7 +731,7 @@ select:-webkit-autofill {
   border: 2px solid #e1bee7;
 }
 
-.job-short__title {
+.job-short__name {
   font-size: 1.5rem;
 }
 
@@ -831,7 +830,7 @@ select:-webkit-autofill {
   padding: 0.3rem;
 }
 
-.job__apply {
+.job__delete {
   padding: 0.8rem;
   background-color: #c2185b;
   color: white;
@@ -851,7 +850,7 @@ select:-webkit-autofill {
   font-size: large;
 }
 
-.job__apply:hover {
+.job__delete:hover {
   background-color: #e91e63;
 }
 
@@ -895,8 +894,7 @@ select:-webkit-autofill {
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
   font-size: 1.8rem;
-  border-radius: 50%;
-  padding: 0.2rem 0.9rem 0.2rem 0.9rem;
+  padding: 0.3rem 0.8rem 0.3rem 0.8rem;
 }
 
 .archive__add:hover {
@@ -916,6 +914,7 @@ select:-webkit-autofill {
 .archive-history__text {
   text-align: center;
   padding: 0.5rem;
+  margin-bottom: 0.5rem;
   background-color: #e1bee7;
   border-radius: 0.3rem;
   text-transform: uppercase;
