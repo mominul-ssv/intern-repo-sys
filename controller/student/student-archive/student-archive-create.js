@@ -1,6 +1,6 @@
-document.getElementById("archive-btn").addEventListener("click", archiveStudentCreate);
+document.getElementById("archive-create-submit-btn").addEventListener("click", studentArchiveCreate);
 
-function archiveStudentCreate(e) {
+function studentArchiveCreate(e) {
 
   e.preventDefault();
 
@@ -38,8 +38,8 @@ function archiveStudentCreate(e) {
     // Handle response
     xhr.onload = function () {
       if (xhr.status === 200) {
-        const obj = JSON.parse(xhr.response);
-        document.getElementById("popup-archive").classList.toggle("active");
+        document.getElementById("popup-archive-create").classList.toggle("active");
+        window.location.replace("../../student/main/student-archive.php");
       } else {
         console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
       }

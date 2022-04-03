@@ -1,6 +1,11 @@
-function togglePopupUpdate() {
-  document.getElementById("popup-update").classList.toggle("active");
+function togglePopupProfileUpdate() {
+  document.getElementById("popup-profile-update").classList.toggle("active");
 }
-function togglePopupArchive() {
-  document.getElementById("popup-archive").classList.toggle("active");
+function togglePopupArchiveCreate() {
+  document.getElementById("popup-archive-create").classList.toggle("active");
 }
+
+function togglePopupArchiveUpdate() {
+  document.getElementById("popup-archive-update").classList.toggle("active");
+}
+

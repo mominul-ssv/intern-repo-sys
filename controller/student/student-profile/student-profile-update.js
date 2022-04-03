@@ -1,6 +1,6 @@
-document.getElementById("update-btn").addEventListener("click", updateStudent);
+document.getElementById("profile-update-submit-btn").addEventListener("click", studentProfileUpdate);
 
-function updateStudent(e) {
+function studentProfileUpdate(e) {
 
   e.preventDefault();
 
@@ -45,7 +45,7 @@ function updateStudent(e) {
         document.getElementById("country-td").innerText = obj.country;
         document.getElementById("address-td").innerText = obj.address;
         document.getElementById("university-name-td").innerText = obj.university_name;
-        document.getElementById("popup-update").classList.toggle("active");
+        document.getElementById("popup-profile-update").classList.toggle("active");
       } else {
         console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
       }

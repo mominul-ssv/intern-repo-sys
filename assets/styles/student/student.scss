@@ -216,7 +216,7 @@ td {
 }
 
 .profile-update-btn {
-  @include btn-design($deep-orange-400, $deep-orange-800);
+  @include btn-design($cyan-700, $cyan-500);
   width: 100%;
   padding: 0.8rem;
   border-radius: $radius;
@@ -225,10 +225,11 @@ td {
 }
 
 @include popup();
+
 .popup {
   & .popup__update-text {
     @include hover-content();
-    background-color: $deep-orange-400;
+    background-color: $cyan-900;
     color: $white;
   }
 }
@@ -238,7 +239,7 @@ td {
 }
 
 .popup__submit-btn {
-  @include btn-design($teal-600, $teal-400);
+  @include btn-design($cyan-500, $cyan-700);
   width: 100%;
 }
 
@@ -278,8 +279,12 @@ td {
   }
 }
 
-#archive-btn {
-  margin-top: 4.5rem;
+#archive-create-submit-btn {
+  margin-top: 3.5rem;
+}
+
+#archive-update-submit-btn {
+  margin-top: 3.5rem;
 }
 
 #description-label {
@@ -337,155 +342,6 @@ td {
 
 .grid-item-student-id {
   grid-area: sid;
-}
-
-// ------------------------------------------- apply ------------------------------------------- //
-.main-apply {
-  display: grid;
-  grid-template-areas:
-    "search"
-    "content";
-
-  &__search {
-    grid-area: search;
-    @include container-style();
-    @include hover-content();
-    border: 0.15rem solid $purple-400;
-    background-color: $purple-100;
-  }
-
-  &__search:hover {
-    @include hover-state();
-    transform: scale(1.005);
-  }
-
-  &__content {
-    grid-area: content;
-    @include container-style();
-    @include hover-content();
-    color: $grey-700;
-  }
-
-  &__content:hover {
-    @include hover-state();
-  }
-}
-
-// --------------- search --------------- //
-.search {
-  display: flex;
-
-  &__icon {
-    font-family: none;
-    font-size: 20px;
-    padding: 0.2rem;
-    margin-right: 0.2rem;
-    color: $purple-500;
-  }
-
-  &__box {
-    flex: 1;
-    width: 0;
-    border: none;
-    border-radius: 2rem;
-    border: 0.1rem solid $purple-400;
-    outline: none;
-    font-family: inherit;
-    font-weight: inherit;
-    padding-left: 0.8rem;
-  }
-}
-
-// --------------- job --------------- //
-.job-short {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-
-  &__left {
-    width: 80%;
-    @include container-style();
-    border: 2px solid $purple-100;
-  }
-
-  &__name {
-    font-size: 1.5rem;
-  }
-
-  &__company {
-    font-size: 1rem;
-  }
-
-  &__company span {
-    margin-right: 0.2rem;
-  }
-
-  &__city {
-    font-size: 0.8rem;
-  }
-
-  &__city span {
-    margin-right: 0.1rem;
-  }
-
-  &__country {
-    font-size: 0.8rem;
-  }
-
-  &__country span {
-    margin-right: 0.2rem;
-  }
-
-  &__right {
-    width: 20%;
-    @include btn-design($lime-500, $lime-300);
-    font-size: 2rem;
-    padding: 0;
-    margin: 0.5rem;
-  }
-}
-
-.job {
-  display: none;
-  flex-direction: column;
-
-  &__group {
-    padding: 0.3rem;
-    margin: 0.2rem 0.5rem 0rem 0.5rem;
-    border: 0.1rem solid $purple-100;
-    border-radius: $radius;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "text data";
-    gap: 1rem;
-    font-size: 0.9rem;
-    white-space: pre-line;
-  }
-
-  &__card-text {
-    grid-area: text;
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    border-radius: $radius;
-    padding: 0.3rem;
-  }
-  &__card-data {
-    grid-area: data;
-    border-radius: $radius;
-    padding: 0.3rem;
-  }
-
-  &__delete {
-    @include btn-design($pink-700, $pink-500);
-    margin: 0.5rem;
-    text-align: center;
-    font-size: large;
-  }
-
-  #title {
-    font-size: 1.3rem;
-  }
 }
 
 // ------------------------------------------- archive ------------------------------------------- //
@@ -576,6 +432,28 @@ td {
 
 .grid-item-work-description {
   grid-area: wDescription;
+}
+
+.archive-box {
+  border: 2.5px solid $purple-600;
+  border-radius: $radius;
+  padding: 1rem;
+  margin: 0.5rem 0 0.5rem 0;
+  background-color: $purple-100;
+  &__id {
+    margin-bottom: 0.3rem;
+    background-color: white;
+    text-align: center;
+  }
+  &__details {
+    background-color: white;
+  }
+  &__update {
+    @include btn-design($cyan-700, $cyan-500);
+  }
+  &__delete {
+    @include btn-design($red-700, $red-500);
+  }
 }
 
 // ============================================= main ============================================= //
