@@ -19,4 +19,4 @@ try {
 }
 
 // Returning JSON format data as response to ajax call
-echo json_encode($student_archive);
+echo "Success!";
