@@ -2,7 +2,7 @@
 
   <!-- student profile -->
   <div class="card__profile">
-    <img class="card__profile-img" src="../../../assets/img/student.png" alt="">
+    <img class="card__profile-img" src="../../assets/img/student.png" alt="student-img">
     <h2 class="card__profile-text">Student Login</h2>
   </div>
 
@@ -31,7 +31,7 @@
   <!-- student register now -->
   <div class="card__register-block">
     <span>Not Registered?</span>
-    <a class="card__register-now-student" href="../../registration/reg-student.php">Register Now!</a>
+    <a class="card__register-now-student" href="../registration/reg-student.php">Register Now!</a>
   </div>
 
 </div>

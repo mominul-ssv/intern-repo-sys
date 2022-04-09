@@ -24,7 +24,8 @@
   left: 0.8rem;
   top: -2.15rem;
   cursor: text;
-  transition: 0.3s;
+  transition: 0.2s;
+  color: $grey-600;
 }
 
 @mixin input-autocomplete-animation() {

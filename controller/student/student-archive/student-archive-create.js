@@ -39,7 +39,7 @@ function studentArchiveCreate(e) {
     xhr.onload = function () {
       if (xhr.status === 200) {
         document.getElementById("popup-archive-create").classList.toggle("active");
-        window.location.replace("../../student/main/student-archive.php");
+        window.location.replace("../../student/student-archive.php");
       } else {
         console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
       }

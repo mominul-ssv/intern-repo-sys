@@ -2,7 +2,7 @@
 
   <!-- faculty profile -->
   <div class="card__profile">
-    <img class="card__profile-img" src="../../../assets/img/faculty.png" alt="">
+    <img class="card__profile-img" src="../../assets/img/faculty.png" alt="faculty-img">
     <h2 class="card__profile-text">Faculty Login</h2>
   </div>
 
@@ -33,7 +33,7 @@
   <!-- faculty register now -->
   <div class="card__register-block">
     <span>Not Registered?</span>
-    <a class="card__register-now-faculty" href="../../registration/reg-faculty.php">Register Now!</a>
+    <a class="card__register-now-faculty" href="../registration/reg-faculty.php">Register Now!</a>
   </div>
 
 </div>

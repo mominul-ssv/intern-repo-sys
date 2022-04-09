@@ -267,8 +267,9 @@ body {
   left: 0.8rem;
   top: -2.15rem;
   cursor: text;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #757575;
 }
 
 .card__email-error {
@@ -285,7 +286,7 @@ body {
 
 .card .card__input:focus ~ .card__label,
 .card .card__input:not(:placeholder-shown).card__input:not(:focus) ~ .card__label {
-  top: -3.88rem;
+  top: -3.65rem;
   left: 0.8rem;
   padding: 5px;
   font-size: 0.8rem;

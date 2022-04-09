@@ -2,7 +2,7 @@
 
   <!-- employer profile -->
   <div class="card__profile">
-    <img class="card__profile-img" src="../../../assets/img/employer.png" alt="">
+    <img class="card__profile-img" src="../../assets/img/employer.png" alt="employer-img">
     <h2 class="card__profile-text">employer Login</h2>
   </div>
 
@@ -34,7 +34,7 @@
   <div class="card__register-block">
     <form action="post" action="../registration/reg-student.php">
       <span>Not Registered?</span>
-      <a class="card__register-now-employer" href="../../registration/reg-employer.php">Register Now!</a>
+      <a class="card__register-now-employer" href="../registration/reg-employer.php">Register Now!</a>
     </form>
   </div>
 

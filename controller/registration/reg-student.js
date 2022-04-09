@@ -43,7 +43,7 @@ function registerStudent(e) {
       xhr.onload = function () {
         if (xhr.status === 200) {
           if (xhr.response === '1') {
-            window.location.replace("../login/main/login.php");
+            window.location.replace("../login/login.php");
           } else {
             console.log("Error occurred!" + "\nxhr.response: " + xhr.response + "\nxhr.status: " + xhr.status);
           }

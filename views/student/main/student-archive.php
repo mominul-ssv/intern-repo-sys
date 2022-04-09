@@ -1,4 +1,4 @@
-<?php include "../header/student-header.php" ?>
+<?php include "../includes/student-header.php" ?>
 
 <body>
 
@@ -10,11 +10,11 @@
   <div class="container">
 
     <!-- Navbar -->
-    <?php include "../nav/student-nav.php" ?>
+    <?php include "../includes/student-nav.php" ?>
     <!-- /Navbar -->
 
     <!-- Sidebar -->
-    <?php include "../sidebar/student-sidebar.php" ?>
+    <?php include "../includes/student-sidebar.php" ?>
     <!-- /Sidebar -->
 
     <!-- Main -->
@@ -349,7 +349,7 @@
     <!-- /Main -->
 
     <!-- Footer -->
-    <?php include "../footer/student-footer.php" ?>
+    <?php include "../includes/student-footer.php" ?>
     <!-- /Footer -->
 
     <!-- Scripts -->

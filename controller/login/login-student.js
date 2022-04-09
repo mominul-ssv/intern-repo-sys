@@ -17,7 +17,7 @@ function loginStudent(e) {
     const xhr = new XMLHttpRequest();
 
     // Initialize ("true" means asynchronous request)
-    xhr.open("POST", "../../../model/login/student-login.php", true);
+    xhr.open("POST", "../../model/login/student-login.php", true);
 
     // Set request header
     xhr.setRequestHeader("Content-Type", "application/json");
@@ -29,7 +29,8 @@ function loginStudent(e) {
         const obj = JSON.parse(xhr.response);
 
         if (obj.id !== '') {
-          window.location.replace("../../student/main/student-profile.php");
+          // console.log(xhr.response);
+          window.location.replace("../student/main/student-profile.php");
         } else {
           // Response handling code
           loginError.style.display = "inline";

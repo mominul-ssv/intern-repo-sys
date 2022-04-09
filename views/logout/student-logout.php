@@ -6,4 +6,4 @@ if (isset($_SESSION['student_archive_array'])) {
   unset($_SESSION['student_archive_array']);
 }
 
-header("Location: ../login/main/login.php");
+header("Location: ../login/login.php");
