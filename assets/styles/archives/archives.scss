@@ -42,6 +42,33 @@ a {
   text-decoration: none;
 }
 
+table {
+  border-radius: $radius;
+  padding: 0.5rem;
+  width: 100%;
+  font-weight: 900;
+  font-size: medium;
+  @include hover-content();
+}
+
+table:hover {
+  @include hover-state();
+}
+
+th {
+  color: $white;
+  background-color: $teal-800;
+  text-transform: uppercase;
+  border-radius: $radius;
+}
+
+td {
+  color: $teal-600;
+  border: 0.15rem solid $teal-600;
+  border-radius: $radius;
+  padding: 0.7rem;
+}
+
 // ============================================= container ============================================= //
 .container {
   display: grid;
@@ -218,6 +245,28 @@ a {
   }
 }
 // ============================================= search ============================================= //
+
+// ============================================= archive ============================================= //
+
+.archive-box {
+  border: 2.5px solid $teal-600;
+  border-radius: $radius;
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: $teal-100;
+
+  &__id {
+    margin-bottom: 0.3rem;
+    background-color: white;
+    text-align: center;
+  }
+
+  &__details {
+    background-color: white;
+  }
+}
+
+// ============================================= archive ============================================= //
 
 // ============================================= footer ============================================= //
 .footer {
