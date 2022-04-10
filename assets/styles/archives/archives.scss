@@ -46,7 +46,6 @@ table {
   border-radius: $radius;
   padding: 0.5rem;
   width: 100%;
-  font-weight: 900;
   font-size: medium;
   @include hover-content();
 }
@@ -66,7 +65,7 @@ td {
   color: $teal-600;
   border: 0.15rem solid $teal-600;
   border-radius: $radius;
-  padding: 0.7rem;
+  padding: 0.4rem;
 }
 
 // ============================================= container ============================================= //
@@ -186,7 +185,6 @@ td {
     @include btn-design($teal-800, $teal-600);
     padding: 0.5rem;
     width: 100%;
-    margin: 0.2rem;
     display: flex;
     justify-content: space-between;
   }
@@ -249,16 +247,13 @@ td {
 // ============================================= archive ============================================= //
 
 .archive-box {
-  border: 2.5px solid $teal-600;
   border-radius: $radius;
   padding: 1rem;
   margin: 0.5rem;
   background-color: $teal-100;
 
-  &__id {
-    margin-bottom: 0.3rem;
+  &__logo {
     background-color: white;
-    text-align: center;
   }
 
   &__details {

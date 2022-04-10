@@ -32,11 +32,7 @@ try {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" type="text/css" href="../../assets/styles/archives/archives.css">
 
     <title>Internship Repository</title>
@@ -83,7 +79,7 @@ try {
           <div class="sidebar__filter">
             <button class="sidebar__filter-btn">
               <span>Filter By</span>
-              <span><i class="fa-solid fa-plus"></i></span>
+              <span><i class="bi bi-plus-circle-dotted"></i></span>
             </button>
           </div>
 
@@ -99,7 +95,7 @@ try {
 
           <div class="main__search">
             <div class="search">
-              <span class="search__icon"><i class="fa fa-search" aria-hidden="true"></i></span>
+              <span class="search__icon"><i class="bi bi-search"></i></span>
               <input class="search__box" type="text" name="">
             </div>
           </div>
@@ -111,26 +107,36 @@ try {
 
             <div class="archive-box">
 
-              <table class="archive-box__id">
+              <table class="archive-box__details">
+
                 <?php foreach ($students as $student_cell) {  ?>
                 <?php if ($archive_cell['student_reg_id'] == $student_cell['id']) { ?>
                 <tr>
-                  <td>Name</td>
+                  <td>
+                    <i class="bi bi-journal-bookmark" style="font-size: 2rem; display:flex; align-items:center"></i>
+                  </td>
+                  <td>
+                    <span style=" display:flex; justify-content: center; font-size: large">
+                      <?php echo "Archive ID #" . $archive_cell['archive_id'] ?>
+                    </span>
+                  </td>
+                </tr>
+
+                <tr>
+                  <th>Name</th>
                   <td><?php echo $student_cell['first_name'] . " " . $student_cell['last_name'] ?></td>
                 </tr>
                 <tr>
-                  <td>Country</td>
+                  <th>Country</th>
                   <td><?php echo $student_cell['country'] ?></td>
                 </tr>
                 <tr>
-                  <td>University Name</td>
+                  <th>University Name</th>
                   <td><?php echo $student_cell['university_name'] ?></td>
                 </tr>
                 <?php } ?>
                 <?php } ?>
-              </table>
 
-              <table class="archive-box__details">
                 <tr>
                   <th>Company Name</th>
                   <td id="company-name"><?php echo $archive_cell['company_name'] ?></td>

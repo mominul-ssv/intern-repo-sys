@@ -45,7 +45,6 @@ table {
   border-radius: 0.3rem;
   padding: 0.5rem;
   width: 100%;
-  font-weight: 900;
   font-size: medium;
   -webkit-box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
@@ -69,7 +68,7 @@ td {
   color: #00897b;
   border: 0.15rem solid #00897b;
   border-radius: 0.3rem;
-  padding: 0.7rem;
+  padding: 0.4rem;
 }
 
 .container {
@@ -285,7 +284,6 @@ td {
   transition: background-color 200ms linear;
   padding: 0.5rem;
   width: 100%;
-  margin: 0.2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,17 +362,14 @@ td {
 }
 
 .archive-box {
-  border: 2.5px solid #00897b;
   border-radius: 0.3rem;
   padding: 1rem;
   margin: 0.5rem;
   background-color: #b2dfdb;
 }
 
-.archive-box__id {
-  margin-bottom: 0.3rem;
+.archive-box__logo {
   background-color: white;
-  text-align: center;
 }
 
 .archive-box__details {
