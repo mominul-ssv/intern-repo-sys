@@ -27,7 +27,8 @@
         <div class="login-error" style="display: none;">
           <div class='card' id='error'>
             <span id="error-text"></span>
-            <button id="error-close-btn"><i class='bi bi-x-circle'></i></button>
+            <button id="error-close-btn"><img id="error-close-btn-icon" src="../../assets/img/x-circle.svg"
+                   alt="X"></button>
           </div>
         </div>
 

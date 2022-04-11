@@ -105,6 +105,11 @@ body {
   padding: 0.4rem;
 }
 
+#error-text {
+  font-size: 0.9rem;
+  padding-left: 1rem;
+}
+
 #error-close-btn {
   padding: 0.8rem;
   background-color: #ef5350;
@@ -121,12 +126,25 @@ body {
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
   font-family: none;
-  font-size: 1.3rem;
   padding: 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #error-close-btn:hover {
   background-color: #ef5350;
+}
+
+#error-close-btn-icon {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .card {

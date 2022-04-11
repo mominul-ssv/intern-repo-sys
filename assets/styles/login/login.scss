@@ -88,11 +88,23 @@ body {
   padding: 0.4rem;
 }
 
+#error-text {
+  font-size: 0.9rem;
+  padding-left: 1rem;
+}
+
 #error-close-btn {
   @include btn-design($red-400, $red-400);
   font-family: none;
-  font-size: 1.3rem;
   padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#error-close-btn-icon {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 
 .card {
