@@ -358,7 +358,9 @@ td {
   outline: none;
   font-family: inherit;
   font-weight: inherit;
+  font-size: 1rem;
   padding-left: 0.8rem;
+  color: #00695c;
 }
 
 .archive-box {
