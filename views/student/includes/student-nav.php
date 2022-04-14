@@ -2,7 +2,7 @@
 
   <nav class="nav">
 
-    <a href="../main/student-profile.php" class="nav__branding">Student Dashboard</a>
+    <a href="student-profile.php" class="nav__branding">Student Dashboard</a>
 
     <ul class="nav__menu">
       <li class="nav__item">

@@ -446,6 +446,7 @@ td {
 }
 
 .popup__submit {
+  margin-top: 3.5rem;
   width: 100%;
 }
 
@@ -480,7 +481,7 @@ td {
 }
 
 .card__input {
-  border: 2.5px solid #bdbdbd;
+  border: 0.1rem solid #bdbdbd;
   border-radius: 0.2rem;
   font-family: inherit;
   font-weight: inherit;
@@ -507,6 +508,7 @@ td {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   color: #757575;
+  pointer-events: none;
 }
 
 .card__email-error {
@@ -531,7 +533,7 @@ td {
 }
 
 .card__description {
-  border: 2.5px solid #bdbdbd;
+  border: 0.1rem solid #bdbdbd;
   border-radius: 0.2rem;
   font-family: inherit;
   font-weight: inherit;
@@ -544,26 +546,18 @@ td {
           box-sizing: border-box;
   width: 100%;
   padding: 0.8rem;
-  margin-top: 0.3rem;
+  width: 100%;
 }
 
 .card__description:hover {
   border-color: #616161;
 }
 
-#archive-create-submit-btn {
-  margin-top: 3.5rem;
-}
-
-#archive-update-submit-btn {
-  margin-top: 3.5rem;
-}
-
 #description-label {
   top: -7.3rem;
   background-color: #ffffff;
   padding: 0.1rem 0.25rem 0.1rem 0.25rem;
-  border: 2.5px solid #bdbdbd;
+  border: 0.1rem solid #bdbdbd;
   border-radius: 0.2rem;
 }
 

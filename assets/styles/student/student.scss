@@ -239,6 +239,7 @@ td {
 }
 
 .popup__submit {
+  margin-top: 3.5rem;
   width: 100%;
 }
 
@@ -279,23 +280,15 @@ td {
 
   &__description {
     @include input();
-    margin-top: 0.3rem;
+    width: 100%;
   }
-}
-
-#archive-create-submit-btn {
-  margin-top: 3.5rem;
-}
-
-#archive-update-submit-btn {
-  margin-top: 3.5rem;
 }
 
 #description-label {
   top: -7.3rem;
   background-color: $white;
   padding: 0.1rem 0.25rem 0.1rem 0.25rem;
-  border: 2.5px solid $grey-400;
+  border: 0.1rem solid $grey-400;
   border-radius: $radius;
 }
 

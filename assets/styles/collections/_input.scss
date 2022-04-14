@@ -1,7 +1,7 @@
 @import ".../../colors";
 
 @mixin input() {
-  border: 2.5px solid $grey-400;
+  border: 0.1rem solid $grey-400;
   border-radius: $radius;
   font-family: inherit;
   font-weight: inherit;
@@ -26,6 +26,7 @@
   cursor: text;
   transition: 0.2s;
   color: $grey-600;
+  pointer-events: none;
 }
 
 @mixin input-autocomplete-animation() {
