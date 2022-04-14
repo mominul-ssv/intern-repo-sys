@@ -220,7 +220,7 @@ td {
 }
 
 .profile-update-btn {
-  @include btn-design($cyan-700, $cyan-500);
+  @include btn-design($deep-orange-700, $deep-orange-500);
   width: 100%;
   padding: 0.8rem;
   border-radius: $radius;
@@ -238,80 +238,13 @@ td {
   }
 
   &__submit {
-    margin-top: 3.5rem;
     width: 100%;
   }
 
   &__submit-btn {
-    @include btn-design($cyan-500, $cyan-700);
+    @include btn-design($deep-orange-500, $deep-orange-700);
     width: 100%;
   }
-
-  &__delete-close-btn {
-    width: fit-content;
-    padding: 0 0.5rem 0 0.5rem;
-    background: #222;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 0.2rem;
-    cursor: pointer;
-  }
-
-  &__delete-text {
-    font-size: 1.4rem;
-  }
-
-  &__delete-img {
-    height: 6rem;
-    width: 6rem;
-  }
-
-  &__delete-submit-btn {
-    width: 92%;
-  }
-}
-
-.grid-container-delete {
-  display: grid;
-  gap: 4px;
-  grid-template-areas: "close"
-  "img"
-  "text"
-  "submit";
-}
-
-.grid-item-delete-close-btn {
-  grid-area: close;
-  text-align: right;
-}
-
-.grid-item-delete-img {
-  grid-area: img;
-  text-align: center;
-}
-
-.grid-item-delete-text {
-  grid-area: text;
-  padding: 1.2rem;
-}
-
-.grid-item-delete-submit-btn {
-  grid-area: submit;
-  text-align: center;
-}
-
-#popup__content-delete {
-  height: max-content;
-  width: max-content;
-  overflow: auto;
-  background-color: $teal-100;
-  background-image: linear-gradient(to right, $teal-100, $teal-200);
-}
-
-#archive-delete-submit-btn {
-  @include btn-design($pink-800, $pink-700);
 }
 
 // --------------- user input --------------- //
@@ -343,32 +276,18 @@ td {
     font-size: 0.8rem;
     background-color: rgb(255, 255, 255);
   }
-
-  &__description {
-    @include input();
-    width: 100%;
-  }
-}
-
-#description-label {
-  top: -7.3rem;
-  background-color: $white;
-  padding: 0.1rem 0.25rem 0.1rem 0.25rem;
-  border: 0.1rem solid $grey-400;
-  border-radius: $radius;
 }
 
 @include input-autocomplete-animation();
 
-.grid-container-student {
+.grid-container-faculty {
   display: grid;
   gap: 4px;
   grid-template-areas:
     "fName fName lName lName"
     "email email phone phone"
     "dob dob country country"
-    "address address address address"
-    "university university sid sid";
+    "university university university university";
 }
 
 .grid-item-first-name {
@@ -395,128 +314,12 @@ td {
   grid-area: country;
 }
 
-.grid-item-address {
-  grid-area: address;
-}
-
 .grid-item-university {
   grid-area: university;
 }
 
-.grid-item-student-id {
-  grid-area: sid;
-}
-
 // ------------------------------------------- archive ------------------------------------------- //
-.archive {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.5rem;
-  border: 0.15rem solid $teal-100;
-  border-radius: $radius;
-  &__text {
-    text-transform: uppercase;
-    font-size: 1.3rem;
-  }
-  &__add {
-    @include btn-design($green-700, $green-500);
-    font-size: 1.8rem;
-    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
-  }
-}
 
-.archive-hr {
-  @include horizontal-line($teal-100);
-  margin-left: 0.2rem;
-  margin-right: 0.2rem;
-}
-
-.archive-history {
-  &__text {
-    text-align: center;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    background-color: $teal-100;
-    border-radius: $radius;
-    text-transform: uppercase;
-    font-size: 1rem;
-  }
-}
-
-.grid-container-archive {
-  display: grid;
-  gap: 4px;
-  grid-template-areas:
-    "cName cName cName cName"
-    "cAddress cAddress cAddress cAddress"
-    "cCity cCity cCountry cCountry"
-    "cDepartment cDepartment cPosition cPosition"
-    "rSkills rSkills rSkills rSkills"
-    "sDate sDate eDate eDate"
-    "wDescription wDescription wDescription wDescription";
-}
-
-.grid-item-company-name {
-  grid-area: cName;
-}
-
-.grid-item-company-address {
-  grid-area: cAddress;
-}
-
-.grid-item-company-city {
-  grid-area: cCity;
-}
-
-.grid-item-company-country {
-  grid-area: cCountry;
-}
-
-.grid-item-company-department {
-  grid-area: cDepartment;
-}
-
-.grid-item-company-position {
-  grid-area: cPosition;
-}
-
-.grid-item-required-skills {
-  grid-area: rSkills;
-}
-
-.grid-item-start-date {
-  grid-area: sDate;
-}
-
-.grid-item-end-date {
-  grid-area: eDate;
-}
-
-.grid-item-work-description {
-  grid-area: wDescription;
-}
-
-.archive-box {
-  border-radius: $radius;
-  padding: 1rem;
-  margin: 0.5rem 0 0.5rem 0;
-  background-color: $teal-100;
-  &__id {
-    margin-bottom: 0.3rem;
-    background-color: white;
-    text-align: center;
-  }
-  &__details {
-    background-color: white;
-  }
-  &__update {
-    @include btn-design($cyan-700, $cyan-500);
-  }
-  &__delete {
-    @include btn-design($red-700, $red-500);
-  }
-}
 
 // ============================================= main ============================================= //
 
@@ -640,11 +443,5 @@ td {
   .grid-container-archive {
     display: flex;
     flex-direction: column;
-  }
-
-  #popup__content-delete {
-    height: max-content;
-    width: 90vw;
-    overflow: auto;
   }
 }

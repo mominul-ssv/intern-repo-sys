@@ -167,7 +167,7 @@
                     </div>
 
                     <div class="popup__submit">
-                      <button class="popup__submit-btn" id="profile-update-submit-btn">Update</button>
+                      <button class="popup__submit-btn" id="student-profile-update-submit-btn">Update</button>
                     </div>
 
                   </form>

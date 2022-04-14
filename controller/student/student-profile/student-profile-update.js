@@ -1,4 +1,4 @@
-document.getElementById("profile-update-submit-btn").addEventListener("click", studentProfileUpdate);
+document.getElementById("student-profile-update-submit-btn").addEventListener("click", studentProfileUpdate);
 
 function studentProfileUpdate(e) {
 

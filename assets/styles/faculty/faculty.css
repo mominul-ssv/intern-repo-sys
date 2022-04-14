@@ -342,7 +342,7 @@ td {
 
 .profile-update-btn {
   padding: 0.8rem;
-  background-color: #0097a7;
+  background-color: #e64a19;
   color: white;
   font-family: inherit;
   font-weight: bold;
@@ -363,7 +363,7 @@ td {
 }
 
 .profile-update-btn:hover {
-  background-color: #00bcd4;
+  background-color: #ff5722;
 }
 
 .popup .popup__overlay {
@@ -446,13 +446,12 @@ td {
 }
 
 .popup__submit {
-  margin-top: 3.5rem;
   width: 100%;
 }
 
 .popup__submit-btn {
   padding: 0.8rem;
-  background-color: #00bcd4;
+  background-color: #ff5722;
   color: white;
   font-family: inherit;
   font-weight: bold;
@@ -469,103 +468,7 @@ td {
 }
 
 .popup__submit-btn:hover {
-  background-color: #0097a7;
-}
-
-.popup__delete-close-btn {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0 0.5rem 0 0.5rem;
-  background: #222;
-  color: #fff;
-  font-size: 1.8rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 0.2rem;
-  cursor: pointer;
-}
-
-.popup__delete-text {
-  font-size: 1.4rem;
-}
-
-.popup__delete-img {
-  height: 6rem;
-  width: 6rem;
-}
-
-.popup__delete-submit-btn {
-  width: 92%;
-}
-
-.grid-container-delete {
-  display: -ms-grid;
-  display: grid;
-  gap: 4px;
-      grid-template-areas: "close" "img" "text" "submit";
-}
-
-.grid-item-delete-close-btn {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: close;
-  text-align: right;
-}
-
-.grid-item-delete-img {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: img;
-  text-align: center;
-}
-
-.grid-item-delete-text {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: text;
-  padding: 1.2rem;
-}
-
-.grid-item-delete-submit-btn {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: submit;
-  text-align: center;
-}
-
-#popup__content-delete {
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  overflow: auto;
-  background-color: #b2dfdb;
-  background-image: -webkit-gradient(linear, left top, right top, from(#b2dfdb), to(#80cbc4));
-  background-image: linear-gradient(to right, #b2dfdb, #80cbc4);
-}
-
-#archive-delete-submit-btn {
-  padding: 0.8rem;
-  background-color: #ad1457;
-  color: white;
-  font-family: inherit;
-  font-weight: bold;
-  font-size: small;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  border-radius: 0.2rem;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 200ms linear;
-  transition: background-color 200ms linear;
-}
-
-#archive-delete-submit-btn:hover {
-  background-color: #c2185b;
+  background-color: #e64a19;
 }
 
 .card {
@@ -628,35 +531,6 @@ td {
   background-color: white;
 }
 
-.card__description {
-  border: 0.1rem solid #bdbdbd;
-  border-radius: 0.2rem;
-  font-family: inherit;
-  font-weight: inherit;
-  font-size: 1rem;
-  color: inherit;
-  text-align: left;
-  outline: none;
-  background: none;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 100%;
-  padding: 0.8rem;
-  width: 100%;
-}
-
-.card__description:hover {
-  border-color: #616161;
-}
-
-#description-label {
-  top: -7.3rem;
-  background-color: #ffffff;
-  padding: 0.1rem 0.25rem 0.1rem 0.25rem;
-  border: 0.1rem solid #bdbdbd;
-  border-radius: 0.2rem;
-}
-
 input:-webkit-autofill,
 textarea:-webkit-autofill,
 select:-webkit-autofill {
@@ -668,11 +542,11 @@ select:-webkit-autofill {
   -webkit-text-fill-color: #616161 !important;
 }
 
-.grid-container-student {
+.grid-container-faculty {
   display: -ms-grid;
   display: grid;
   gap: 4px;
-      grid-template-areas: "fName fName lName lName" "email email phone phone" "dob dob country country" "address address address address" "university university sid sid";
+      grid-template-areas: "fName fName lName lName" "email email phone phone" "dob dob country country" "university university university university";
 }
 
 .grid-item-first-name {
@@ -717,224 +591,11 @@ select:-webkit-autofill {
   grid-area: country;
 }
 
-.grid-item-address {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: address;
-}
-
 .grid-item-university {
-  -ms-grid-row: 5;
+  -ms-grid-row: 4;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 4;
   grid-area: university;
-}
-
-.grid-item-student-id {
-  -ms-grid-row: 5;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-area: sid;
-}
-
-.archive {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 0.5rem;
-  border: 0.15rem solid #b2dfdb;
-  border-radius: 0.2rem;
-}
-
-.archive__text {
-  text-transform: uppercase;
-  font-size: 1.3rem;
-}
-
-.archive__add {
-  padding: 0.8rem;
-  background-color: #388e3c;
-  color: white;
-  font-family: inherit;
-  font-weight: bold;
-  font-size: small;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  border-radius: 0.2rem;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 200ms linear;
-  transition: background-color 200ms linear;
-  font-size: 1.8rem;
-  padding: 0.3rem 0.8rem 0.3rem 0.8rem;
-}
-
-.archive__add:hover {
-  background-color: #4caf50;
-}
-
-.archive-hr {
-  margin: 1rem;
-  border: none;
-  height: 3px;
-  border-radius: 0.1rem;
-  background: #b2dfdb;
-  margin-left: 0.2rem;
-  margin-right: 0.2rem;
-}
-
-.archive-history__text {
-  text-align: center;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
-  background-color: #b2dfdb;
-  border-radius: 0.2rem;
-  text-transform: uppercase;
-  font-size: 1rem;
-}
-
-.grid-container-archive {
-  display: -ms-grid;
-  display: grid;
-  gap: 4px;
-      grid-template-areas: "cName cName cName cName" "cAddress cAddress cAddress cAddress" "cCity cCity cCountry cCountry" "cDepartment cDepartment cPosition cPosition" "rSkills rSkills rSkills rSkills" "sDate sDate eDate eDate" "wDescription wDescription wDescription wDescription";
-}
-
-.grid-item-company-name {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: cName;
-}
-
-.grid-item-company-address {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: cAddress;
-}
-
-.grid-item-company-city {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: cCity;
-}
-
-.grid-item-company-country {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-area: cCountry;
-}
-
-.grid-item-company-department {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: cDepartment;
-}
-
-.grid-item-company-position {
-  -ms-grid-row: 4;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-area: cPosition;
-}
-
-.grid-item-required-skills {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: rSkills;
-}
-
-.grid-item-start-date {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: sDate;
-}
-
-.grid-item-end-date {
-  -ms-grid-row: 6;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-area: eDate;
-}
-
-.grid-item-work-description {
-  -ms-grid-row: 7;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 4;
-  grid-area: wDescription;
-}
-
-.archive-box {
-  border-radius: 0.2rem;
-  padding: 1rem;
-  margin: 0.5rem 0 0.5rem 0;
-  background-color: #b2dfdb;
-}
-
-.archive-box__id {
-  margin-bottom: 0.3rem;
-  background-color: white;
-  text-align: center;
-}
-
-.archive-box__details {
-  background-color: white;
-}
-
-.archive-box__update {
-  padding: 0.8rem;
-  background-color: #0097a7;
-  color: white;
-  font-family: inherit;
-  font-weight: bold;
-  font-size: small;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  border-radius: 0.2rem;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 200ms linear;
-  transition: background-color 200ms linear;
-}
-
-.archive-box__update:hover {
-  background-color: #00bcd4;
-}
-
-.archive-box__delete {
-  padding: 0.8rem;
-  background-color: #d32f2f;
-  color: white;
-  font-family: inherit;
-  font-weight: bold;
-  font-size: small;
-  text-transform: uppercase;
-  letter-spacing: 0.05rem;
-  border-radius: 0.2rem;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  -webkit-transition: background-color 200ms linear;
-  transition: background-color 200ms linear;
-}
-
-.archive-box__delete:hover {
-  background-color: #f44336;
 }
 
 .footer {
@@ -1057,13 +718,6 @@ select:-webkit-autofill {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  #popup__content-delete {
-    height: -webkit-max-content;
-    height: -moz-max-content;
-    height: max-content;
-    width: 90vw;
-    overflow: auto;
   }
 }
 /*# sourceMappingURL=faculty.css.map */
