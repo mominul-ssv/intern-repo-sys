@@ -61,6 +61,12 @@ body {
     grid-area: navbar;
     width: 90vw;
     border-bottom: 2px solid $grey-500;
+    margin-top: 0.5rem;
+  }
+
+  &__logo {
+    width: 2rem;
+    height: 2rem;
   }
 
   &__main {
@@ -71,9 +77,12 @@ body {
     display: flex;
     justify-content: center;
     grid-area: footer;
-    font-size: 0.8rem;
     width: 95vw;
     border-top: 2px solid $grey-500;
+  }
+
+  &__footer-text {
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -123,17 +132,12 @@ body {
   }
 
   &__toggle-btn-student {
-    @include btn-design($purple-400, $purple-300);
-    width: 100%;
-  }
-
-  &__toggle-btn-employer {
-    @include btn-design($blue-500, $blue-300);
+    @include btn-design($indigo-600, $indigo-400);
     width: 100%;
   }
 
   &__toggle-btn-faculty {
-    @include btn-design($green-500, $green-300);
+    @include btn-design($teal-600, $teal-400);
     width: 100%;
   }
 
@@ -183,28 +187,20 @@ body {
 
   // =============================== submit button =============================== //
   &__submit-btn-student {
-    @include btn-login($purple-400, $purple-300);
-  }
-
-  &__submit-btn-employer {
-    @include btn-login($blue-500, $blue-300);
+    @include btn-login($indigo-600, $indigo-400);
   }
 
   &__submit-btn-faculty {
-    @include btn-login($green-500, $green-300);
+    @include btn-login($teal-600, $teal-400);
   }
 
   // =============================== forgot password link =============================== //
   &__forgot-password-student {
-    @include link-forgot-password($purple-400);
-  }
-
-  &__forgot-password-employer {
-    @include link-forgot-password($blue-500);
+    @include link-forgot-password($indigo-600);
   }
 
   &__forgot-password-faculty {
-    @include link-forgot-password($green-500);
+    @include link-forgot-password($teal-600);
   }
 
   // =============================== register now link =============================== //
@@ -215,41 +211,29 @@ body {
   }
 
   &__register-now-student {
-    color: $purple-400;
-  }
-
-  &__register-now-employer {
-    color: $blue-500;
+    color: $indigo-600;
   }
 
   &__register-now-faculty {
-    color: $green-500;
+    color: $teal-600;
   }
 
   // =============================== horizontal line =============================== //
   &__hr-student {
-    @include horizontal-line($purple-400);
-  }
-
-  &__hr-employer {
-    @include horizontal-line($blue-500);
+    @include horizontal-line($indigo-600);
   }
 
   &__hr-faculty {
-    @include horizontal-line($green-500);
+    @include horizontal-line($teal-600);
   }
 
   // =============================== registration page =============================== //
   &__student-login-home {
-    @include btn-login-home($purple-400, $purple-300);
-  }
-
-  &__employer-login-home {
-    @include btn-login-home($blue-500, $blue-300);
+    @include btn-login-home($indigo-600, $indigo-400);
   }
 
   &__faculty-login-home {
-    @include btn-login-home($green-500, $green-300);
+    @include btn-login-home($teal-600, $teal-400);
   }
 }
 
@@ -263,18 +247,6 @@ body {
     "dob dob country country"
     "address address address address"
     "university university sid sid"
-    "password password confirm confirm"
-    "register register register register";
-}
-
-.grid-container-employer {
-  display: grid;
-  gap: 4px;
-  grid-template-areas:
-    "fName fName lName lName"
-    "email email phone phone"
-    "dob dob country country"
-    "company company company company"
     "password password confirm confirm"
     "register register register register";
 }
@@ -345,11 +317,6 @@ body {
 
 @media only screen and (max-width: 768px) {
   .grid-container-student {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .grid-container-employer {
     display: flex;
     flex-direction: column;
   }

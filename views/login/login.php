@@ -18,7 +18,8 @@
 
       <!-- Navbar -->
       <div class="box__navbar">
-        <h2 style="cursor: pointer;" onclick="window.location.href='../archive/archive.php'">intern</h2>
+        <a href="../archive/archive.php"><img class="box__logo" src="../../assets/img/archive.png"
+               alt="archive_logo"></a>
       </div>
       <!-- /Navbar -->
 
@@ -47,11 +48,9 @@
       </div>
 
       <!-- Footer -->
-      <footer class="box__footer">
-        <div class="footer">
-          <span>©Team Aurora</span>
-        </div>
-      </footer>
+      <div class="box__footer">
+        <span class="box__footer-text">©Team Aurora</span>
+      </div>
       <!-- /Footer -->
 
     </div>

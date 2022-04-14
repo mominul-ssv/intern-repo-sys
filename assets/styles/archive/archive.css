@@ -59,16 +59,16 @@ table:hover {
 
 th {
   color: #ffffff;
-  background-color: #1565c0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#1e88e5), to(#2196f3));
-  background-image: linear-gradient(to right, #1e88e5, #2196f3);
+  background-color: #37474f;
+  background-image: -webkit-gradient(linear, left top, right top, from(#546e7a), to(#607d8b));
+  background-image: linear-gradient(to right, #546e7a, #607d8b);
   padding: 0 0.2rem 0 0.2rem;
   border-radius: 0.2rem;
 }
 
 td {
-  color: #1e88e5;
-  border: 0.1rem solid #1e88e5;
+  color: #546e7a;
+  border: 0.1rem solid #546e7a;
   border-radius: 0.2rem;
   padding: 0.4rem;
 }
@@ -94,9 +94,9 @@ td {
   border-radius: 0.2rem;
   margin: 0;
   border-radius: 0;
-  background-color: #1976d2;
-  background-image: -webkit-gradient(linear, left top, right top, from(#1e88e5), to(#64b5f6));
-  background-image: linear-gradient(to right, #1e88e5, #64b5f6);
+  background-color: #455a64;
+  background-image: -webkit-gradient(linear, left top, right top, from(#546e7a), to(#90a4ae));
+  background-image: linear-gradient(to right, #546e7a, #90a4ae);
 }
 
 .container__sidebar {
@@ -107,7 +107,7 @@ td {
   padding: 0.5rem;
   border-radius: 0.2rem;
   margin-right: 0;
-  border: 0.15rem solid #bbdefb;
+  border: 0.15rem solid #cfd8dc;
 }
 
 .container__main {
@@ -118,7 +118,7 @@ td {
   margin: 0.5rem;
   padding: 0.5rem;
   border-radius: 0.2rem;
-  border: 0.15rem solid #bbdefb;
+  border: 0.15rem solid #cfd8dc;
 }
 
 .container__footer {
@@ -131,7 +131,7 @@ td {
   border-radius: 0.2rem;
   margin: 0;
   border-radius: 0;
-  background-color: #1976d2;
+  background-color: #455a64;
 }
 
 .nav {
@@ -258,7 +258,7 @@ td {
 
 .sidebar__filter-btn {
   padding: 0.8rem;
-  background-color: #1565c0;
+  background-color: #37474f;
   color: white;
   font-family: inherit;
   font-weight: bold;
@@ -283,12 +283,12 @@ td {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-image: -webkit-gradient(linear, left top, right top, from(#1e88e5), to(#64b5f6));
-  background-image: linear-gradient(to right, #1e88e5, #64b5f6);
+  background-image: -webkit-gradient(linear, left top, right top, from(#546e7a), to(#90a4ae));
+  background-image: linear-gradient(to right, #546e7a, #90a4ae);
 }
 
 .sidebar__filter-btn:hover {
-  background-color: #1e88e5;
+  background-color: #546e7a;
 }
 
 .sidebar__filter-btn:hover {
@@ -313,7 +313,7 @@ td {
           box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  background-color: #90caf9;
+  background-color: #b0bec5;
 }
 
 .main__search:hover {
@@ -358,14 +358,14 @@ td {
   font-weight: inherit;
   font-size: 1rem;
   padding-left: 0.8rem;
-  color: #1565c0;
+  color: #37474f;
 }
 
 .archive-box {
   border-radius: 0.2rem;
   padding: 1rem;
   margin: 0.5rem;
-  background-color: #bbdefb;
+  background-color: #cfd8dc;
 }
 
 .archive-box__logo {
@@ -430,8 +430,8 @@ td {
     text-align: center;
     -webkit-transition: 0.4s;
     transition: 0.4s;
-    background-image: -webkit-gradient(linear, right top, left top, from(#90caf9), to(#bbdefb));
-    background-image: linear-gradient(to left, #90caf9, #bbdefb);
+    background-image: -webkit-gradient(linear, right top, left top, from(#b0bec5), to(#cfd8dc));
+    background-image: linear-gradient(to left, #b0bec5, #cfd8dc);
   }
   .nav__menu.active {
     top: 0;

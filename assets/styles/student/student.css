@@ -62,11 +62,10 @@ a {
 }
 
 table {
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   padding: 0.5rem;
   width: 100%;
-  font-weight: 900;
-  font-size: medium;
+  font-size: 0.9rem;
   -webkit-box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
   -webkit-transition: 0.3s;
@@ -80,16 +79,18 @@ table:hover {
 
 th {
   color: #ffffff;
-  background-color: #6a1b9a;
-  text-transform: uppercase;
-  border-radius: 0.3rem;
+  background-color: #283593;
+  background-image: -webkit-gradient(linear, left top, right top, from(#3949ab), to(#5c6bc0));
+  background-image: linear-gradient(to right, #3949ab, #5c6bc0);
+  padding: 0 0.2rem 0 0.2rem;
+  border-radius: 0.2rem;
 }
 
 td {
-  color: #8e24aa;
-  border: 0.15rem solid #8e24aa;
-  border-radius: 0.3rem;
-  padding: 0.7rem;
+  color: #3949ab;
+  border: 0.1rem solid #3949ab;
+  border-radius: 0.2rem;
+  padding: 0.4rem;
 }
 
 .container {
@@ -110,10 +111,12 @@ td {
   grid-area: nav;
   margin: 0.5rem;
   padding: 0.5rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   margin: 0;
   border-radius: 0;
-  background-color: #7b1fa2;
+  background-color: #303f9f;
+  background-image: -webkit-gradient(linear, left top, right top, from(#3949ab), to(#5c6bc0));
+  background-image: linear-gradient(to right, #3949ab, #5c6bc0);
 }
 
 .container__sidebar {
@@ -122,9 +125,9 @@ td {
   grid-area: sidebar;
   margin: 0.5rem;
   padding: 0.5rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   margin-right: 0;
-  border: 0.15rem solid #ce93d8;
+  border: 0.15rem solid #9fa8da;
 }
 
 .container__main {
@@ -134,8 +137,8 @@ td {
   grid-area: main;
   margin: 0.5rem;
   padding: 0.5rem;
-  border-radius: 0.3rem;
-  border: 0.15rem solid #ce93d8;
+  border-radius: 0.2rem;
+  border: 0.15rem solid #9fa8da;
 }
 
 .container__footer {
@@ -145,10 +148,12 @@ td {
   grid-area: footer;
   margin: 0.5rem;
   padding: 0.5rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   margin: 0;
   border-radius: 0;
-  background-color: #7b1fa2;
+  background-color: #303f9f;
+  background-image: -webkit-gradient(linear, left top, right top, from(#3949ab), to(#5c6bc0));
+  background-image: linear-gradient(to right, #3949ab, #5c6bc0);
 }
 
 .nav {
@@ -183,14 +188,14 @@ td {
 
 .nav__btn-logout {
   padding: 0.8rem;
-  background-color: #b71c1c;
+  background-color: #d32f2f;
   color: white;
   font-family: inherit;
   font-weight: bold;
   font-size: small;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -198,10 +203,11 @@ td {
   transition: background-color 200ms linear;
   padding: 0.6rem;
   font-size: 0.9rem;
+  border-radius: 1rem;
 }
 
 .nav__btn-logout:hover {
-  background-color: #d32f2f;
+  background-color: #f44336;
 }
 
 .nav__hamburger {
@@ -249,14 +255,14 @@ td {
 
 .sidebar__filter-btn {
   padding: 0.8rem;
-  background-color: #ab47bc;
+  background-color: #5c6bc0;
   color: white;
   font-family: inherit;
   font-weight: bold;
   font-size: small;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -284,7 +290,7 @@ td {
   font-size: small;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -331,7 +337,7 @@ td {
   transition: 0.3s;
   margin-top: 0.5rem;
   padding: 0.5rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
 }
 
 .profile-update-btn {
@@ -343,7 +349,7 @@ td {
   font-size: small;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -351,7 +357,7 @@ td {
   transition: background-color 200ms linear;
   width: 100%;
   padding: 0.8rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   font-size: medium;
   text-transform: capitalize;
 }
@@ -376,7 +382,7 @@ td {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #fff;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   padding: 1rem;
   width: 60vw;
   top: 50%;
@@ -406,7 +412,7 @@ td {
 .popup .popup__update-text {
   width: 100%;
   padding: 0.2rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
 }
 
 .popup .popup__close-btn {
@@ -415,7 +421,7 @@ td {
   color: #fff;
   font-size: 1.8rem;
   font-weight: 600;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   cursor: pointer;
 }
 
@@ -452,7 +458,7 @@ td {
   font-size: small;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -475,7 +481,7 @@ td {
 
 .card__input {
   border: 2.5px solid #bdbdbd;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   font-family: inherit;
   font-weight: inherit;
   font-size: 1rem;
@@ -526,7 +532,7 @@ td {
 
 .card__description {
   border: 2.5px solid #bdbdbd;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   font-family: inherit;
   font-weight: inherit;
   font-size: 1rem;
@@ -558,7 +564,7 @@ td {
   background-color: #ffffff;
   padding: 0.1rem 0.25rem 0.1rem 0.25rem;
   border: 2.5px solid #bdbdbd;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
 }
 
 input:-webkit-autofill,
@@ -653,8 +659,8 @@ select:-webkit-autofill {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.5rem;
-  border: 0.15rem solid #e1bee7;
-  border-radius: 0.3rem;
+  border: 0.15rem solid #c5cae9;
+  border-radius: 0.2rem;
 }
 
 .archive__text {
@@ -671,7 +677,7 @@ select:-webkit-autofill {
   font-size: small;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -690,7 +696,7 @@ select:-webkit-autofill {
   border: none;
   height: 3px;
   border-radius: 0.1rem;
-  background: #e1bee7;
+  background: #c5cae9;
   margin-left: 0.2rem;
   margin-right: 0.2rem;
 }
@@ -699,8 +705,8 @@ select:-webkit-autofill {
   text-align: center;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
-  background-color: #e1bee7;
-  border-radius: 0.3rem;
+  background-color: #c5cae9;
+  border-radius: 0.2rem;
   text-transform: uppercase;
   font-size: 1rem;
 }
@@ -783,11 +789,10 @@ select:-webkit-autofill {
 }
 
 .archive-box {
-  border: 2.5px solid #8e24aa;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   padding: 1rem;
   margin: 0.5rem 0 0.5rem 0;
-  background-color: #e1bee7;
+  background-color: #c5cae9;
 }
 
 .archive-box__id {
@@ -809,7 +814,7 @@ select:-webkit-autofill {
   font-size: small;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -830,7 +835,7 @@ select:-webkit-autofill {
   font-size: small;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  border-radius: 0.3rem;
+  border-radius: 0.2rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -915,7 +920,7 @@ select:-webkit-autofill {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: #ab47bc;
+    background-color: #5c6bc0;
     width: 100%;
     text-align: center;
     -webkit-transition: 0.4s;

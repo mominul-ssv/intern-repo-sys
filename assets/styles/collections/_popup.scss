@@ -15,11 +15,9 @@
       position: fixed;
       box-sizing: border-box;
       background: #fff;
-      border-radius: 0.3rem;
+      border-radius: 0.2rem;
       padding: 1rem;
       width: 60vw;
-      // height: max-content;
-      // overflow-y: scroll;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(0);
@@ -38,7 +36,7 @@
     & .popup__update-text {
       width: 100%;
       padding: 0.2rem;
-      border-radius: 0.3rem;
+      border-radius: 0.2rem;
     }
 
     & .popup__close-btn {
@@ -47,7 +45,7 @@
       color: #fff;
       font-size: 1.8rem;
       font-weight: 600;
-      border-radius: 0.3rem;
+      border-radius: 0.2rem;
       cursor: pointer;
     }
 

@@ -56,15 +56,15 @@ table:hover {
 
 th {
   color: $white;
-  background-color: $blue-800;
-  background-image: linear-gradient(to right, $blue-600, $blue-500);
+  background-color: $blue-grey-800;
+  background-image: linear-gradient(to right, $blue-grey-600, $blue-grey-500);
   padding: 0 0.2rem 0 0.2rem;
   border-radius: $radius;
 }
 
 td {
-  color: $blue-600;
-  border: 0.1rem solid $blue-600;
+  color: $blue-grey-600;
+  border: 0.1rem solid $blue-grey-600;
   border-radius: $radius;
   padding: 0.4rem;
 }
@@ -85,21 +85,21 @@ td {
     @include container-style();
     margin: 0;
     border-radius: 0;
-    background-color: $blue-700;
-    background-image: linear-gradient(to right, $blue-600, $blue-300);
+    background-color: $blue-grey-700;
+    background-image: linear-gradient(to right, $blue-grey-600, $blue-grey-300);
   }
 
   &__sidebar {
     grid-area: sidebar;
     @include container-style();
     margin-right: 0;
-    border: 0.15rem solid $blue-100;
+    border: 0.15rem solid $blue-grey-100;
   }
 
   &__main {
     grid-area: main;
     @include container-style();
-    border: 0.15rem solid $blue-100;
+    border: 0.15rem solid $blue-grey-100;
   }
 
   &__footer {
@@ -107,7 +107,7 @@ td {
     @include container-style();
     margin: 0;
     border-radius: 0;
-    background-color: $blue-700;
+    background-color: $blue-grey-700;
   }
 }
 // ============================================= container ============================================= //
@@ -177,13 +177,13 @@ td {
   }
 
   &__filter-btn {
-    @include btn-design($blue-800, $blue-600);
+    @include btn-design($blue-grey-800, $blue-grey-600);
     @include hover-content();    
     padding: 0.5rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    background-image: linear-gradient(to right, $blue-600, $blue-300);
+    background-image: linear-gradient(to right, $blue-grey-600, $blue-grey-300);
   }
 
   &__filter-btn:hover {
@@ -203,7 +203,7 @@ td {
     grid-area: search;
     @include container-style();
     @include hover-content();
-    background-color: $blue-200;
+    background-color: $blue-grey-200;
   }
 
   &__search:hover {
@@ -240,7 +240,7 @@ td {
     font-weight: inherit;
     font-size: 1rem;
     padding-left: 0.8rem;
-    color: $blue-800;
+    color: $blue-grey-800;
   }
 }
 // ============================================= search ============================================= //
@@ -251,7 +251,7 @@ td {
   border-radius: $radius;
   padding: 1rem;
   margin: 0.5rem;
-  background-color: $blue-100;
+  background-color: $blue-grey-100;
 
   &__logo {
     background-color: white;
@@ -320,7 +320,7 @@ td {
       width: 100%;
       text-align: center;
       transition: 0.4s;
-      background-image: linear-gradient(to left, $blue-200, $blue-100);
+      background-image: linear-gradient(to left, $blue-grey-200, $blue-grey-100);
     }
 
     &__menu.active {

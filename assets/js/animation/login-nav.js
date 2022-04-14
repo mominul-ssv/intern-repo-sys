@@ -6,7 +6,6 @@ function navStudent() {
   facultyLoginNav.style.display = "none";
 }
 
-
 function navFaculty() {
   studentLoginNav.style.display = "none";
   facultyLoginNav.style.display = "inline";
