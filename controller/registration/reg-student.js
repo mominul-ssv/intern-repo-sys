@@ -1,4 +1,8 @@
 document.getElementById("register-btn").addEventListener("click", registerStudent);
+document.getElementById("error-close-btn").addEventListener("click", closeError);
+
+const registrationError = document.querySelector(".registration-error");
+const errorText = document.querySelector("#error-text");
 
 function registerStudent(e) {
 
@@ -73,7 +77,9 @@ function registerStudent(e) {
       xhr.send(data);
 
     } else {
-      console.log("Password mismatch!");
+      // Response handling code
+      registrationError.style.display = "inline";
+      errorText.innerText = "Password mismatch!";
     }
 
   } else {
@@ -145,4 +151,9 @@ function registerStudent(e) {
     }
 
   }
+}
+
+function closeError() {
+  let registrationError = document.querySelector(".registration-error");
+  registrationError.style.display = "none";
 }

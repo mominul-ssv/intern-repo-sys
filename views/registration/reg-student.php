@@ -21,8 +21,16 @@
       </div>
 
       <div class="box__main">
-        <div class="card">
 
+        <div class="registration-error" style="display: none;">
+          <div class='card' id='error'>
+            <span id="error-text"></span>
+            <button id="error-close-btn"><img id="error-close-btn-icon" src="../../assets/img/x-circle.svg"
+                   alt="X"></button>
+          </div>
+        </div>
+
+        <div class="card">
           <form>
 
             <!-- student registration -->
