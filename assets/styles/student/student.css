@@ -472,6 +472,126 @@ td {
   background-color: #0097a7;
 }
 
+.popup__delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0.5rem;
+}
+
+.popup__delete-close-btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 0.5rem 0 0.5rem;
+  background: #222;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+.popup__delete-text {
+  font-size: 1.5rem;
+}
+
+.popup__delete-img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.popup__delete-submit-btn {
+  width: 100%;
+}
+
+.grid-container-delete {
+  display: -ms-grid;
+  display: grid;
+  gap: 4px;
+      grid-template-areas: "close" "img" "text" "submit";
+}
+
+.grid-item-delete-close-btn {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: close;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.grid-item-delete-img {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: img;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.grid-item-delete-text {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: text;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.grid-item-delete-submit-btn {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: submit;
+}
+
+#popup__content-delete {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  overflow: auto;
+}
+
+#archive-delete-submit-btn {
+  padding: 0.8rem;
+  background-color: #ad1457;
+  color: white;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: small;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  border-radius: 0.2rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+#archive-delete-submit-btn:hover {
+  background-color: #c2185b;
+}
+
 .card {
   padding: 1rem 0 0.5rem 0;
 }
@@ -961,6 +1081,13 @@ select:-webkit-autofill {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #popup__content-delete {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    width: 90vw;
+    overflow: auto;
   }
 }
 /*# sourceMappingURL=student.css.map */

@@ -179,7 +179,8 @@
               <td>Archive ID <?php echo "#" . $archive['archive_id'] ?></td>
               <td class="archive-box__update" data-archive-id="<?php echo $archive['archive_id'] ?>"
                   onclick="togglePopupArchiveUpdate()">Update</td>
-              <td class="archive-box__delete" data-archive-id="<?php echo $archive['archive_id'] ?>">Delete</td>
+              <td class="archive-box__delete" data-archive-id="<?php echo $archive['archive_id'] ?>"
+                  onclick="togglePopupArchiveDelete()">Delete</td>
             </table>
 
             <table class="archive-box__details">
@@ -354,6 +355,30 @@
                 </div>
               </div>
 
+            </div>
+          </div>
+
+          <div class="popup" id="popup-archive-delete">
+
+            <div class="popup__overlay"></div>
+            <div class="popup__content" id="popup__content-delete">
+
+              <form class="grid-container-delete">
+
+                <div class="grid-item-delete-close-btn">
+                  <button class="popup__delete-close-btn" onclick="togglePopupArchiveDelete()">&times;</button>
+                </div>
+                <div class="grid-item-delete-img">
+                  <img class="popup__delete-img" src="../../assets/img/warning-sign.png" alt="X">
+                </div>
+                <div class="grid-item-delete-text">
+                  <span class="popup__delete-text">Do you really want to delete this archive?</span>
+                </div>
+                <div class="grid-item-delete-submit-btn">
+                  <button class="popup__delete-submit-btn" id="archive-delete-submit-btn">Delete</button>
+                </div>
+
+              </form>
             </div>
           </div>
           <?php } ?>

@@ -10,3 +10,7 @@ function togglePopupArchiveUpdate() {
   document.getElementById("popup-archive-update").classList.toggle("active");
 }
 
+function togglePopupArchiveDelete() {
+  document.getElementById("popup-archive-delete").classList.toggle("active");
+}
+
