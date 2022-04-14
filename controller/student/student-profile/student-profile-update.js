@@ -28,7 +28,7 @@ function studentProfileUpdate(e) {
     const xhr = new XMLHttpRequest();
 
     // Initialize ("true" means asynchronous request)
-    xhr.open("POST", "../../../model/student/student-profile/student-profile-update.php", true);
+    xhr.open("POST", "../../model/student/student-profile/student-profile-update.php", true);
 
     // Set request header
     xhr.setRequestHeader("Content-Type", "application/json");

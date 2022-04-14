@@ -18,7 +18,7 @@
 
       <!-- Navbar -->
       <div class="box__navbar">
-        <h2 style="cursor: pointer;" onclick="window.location.href='../home/home.php'">intern</h2>
+        <h2 style="cursor: pointer;" onclick="window.location.href='../archive/archive.php'">intern</h2>
       </div>
       <!-- /Navbar -->
 
@@ -36,12 +36,10 @@
 
           <div class="card__toggle-btn">
             <button class="card__toggle-btn-student" onclick="navStudent()">Student</button>
-            <button class="card__toggle-btn-employer" onclick="navEmployer()">employer</button>
             <button class="card__toggle-btn-faculty" onclick="navFaculty()">Faculty</button>
           </div>
 
           <?php include "includes/login-student.php" ?>
-          <?php include "includes/login-employer.php" ?>
           <?php include "includes/login-faculty.php" ?>
 
         </div>

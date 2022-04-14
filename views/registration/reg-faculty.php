@@ -16,7 +16,7 @@
     <div class="box">
 
       <div class="box__navbar">
-        <h2 style="cursor: pointer;" onclick="window.location.href='../home/main/home.php'">intern</h2>
+        <h2 style="cursor: pointer;" onclick="window.location.href='../archive/archive.php'">intern</h2>
       </div>
 
       <div class="box__main">

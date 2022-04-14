@@ -72,7 +72,7 @@ for (let i = 0; i < updateCell.length; i++) {
         const xhr = new XMLHttpRequest();
 
         // Initialize ("true" means asynchronous request)
-        xhr.open("POST", "../../../model/student/student-archive/student-archive-update.php", true);
+        xhr.open("POST", "../../model/student/student-archive/student-archive-update.php", true);
 
         // Set request header
         xhr.setRequestHeader("Content-Type", "application/json");
@@ -80,7 +80,7 @@ for (let i = 0; i < updateCell.length; i++) {
         // Handle response
         xhr.onload = function () {
           if (xhr.status === 200) {
-            window.location.replace("../../student/main/student-archive.php");
+            window.location.replace("../student/student-archive.php");
           } else {
             console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
           }

@@ -3,33 +3,32 @@ $connect = mysqli_connect("localhost", "root", "", "cse482_project_db");
 $output = '';
 if (isset($_POST["query"])) {
 	$search = mysqli_real_escape_string($connect, $_POST["query"]);
-
 	$query = "SELECT 
-	first_name, 
-	last_name, 
-	country, 
-	university_name,
-	archive_id,
-	company_name,
-	company_address,
-	company_country,
-	company_city,
-	company_department,
-	company_position,
-	required_skills,
-	start_date,
-	end_date,
-	work_description
-	FROM student_archive 
-	INNER JOIN student_reg 
-	ON student_reg.id=student_archive.student_reg_id 
-	WHERE LOWER(company_name) LIKE LOWER('%" . $search . "%')
-	OR LOWER(company_city) LIKE LOWER('%" . $search . "%') 
-	OR LOWER(company_country) LIKE LOWER('%" . $search . "%') 
-	OR LOWER(required_skills) LIKE LOWER('%" . $search . "%') 
-	OR LOWER(first_name) LIKE LOWER('%" . $search . "%') 
-	OR LOWER(last_name) LIKE LOWER('%" . $search . "%') 
-	OR LOWER(university_name) LIKE LOWER('%" . $search . "%') 
+		first_name, 
+		last_name, 
+		country, 
+		university_name,
+		archive_id,
+		company_name,
+		company_address,
+		company_country,
+		company_city,
+		company_department,
+		company_position,
+		required_skills,
+		start_date,
+		end_date,
+		work_description
+		FROM student_archive 
+		INNER JOIN student_reg 
+		ON student_reg.id=student_archive.student_reg_id 
+		WHERE LOWER(company_name) LIKE LOWER('%" . $search . "%')
+		OR LOWER(company_city) LIKE LOWER('%" . $search . "%') 
+		OR LOWER(company_country) LIKE LOWER('%" . $search . "%') 
+		OR LOWER(required_skills) LIKE LOWER('%" . $search . "%') 
+		OR LOWER(first_name) LIKE LOWER('%" . $search . "%') 
+		OR LOWER(last_name) LIKE LOWER('%" . $search . "%') 
+		OR LOWER(university_name) LIKE LOWER('%" . $search . "%') 
 	";
 } else {
 	$query = "SELECT * FROM student_archive INNER JOIN student_reg ON student_reg.id=student_archive.student_reg_id";
@@ -45,10 +44,15 @@ if (mysqli_num_rows($archives) > 0) {
         <table class="archive-box__details">
 					<tr>
           	<td>
-            	<i class="bi bi-journal-bookmark" style="font-size: 2rem; display:flex; align-items:center"></i>
+            	<i class="bi bi-journal-bookmark" 
+							style="
+							font-size: 1.5rem; 
+							display:flex; 
+							align-items:center;	
+							"></i>
           	</td>
           	<td>
-          		<span style=" display:flex; justify-content: center; font-size: large">
+          		<span style=" display:flex; justify-content: center; font-size: medium">
 								Archive ID #' . $archive_cell["archive_id"] . '
         			</span>
       			</td>

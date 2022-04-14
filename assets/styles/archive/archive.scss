@@ -11,7 +11,7 @@
 @import "../collections/hr";
 
 // border radius
-$radius: 0.3rem;
+$radius: 0.2rem;
 
 @mixin container-style() {
   margin: 0.5rem;
@@ -27,7 +27,7 @@ $radius: 0.3rem;
 html,
 body {
   font-family: 'Trebuchet MS';
-  font-weight: 900;
+  font-weight: bold;
   letter-spacing: 0.05rem;
   background-color: $white;
   color: $white;
@@ -46,7 +46,7 @@ table {
   border-radius: $radius;
   padding: 0.5rem;
   width: 100%;
-  font-size: medium;
+  font-size: 0.9rem;
   @include hover-content();
 }
 
@@ -56,14 +56,15 @@ table:hover {
 
 th {
   color: $white;
-  background-color: $teal-800;
-  text-transform: uppercase;
+  background-color: $blue-800;
+  background-image: linear-gradient(to right, $blue-600, $blue-500);
+  padding: 0 0.2rem 0 0.2rem;
   border-radius: $radius;
 }
 
 td {
-  color: $teal-600;
-  border: 0.15rem solid $teal-600;
+  color: $blue-600;
+  border: 0.1rem solid $blue-600;
   border-radius: $radius;
   padding: 0.4rem;
 }
@@ -84,20 +85,21 @@ td {
     @include container-style();
     margin: 0;
     border-radius: 0;
-    background-color: $teal-700;
+    background-color: $blue-700;
+    background-image: linear-gradient(to right, $blue-600, $blue-300);
   }
 
   &__sidebar {
     grid-area: sidebar;
     @include container-style();
     margin-right: 0;
-    border: 0.15rem solid $teal-100;
+    border: 0.15rem solid $blue-100;
   }
 
   &__main {
     grid-area: main;
     @include container-style();
-    border: 0.15rem solid $teal-100;
+    border: 0.15rem solid $blue-100;
   }
 
   &__footer {
@@ -105,7 +107,7 @@ td {
     @include container-style();
     margin: 0;
     border-radius: 0;
-    background-color: $teal-700;
+    background-color: $blue-700;
   }
 }
 // ============================================= container ============================================= //
@@ -116,8 +118,9 @@ td {
   justify-content: space-between;
   align-items: center;
 
-  &__branding {
-    font-size: 1.5rem;
+  &__logo {
+    width: 2rem;
+    width: 2rem;
   }
 
   &__menu {
@@ -129,25 +132,17 @@ td {
   }
 
   &__btn-register {
-    @include btn-design($green-700, $green-500);
-    @include hover-content();
+    @include btn-design($teal-600, $teal-700);
     padding: 0.6rem;
     font-size: 0.9rem;
-  }
-
-  &__btn-register:hover {
-    @include hover-state();
+    border-radius: 0.2rem;
   }
 
   &__btn-login {
-    @include btn-design($purple-500, $purple-300);
-    @include hover-content();
+    @include btn-design($pink-400, $pink-500);
     padding: 0.6rem;
     font-size: 0.9rem;
-  }
-
-  &__btn-login:hover {
-    @include hover-state();
+    border-radius: 0.2rem;
   }
 
   &__hamburger {
@@ -182,11 +177,17 @@ td {
   }
 
   &__filter-btn {
-    @include btn-design($teal-800, $teal-600);
+    @include btn-design($blue-800, $blue-600);
+    @include hover-content();    
     padding: 0.5rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    background-image: linear-gradient(to right, $blue-600, $blue-300);
+  }
+
+  &__filter-btn:hover {
+    @include hover-state();
   }
 }
 // ============================================= sidebar ============================================= //
@@ -202,8 +203,7 @@ td {
     grid-area: search;
     @include container-style();
     @include hover-content();
-    border: 0.15rem solid $teal-400;
-    background-color: $teal-100;
+    background-color: $blue-200;
   }
 
   &__search:hover {
@@ -227,7 +227,7 @@ td {
     font-size: 20px;
     padding: 0.2rem;
     margin-right: 0.2rem;
-    color: $teal-500;
+    color: $white;
   }
 
   &__box {
@@ -235,13 +235,12 @@ td {
     width: 0;
     border: none;
     border-radius: 2rem;
-    border: 0.1rem solid $teal-400;
     outline: none;
     font-family: inherit;
     font-weight: inherit;
     font-size: 1rem;
     padding-left: 0.8rem;
-    color: $teal-800;
+    color: $blue-800;
   }
 }
 // ============================================= search ============================================= //
@@ -252,7 +251,7 @@ td {
   border-radius: $radius;
   padding: 1rem;
   margin: 0.5rem;
-  background-color: $teal-100;
+  background-color: $blue-100;
 
   &__logo {
     background-color: white;
@@ -321,6 +320,7 @@ td {
       width: 100%;
       text-align: center;
       transition: 0.4s;
+      background-image: linear-gradient(to left, $blue-200, $blue-100);
     }
 
     &__menu.active {
@@ -329,11 +329,11 @@ td {
     }
 
     &__btn-register {
-      margin: 0.5rem 0 0 0;
+      margin: 0.5rem;
       width: 10rem;
     }
     &__btn-login {
-      margin: 0.5rem;
+      margin: 0.5rem 0 0 0;
       width: 10rem;
     }
   }

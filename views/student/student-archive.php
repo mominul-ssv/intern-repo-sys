@@ -1,7 +1,7 @@
-<?php include "../includes/student-header.php" ?>
+<?php include "includes/student-header.php" ?>
 
 <?php
-include('../../../connection/db_connect.php');
+include('../../connection/db_connect.php');
 
 $student_reg = $_SESSION['student_reg_array'];
 $studentRegId = $student_reg['id'];
@@ -30,11 +30,11 @@ try {
   <div class="container">
 
     <!-- Navbar -->
-    <?php include "../includes/student-nav.php" ?>
+    <?php include "includes/student-nav.php" ?>
     <!-- /Navbar -->
 
     <!-- Sidebar -->
-    <?php include "../includes/student-sidebar.php" ?>
+    <?php include "includes/student-sidebar.php" ?>
     <!-- /Sidebar -->
 
     <!-- Main -->
@@ -369,16 +369,16 @@ try {
     <!-- /Main -->
 
     <!-- Footer -->
-    <?php include "../includes/student-footer.php" ?>
+    <?php include "includes/student-footer.php" ?>
     <!-- /Footer -->
 
     <!-- Scripts -->
-    <script src="../../../assets/js/animation/popup-form.js"></script>
-    <script src="../../../assets/js/animation/hamburger-menu.js"></script>
-    <script src="../../../controller/student/student-sidebar/student-sidebar.js"></script>
-    <script src="../../../controller/student/student-archive/student-archive-create.js"></script>
-    <script src="../../../controller/student/student-archive/student-archive-update.js"></script>
-    <script src="../../../controller/student/student-archive/student-archive-delete.js"></script>
+    <script src="../../assets/js/animation/popup-form.js"></script>
+    <script src="../../assets/js/animation/hamburger-menu.js"></script>
+    <script src="../../controller/student/student-sidebar/student-sidebar.js"></script>
+    <script src="../../controller/student/student-archive/student-archive-create.js"></script>
+    <script src="../../controller/student/student-archive/student-archive-update.js"></script>
+    <script src="../../controller/student/student-archive/student-archive-delete.js"></script>
     <!-- /Scripts -->
   </div>
 

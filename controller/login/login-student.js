@@ -30,7 +30,7 @@ function loginStudent(e) {
 
         if (obj.id !== '') {
           // console.log(xhr.response);
-          window.location.replace("../student/main/student-profile.php");
+          window.location.replace("../student/student-profile.php");
         } else {
           // Response handling code
           loginError.style.display = "inline";

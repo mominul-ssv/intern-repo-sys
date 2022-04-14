@@ -6,7 +6,7 @@
 
     <ul class="nav__menu">
       <li class="nav__item">
-        <button class="nav__btn-logout" onclick="window.location.href='../../logout/student-logout.php'">Logout</button>
+        <button class="nav__btn-logout" onclick="window.location.href='../logout/student-logout.php'">Logout</button>
       </li>
     </ul>
 

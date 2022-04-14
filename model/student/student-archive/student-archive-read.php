@@ -14,9 +14,7 @@ try {
   $stm->closeCursor();
 
   $_SESSION['student_archive_array'] = $student_archive;
+  echo "Success!";
 } catch (Exception $e) {
   echo $e->getMessage();
 }
-
-// Returning JSON format data as response to ajax call
-echo "Success!";

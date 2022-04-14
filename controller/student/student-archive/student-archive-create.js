@@ -30,7 +30,7 @@ function studentArchiveCreate(e) {
     const xhr = new XMLHttpRequest();
 
     // Initialize ("true" means asynchronous request)
-    xhr.open("POST", "../../../model/student/student-archive/student-archive-create.php", true);
+    xhr.open("POST", "../../model/student/student-archive/student-archive-create.php", true);
 
     // Set request header
     xhr.setRequestHeader("Content-Type", "application/json");
@@ -39,7 +39,7 @@ function studentArchiveCreate(e) {
     xhr.onload = function () {
       if (xhr.status === 200) {
         document.getElementById("popup-archive-create").classList.toggle("active");
-        window.location.replace("../../student/main/student-archive.php");
+        window.location.replace("../student/student-archive.php");
       } else {
         console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
       }
