@@ -446,7 +446,6 @@ td {
 }
 
 .popup__submit {
-  margin-top: 3.5rem;
   width: 100%;
 }
 
@@ -542,9 +541,9 @@ td {
   width: -moz-max-content;
   width: max-content;
   overflow: auto;
-  background-color: #c5cae9;
-  background-image: -webkit-gradient(linear, left top, right top, from(#c5cae9), to(#9fa8da));
-  background-image: linear-gradient(to right, #c5cae9, #9fa8da);
+  background-color: #ffcdd2;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffcdd2), to(#ef9a9a));
+  background-image: linear-gradient(to right, #ffcdd2, #ef9a9a);
 }
 
 #archive-delete-submit-btn {
@@ -876,6 +875,7 @@ select:-webkit-autofill {
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: wDescription;
+  padding-bottom: 3.5rem;
 }
 
 .archive-box {

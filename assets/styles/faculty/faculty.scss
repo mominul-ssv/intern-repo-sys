@@ -340,6 +340,7 @@ td {
   .popup {
     & .popup__content {
       width: 80vw;
+      height: max-content;
     }
   }
 }
@@ -423,7 +424,7 @@ td {
       display: inline-block;
       overflow: scroll;
       width: 90vw;
-      height: 90vh;
+      height: max-content;
     }
 
     & .popup__update-text {

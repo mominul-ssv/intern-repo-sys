@@ -615,6 +615,9 @@ select:-webkit-autofill {
   }
   .popup .popup__content {
     width: 80vw;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
 }
 
@@ -693,7 +696,9 @@ select:-webkit-autofill {
     display: inline-block;
     overflow: scroll;
     width: 90vw;
-    height: 90vh;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
   }
   .popup .popup__update-text {
     font-size: large;

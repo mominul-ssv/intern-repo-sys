@@ -1,4 +1,3 @@
-// ============================ Update Archive ============================ //
 let deleteCell = document.getElementsByClassName("archive-box__delete");
 
 for (let i = 0; i < deleteCell.length; i++) {
@@ -6,12 +5,15 @@ for (let i = 0; i < deleteCell.length; i++) {
 
     archive_id = deleteCell[i].getAttribute('data-archive-id');
 
+
     // ============================ Delete Archive ============================ //
     document.getElementById("archive-delete-submit-btn").addEventListener("click", studentArchiveDelete);
 
     function studentArchiveDelete(e) {
 
       e.preventDefault();
+
+      console.log(archive_id);
 
       // Creating xhr object
       const xhr = new XMLHttpRequest();
@@ -25,6 +27,7 @@ for (let i = 0; i < deleteCell.length; i++) {
       // Handle response
       xhr.onload = function () {
         if (xhr.status === 200) {
+          console.log(xhr.response);
           if (xhr.response === 'SUCCESS') {
             window.location.replace("../student/student-archive.php");
           }

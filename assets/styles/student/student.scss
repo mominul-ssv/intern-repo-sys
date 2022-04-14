@@ -238,7 +238,6 @@ td {
   }
 
   &__submit {
-    margin-top: 3.5rem;
     width: 100%;
   }
 
@@ -306,8 +305,8 @@ td {
   height: max-content;
   width: max-content;
   overflow: auto;
-  background-color: $indigo-100;
-  background-image: linear-gradient(to right, $indigo-100, $indigo-200);
+  background-color: $red-100;
+  background-image: linear-gradient(to right, $red-100, $red-200);
 }
 
 #archive-delete-submit-btn {
@@ -495,6 +494,7 @@ td {
 
 .grid-item-work-description {
   grid-area: wDescription;
+  padding-bottom: 3.5rem;
 }
 
 .archive-box {
