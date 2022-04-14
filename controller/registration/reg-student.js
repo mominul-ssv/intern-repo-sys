@@ -46,9 +46,20 @@ function registerStudent(e) {
       // Handle response
       xhr.onload = function () {
         if (xhr.status === 200) {
+
+          // Student successfully created
           if (xhr.response === '1') {
             window.location.replace("../login/login.php");
-          } else {
+          }
+
+          // Student already exists
+          else if (xhr.response === 'EXISTS') {
+            registrationError.style.display = "inline";
+            errorText.innerText = "Email is already in use!";
+          }
+
+          // Server errors
+          else {
             console.log("Error occurred!" + "\nxhr.response: " + xhr.response + "\nxhr.status: " + xhr.status);
           }
         } else {

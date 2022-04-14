@@ -26,45 +26,61 @@ $universityName = $myData['dataUniversityName'];
 $studentId = $myData['dataStudentId'];
 $password = $myData['dataPassword'];
 
-$sql = "INSERT INTO student_reg(
-  first_name, 
-  last_name, 
-  email, 
-  phone, 
-  dob, 
-  country, 
-  address, 
-  university_name, 
-  student_id, 
-  password) 
-VALUES(
-  :first_name, 
-  :last_name, 
-  :email, 
-  :phone, 
-  :dob, 
-  :country, 
-  :address, 
-  :university_name, 
-  :student_id, 
-  :password)";
+try {
+  $sql = "SELECT * FROM student_reg WHERE email='$email'";
 
-$stm = $db->prepare($sql);
-$stm->bindValue(':first_name', $firstName);
-$stm->bindValue(':last_name', $lastName);
-$stm->bindValue(':email', $email);
-$stm->bindValue(':phone', $phone);
-$stm->bindValue(':dob', $dob);
-$stm->bindValue(':country', $country);
-$stm->bindValue(':address', $address);
-$stm->bindValue(':university_name', $universityName);
-$stm->bindValue(':student_id', $studentId);
-$stm->bindValue(':password', $password);
-$execute_success = $stm->execute();
-$stm->closeCursor();
+  $stm = $db->prepare($sql);
+  $stm->execute();
+  $student_email = $stm->fetchAll();
+  $stm->closeCursor();
 
-if ($execute_success) {
-  echo $execute_success;
-} else {
-  echo $stm->errorInfo()[2];
+  if (empty($student_email)) {
+    $sql = "INSERT INTO student_reg(
+      first_name, 
+      last_name, 
+      email, 
+      phone, 
+      dob, 
+      country, 
+      address, 
+      university_name, 
+      student_id, 
+      password) 
+      VALUES(
+      :first_name, 
+      :last_name, 
+      :email, 
+      :phone, 
+      :dob, 
+      :country, 
+      :address, 
+      :university_name, 
+      :student_id, 
+      :password)
+    ";
+
+    $stm = $db->prepare($sql);
+    $stm->bindValue(':first_name', $firstName);
+    $stm->bindValue(':last_name', $lastName);
+    $stm->bindValue(':email', $email);
+    $stm->bindValue(':phone', $phone);
+    $stm->bindValue(':dob', $dob);
+    $stm->bindValue(':country', $country);
+    $stm->bindValue(':address', $address);
+    $stm->bindValue(':university_name', $universityName);
+    $stm->bindValue(':student_id', $studentId);
+    $stm->bindValue(':password', $password);
+    $execute_success = $stm->execute();
+    $stm->closeCursor();
+
+    if ($execute_success) {
+      echo $execute_success;
+    } else {
+      echo $stm->errorInfo()[2];
+    }
+  } else {
+    echo "EXISTS";
+  }
+} catch (Exception $e) {
+  echo $e->getMessage();
 }

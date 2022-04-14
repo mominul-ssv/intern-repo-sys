@@ -28,14 +28,23 @@ function loginStudent(e) {
 
         const obj = JSON.parse(xhr.response);
 
-        if (obj.id !== '') {
-          // console.log(xhr.response);
-          window.location.replace("../student/student-profile.php");
-        } else {
-          // Response handling code
+        // Checking whether the user exists or not
+        if (obj.exists == false && obj.password == false) {
           loginError.style.display = "inline";
-          errorText.innerText = "Incorrect email or password!";
+          errorText.innerText = "User is not registered!";
         }
+
+        // Password mismatch
+        else if (obj.exists == true && obj.password == false) {
+          loginError.style.display = "inline";
+          errorText.innerText = "Wrong password!";
+        }
+
+        // Valid Credentials
+        else if (obj.exists == true && obj.password == true) {
+          window.location.replace("../student/student-profile.php");
+        }
+
       } else {
         console.log("Problem Occurred!");
       }
