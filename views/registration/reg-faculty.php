@@ -22,9 +22,16 @@
 
       <div class="box__main">
 
-        <div class="card">
+        <div class="registration-error" style="display: none;">
+          <div class='card' id='error'>
+            <span id="error-text"></span>
+            <button id="error-close-btn"><img id="error-close-btn-icon" src="../../assets/img/x-circle.svg"
+                   alt="X"></button>
+          </div>
+        </div>
 
-          <form action="">
+        <div class="card">
+          <form>
 
             <!-- faculty registration -->
             <div class="card__profile">
@@ -84,7 +91,7 @@
               <!-- faculty university -->
               <div class="grid-item-university">
                 <div class="card__group">
-                  <input type="text" id="university" class="card__input" placeholder=" " required>
+                  <input type="text" id="university-name" class="card__input" placeholder=" " required>
                   <label for="university" class="card__label">University
                     Name</label>
                 </div>
@@ -109,7 +116,7 @@
 
               <!-- faculty register -->
               <div class="grid-item-register">
-                <button type="submit" class="card__submit-btn-faculty">Register</button>
+                <button type="submit" id="register-btn" class="card__submit-btn-faculty">Register</button>
               </div>
 
             </div>
@@ -133,6 +140,7 @@
         <span class="box__footer-text">©Team Aurora</span>
       </div>
 
+      <script src="../../controller/registration/reg-faculty.js"></script>
     </div>
 
   </body>

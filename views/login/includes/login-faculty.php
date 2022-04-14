@@ -21,7 +21,7 @@
     </div>
 
     <!-- faculty login button -->
-    <button class="card__submit-btn-faculty">Login</button>
+    <button type="submit" id="faculty-login-btn" class="card__submit-btn-faculty">Login</button>
 
     <!-- faculty forgot password -->
     <a class="card__forgot-password-faculty" href="#">Forgot

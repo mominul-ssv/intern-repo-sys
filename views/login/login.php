@@ -57,7 +57,7 @@
 
     <!-- Scripts -->
     <script src="../../assets/js/animation/login-nav.js"></script>
-    <script src="../../controller/login/login-student.js"></script>
+    <script src="../../controller/login/login.js"></script>
     <!-- /Scripts -->
 
   </body>
