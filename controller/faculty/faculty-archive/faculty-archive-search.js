@@ -10,6 +10,21 @@ $(document).ready(function () {
       },
       success: function (data) {
         $('#result').html(data);
+        let archiveApprove = document.getElementsByClassName("archive-approve");
+        let archiveDeny = document.getElementsByClassName("archive-deny");
+
+        for (let i = 0; i < archiveApprove.length; i++) {
+          archiveApprove[i].addEventListener('click', function () {
+            archive_id = archiveApprove[i].getAttribute('data-archive-id');
+
+          });
+        }
+        for (let i = 0; i < archiveDeny.length; i++) {
+          archiveDeny[i].addEventListener('click', function () {
+            archive_id = archiveDeny[i].getAttribute('data-archive-id');
+
+          });
+        }
       }
     });
   }
