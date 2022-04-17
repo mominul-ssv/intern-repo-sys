@@ -664,6 +664,7 @@ select:-webkit-autofill {
 
 .archive-approve:hover {
   background-color: #8e24aa;
+  cursor: pointer;
   -webkit-box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -677,6 +678,7 @@ select:-webkit-autofill {
 
 .archive-deny:hover {
   background-color: #e53935;
+  cursor: pointer;
   -webkit-box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.2);
 }

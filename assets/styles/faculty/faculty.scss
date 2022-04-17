@@ -370,6 +370,7 @@ td {
 
 .archive-approve:hover {
   background-color: $purple-600;
+  cursor: pointer;
   @include hover-state();
 }
 
@@ -382,6 +383,7 @@ td {
 
 .archive-deny:hover {
   background-color: $red-600;
+  cursor: pointer;
   @include hover-state();
 }
 
