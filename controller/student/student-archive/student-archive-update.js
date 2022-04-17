@@ -12,6 +12,10 @@ let valueEndDate = document.getElementsByClassName("value-end-date");
 let valueFacultyEmail = document.getElementsByClassName("value-faculty-email");
 let valueWorkDescription = document.getElementsByClassName("value-work-description");
 
+
+console.log(updateCell);
+console.log(updateCell.length);
+
 for (let i = 0; i < updateCell.length; i++) {
   updateCell[i].addEventListener('click', function () {
 

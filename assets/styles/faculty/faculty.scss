@@ -359,6 +359,32 @@ td {
   }
 }
 
+.archive-approve {
+  text-align: center;
+  background-color: $purple-800;
+  color: $white;
+  padding: 1rem;
+  border: none;
+  @include hover-content();
+}
+
+.archive-approve:hover {
+  background-color: $purple-600;
+  @include hover-state();
+}
+
+.archive-deny {
+  text-align: center;
+  background-color: $red-800;
+  color: $white;
+  border: none;
+}
+
+.archive-deny:hover {
+  background-color: $red-600;
+  @include hover-state();
+}
+
 // ------------- search ------------- //
 .search {
   display: flex;

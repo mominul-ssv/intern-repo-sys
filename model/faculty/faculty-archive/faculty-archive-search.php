@@ -33,10 +33,29 @@ if (isset($_POST["query"])) {
 		OR LOWER(required_skills) LIKE LOWER('%" . $search . "%') 
 		OR LOWER(first_name) LIKE LOWER('%" . $search . "%') 
 		OR LOWER(last_name) LIKE LOWER('%" . $search . "%') 
-		OR LOWER(university_name) LIKE LOWER('%" . $search . "%') 
-	";
+		OR LOWER(university_name) LIKE LOWER('%" . $search . "%')";
 } else {
-	$query = "SELECT * FROM student_archive INNER JOIN student_reg ON student_reg.id=student_archive.student_reg_id AND student_archive.faculty_email='$facultyEmail'";
+	$query = "SELECT 
+		first_name, 
+		last_name, 
+		country, 
+		university_name,
+		archive_id,
+		company_name,
+		company_address,
+		company_country,
+		company_city,
+		company_department,
+		company_position,
+		required_skills,
+		start_date,
+		end_date,
+		verification_status,
+		work_description
+		FROM student_archive 
+		INNER JOIN student_reg 
+		ON student_reg.id=student_archive.student_reg_id 
+		AND student_archive.faculty_email='$facultyEmail'";
 }
 $archives = mysqli_query($connect, $query);
 
@@ -115,6 +134,10 @@ if (mysqli_num_rows($archives) > 0) {
             <th>Work Description</th>
             <td>' . $archive_cell['work_description'] . '</td>
           </tr>
+					<tr>
+						<td class="archive-approve" data-archive-id="' . $archive_cell['archive_id'] . '">Approve</td>
+						<td class="archive-deny" data-archive-id="' . $archive_cell['archive_id'] . '">Deny</td>
+					</tr>
 			  </table>
     	</div>
 		';

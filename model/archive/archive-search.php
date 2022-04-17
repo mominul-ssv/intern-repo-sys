@@ -29,10 +29,28 @@ if (isset($_POST["query"])) {
 		OR LOWER(required_skills) LIKE LOWER('%" . $search . "%') 
 		OR LOWER(first_name) LIKE LOWER('%" . $search . "%') 
 		OR LOWER(last_name) LIKE LOWER('%" . $search . "%') 
-		OR LOWER(university_name) LIKE LOWER('%" . $search . "%') 
-	";
+		OR LOWER(university_name) LIKE LOWER('%" . $search . "%') ";
 } else {
-	$query = "SELECT * FROM student_archive INNER JOIN student_reg ON student_reg.id=student_archive.student_reg_id";
+	$query = "SELECT 
+		first_name, 
+		last_name, 
+		country, 
+		university_name,
+		archive_id,
+		company_name,
+		company_address,
+		company_country,
+		company_city,
+		company_department,
+		company_position,
+		required_skills,
+		start_date,
+		end_date,
+		verification_status,
+		work_description
+		FROM student_archive 
+		INNER JOIN student_reg 
+		ON student_reg.id=student_archive.student_reg_id";
 }
 $archives = mysqli_query($connect, $query);
 

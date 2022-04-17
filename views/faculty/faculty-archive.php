@@ -45,6 +45,7 @@
     <script src="../../assets/js/animation/hamburger-menu.js"></script>
     <script src="../../controller/faculty/faculty-sidebar/faculty-sidebar.js"></script>
     <script src="../../controller/faculty/faculty-archive/faculty-archive-search.js"></script>
+    <script src="../../controller/faculty/faculty-archive/faculty-archive-verification.js"></script>
     <!-- /Scripts -->
   </div>
 
