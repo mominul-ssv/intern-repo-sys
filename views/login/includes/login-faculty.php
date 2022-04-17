@@ -2,7 +2,7 @@
 
   <!-- faculty profile -->
   <div class="card__profile">
-    <img class="card__profile-img" src="../../assets/img/faculty.png" alt="faculty-img">
+    <img class="card__profile-img" src="../../assets/img/faculty.png" alt="faculty-img" loading="lazy">
     <h2 class="card__profile-text">Faculty Login</h2>
   </div>
 

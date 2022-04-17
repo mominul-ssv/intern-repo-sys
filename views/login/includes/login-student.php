@@ -2,7 +2,7 @@
 
   <!-- student profile -->
   <div class="card__profile">
-    <img class="card__profile-img" src="../../assets/img/student.png" alt="student-img">
+    <img class="card__profile-img" src="../../assets/img/student.png" alt="student-img" loading="lazy">
     <h2 class="card__profile-text">Student Login</h2>
   </div>
 
