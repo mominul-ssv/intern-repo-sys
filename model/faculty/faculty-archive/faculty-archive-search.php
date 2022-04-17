@@ -9,7 +9,8 @@ if (isset($_POST["query"])) {
 	$search = mysqli_real_escape_string($connect, $_POST["query"]);
 	$query = "SELECT 
 		first_name, 
-		last_name, 
+		last_name,
+		student_id, 
 		country, 
 		university_name,
 		archive_id,
@@ -38,6 +39,7 @@ if (isset($_POST["query"])) {
 	$query = "SELECT 
 		first_name, 
 		last_name, 
+		student_id,
 		country, 
 		university_name,
 		archive_id,
@@ -85,6 +87,10 @@ if (mysqli_num_rows($archives) > 0) {
       			<th>Name</th>
 						<td>' . $archive_cell['first_name'] . " " . $archive_cell['last_name'] . '</td>
       		</tr>
+      		<tr>
+      			<th>Student ID</th>
+						<td>' . $archive_cell['student_id'] . '</td>
+        	</tr>
       		<tr>
       			<th>Country</th>
 						<td>' . $archive_cell['country'] . '</td>
