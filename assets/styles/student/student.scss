@@ -371,9 +371,11 @@ td {
   grid-template-areas:
     "fName fName lName lName"
     "email email phone phone"
-    "dob dob country country"
+    "dob dob dob dob"
+    "country country country country"
     "address address address address"
-    "university university sid sid";
+    "university university university university"
+    "sid sid sid sid";
 }
 
 .grid-item-first-name {

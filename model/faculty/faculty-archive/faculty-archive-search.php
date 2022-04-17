@@ -1,4 +1,8 @@
 <?php
+session_start();
+$faculty_reg = $_SESSION['faculty_reg_array'];
+$facultyEmail = $faculty_reg['email'];
+
 $connect = mysqli_connect("localhost", "root", "", "cse482_project_db");
 $output = '';
 if (isset($_POST["query"])) {
@@ -32,7 +36,7 @@ if (isset($_POST["query"])) {
 		OR LOWER(university_name) LIKE LOWER('%" . $search . "%') 
 	";
 } else {
-	$query = "SELECT * FROM student_archive INNER JOIN student_reg ON student_reg.id=student_archive.student_reg_id";
+	$query = "SELECT * FROM student_archive INNER JOIN student_reg ON student_reg.id=student_archive.student_reg_id AND student_archive.faculty_email='$facultyEmail'";
 }
 $archives = mysqli_query($connect, $query);
 

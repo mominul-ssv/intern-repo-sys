@@ -199,7 +199,7 @@ td {
 
 // ============================================= main ============================================= //
 
-// ------------------------------------------- profile ------------------------------------------- //
+// ------------- profile ------------- //
 .main-profile {
   display: grid;
   grid-template-areas:
@@ -247,7 +247,7 @@ td {
   }
 }
 
-// --------------- user input --------------- //
+// ------------- user input ------------- //
 .card {
   padding: 1rem 0 0.5rem 0;
   &__group {
@@ -318,8 +318,71 @@ td {
   grid-area: university;
 }
 
-// ------------------------------------------- archive ------------------------------------------- //
+// ------------- archive ------------- //
+.main {
+  display: grid;
+  grid-template-areas:
+    "search"
+    "content";
 
+  &__search {
+    grid-area: search;
+    @include container-style();
+    @include hover-content();
+    background-color: $teal-200;
+  }
+
+  &__search:hover {
+    @include hover-state();
+    transform: scale(1.005);
+  }
+
+  &__content {
+    grid-area: content;
+    @include container-style();
+    background-color: $teal-700;
+  }
+}
+
+.archive-box {
+  border-radius: $radius;
+  padding: 1rem;
+  margin: 0.5rem;
+  background-color: $teal-100;
+
+  &__logo {
+    background-color: white;
+  }
+
+  &__details {
+    background-color: white;
+  }
+}
+
+// ------------- search ------------- //
+.search {
+  display: flex;
+
+  &__icon {
+    font-size: 20px;
+    padding: 0.2rem;
+    margin-right: 0.2rem;
+    color: $white;
+  }
+
+  &__box {
+    flex: 1;
+    width: 0;
+    border: none;
+    border-radius: 2rem;
+    outline: none;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 1rem;
+    padding-left: 0.8rem;
+    color: $teal-800;
+  }
+}
 
 // ============================================= main ============================================= //
 

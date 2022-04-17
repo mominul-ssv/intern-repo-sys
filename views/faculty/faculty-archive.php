@@ -17,6 +17,24 @@
     <?php include "includes/faculty-sidebar.php" ?>
     <!-- /Sidebar -->
 
+    <!-- Main -->
+    <main class="container__main">
+
+      <div class="main">
+
+        <div class="main__search">
+          <div class="search">
+            <span class="search__icon"><i class="bi bi-search"></i></span>
+            <input type="text" class="search__box" id="search_archive">
+          </div>
+        </div>
+
+        <div id="result">
+        </div>
+
+      </div>
+    </main>
+    <!-- /Main -->
 
     <!-- Footer -->
     <?php include "includes/faculty-footer.php" ?>
@@ -26,6 +44,7 @@
     <script src="../../assets/js/animation/popup-form.js"></script>
     <script src="../../assets/js/animation/hamburger-menu.js"></script>
     <script src="../../controller/faculty/faculty-sidebar/faculty-sidebar.js"></script>
+    <script src="../../controller/faculty/faculty-archive/faculty-archive-search.js"></script>
     <!-- /Scripts -->
   </div>
 

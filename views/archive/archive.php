@@ -69,9 +69,9 @@
       <!-- /Sidebar -->
 
       <!-- Main -->
-      <main class="container__main">
+      <main class="container__main" style="color: black;">
 
-        <div class="main" style="color: black;">
+        <div class="main">
 
           <div class="main__search">
             <div class="search">

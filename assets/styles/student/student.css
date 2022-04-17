@@ -677,7 +677,7 @@ select:-webkit-autofill {
   display: -ms-grid;
   display: grid;
   gap: 4px;
-      grid-template-areas: "fName fName lName lName" "email email phone phone" "dob dob country country" "address address address address" "university university sid sid";
+      grid-template-areas: "fName fName lName lName" "email email phone phone" "dob dob dob dob" "country country country country" "address address address address" "university university university university" "sid sid sid sid";
 }
 
 .grid-item-first-name {
@@ -711,35 +711,35 @@ select:-webkit-autofill {
 .grid-item-dob {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 4;
   grid-area: dob;
 }
 
 .grid-item-country {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
   grid-area: country;
 }
 
 .grid-item-address {
-  -ms-grid-row: 4;
+  -ms-grid-row: 5;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: address;
 }
 
 .grid-item-university {
-  -ms-grid-row: 5;
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
+  -ms-grid-column-span: 4;
   grid-area: university;
 }
 
 .grid-item-student-id {
-  -ms-grid-row: 5;
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
   grid-area: sid;
 }
 
