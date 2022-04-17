@@ -37,16 +37,6 @@ function studentArchiveCreate(e) {
     // Set request header
     xhr.setRequestHeader("Content-Type", "application/json");
 
-    // Handle response
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        document.getElementById("popup-archive-create").classList.toggle("active");
-        window.location.replace("../student/student-archive.php");
-      } else {
-        console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
-      }
-    };
-
     // JavaScript object
     const myData = {
       dataCompanyName: companyName,
@@ -67,6 +57,16 @@ function studentArchiveCreate(e) {
 
     // Send request with data
     xhr.send(data);
+
+    // Handle response
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        document.getElementById("popup-archive-create").classList.toggle("active");
+        window.location.replace("../student/student-archive.php");
+      } else {
+        console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
+      }
+    };
 
   } else {
 

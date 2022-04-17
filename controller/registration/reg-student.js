@@ -1,8 +1,8 @@
 document.getElementById("register-btn").addEventListener("click", registerStudent);
 document.getElementById("error-close-btn").addEventListener("click", closeError);
 
-const registrationError = document.querySelector(".registration-error");
-const errorText = document.querySelector("#error-text");
+let registrationError = document.querySelector(".registration-error");
+let errorText = document.querySelector("#error-text");
 
 function registerStudent(e) {
 
@@ -43,6 +43,26 @@ function registerStudent(e) {
       // Set request header
       xhr.setRequestHeader("Content-Type", "application/json");
 
+      // JavaScript object
+      const myData = {
+        dataFirstName: firstName,
+        dataLastName: lastName,
+        dataEmail: email,
+        dataPhone: phone,
+        dataDob: dob,
+        dataCountry: country,
+        dataAddress: address,
+        dataUniversityName: universityName,
+        dataStudentId: studentId,
+        dataPassword: password
+      };
+
+      // Converts JavaScript objects to JSON string 
+      const data = JSON.stringify(myData);
+
+      // Send request with data
+      xhr.send(data);
+
       // Handle response
       xhr.onload = function () {
         if (xhr.status === 200) {
@@ -66,26 +86,6 @@ function registerStudent(e) {
           console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
         }
       };
-
-      // JavaScript object
-      const myData = {
-        dataFirstName: firstName,
-        dataLastName: lastName,
-        dataEmail: email,
-        dataPhone: phone,
-        dataDob: dob,
-        dataCountry: country,
-        dataAddress: address,
-        dataUniversityName: universityName,
-        dataStudentId: studentId,
-        dataPassword: password
-      };
-
-      // Converts JavaScript objects to JSON string 
-      const data = JSON.stringify(myData);
-
-      // Send request with data
-      xhr.send(data);
 
     } else {
       // Response handling code
@@ -165,6 +165,5 @@ function registerStudent(e) {
 }
 
 function closeError() {
-  let registrationError = document.querySelector(".registration-error");
   registrationError.style.display = "none";
 }

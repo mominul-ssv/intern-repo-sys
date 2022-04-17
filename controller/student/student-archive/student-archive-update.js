@@ -82,15 +82,6 @@ for (let i = 0; i < updateCell.length; i++) {
         // Set request header
         xhr.setRequestHeader("Content-Type", "application/json");
 
-        // Handle response
-        xhr.onload = function () {
-          if (xhr.status === 200) {
-            window.location.replace("../student/student-archive.php");
-          } else {
-            console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
-          }
-        };
-
         // JavaScript object
         const myData = {
           dataArchiveId: archive_id,
@@ -112,6 +103,15 @@ for (let i = 0; i < updateCell.length; i++) {
 
         // Send request with data
         xhr.send(data);
+
+        // Handle response
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            window.location.replace("../student/student-archive.php");
+          } else {
+            console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
+          }
+        };
 
         // ===================================== /UPDATE ===================================== //
 

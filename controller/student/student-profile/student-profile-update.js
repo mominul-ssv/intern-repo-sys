@@ -33,24 +33,6 @@ function studentProfileUpdate(e) {
     // Set request header
     xhr.setRequestHeader("Content-Type", "application/json");
 
-    // Handle response
-    xhr.onload = function () {
-      if (xhr.status === 200) {
-        const obj = JSON.parse(xhr.response);
-        document.getElementById("student-id-td").innerText = obj.student_id;
-        document.getElementById("name-td").innerText = obj.first_name + " " + obj.last_name;
-        document.getElementById("email-td").innerText = obj.email;
-        document.getElementById("phone-td").innerText = obj.phone;
-        document.getElementById("dob-td").innerText = obj.dob;
-        document.getElementById("country-td").innerText = obj.country;
-        document.getElementById("address-td").innerText = obj.address;
-        document.getElementById("university-name-td").innerText = obj.university_name;
-        document.getElementById("popup-profile-update").classList.toggle("active");
-      } else {
-        console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
-      }
-    };
-
     // JavaScript object
     const myData = {
       dataFirstName: firstName,
@@ -69,6 +51,24 @@ function studentProfileUpdate(e) {
 
     // Send request with data
     xhr.send(data);
+
+    // Handle response
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        const obj = JSON.parse(xhr.response);
+        document.getElementById("student-id-td").innerText = obj.student_id;
+        document.getElementById("name-td").innerText = obj.first_name + " " + obj.last_name;
+        document.getElementById("email-td").innerText = obj.email;
+        document.getElementById("phone-td").innerText = obj.phone;
+        document.getElementById("dob-td").innerText = obj.dob;
+        document.getElementById("country-td").innerText = obj.country;
+        document.getElementById("address-td").innerText = obj.address;
+        document.getElementById("university-name-td").innerText = obj.university_name;
+        document.getElementById("popup-profile-update").classList.toggle("active");
+      } else {
+        console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
+      }
+    };
 
   } else {
 

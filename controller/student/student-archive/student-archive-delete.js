@@ -24,6 +24,17 @@ for (let i = 0; i < deleteCell.length; i++) {
       // Set request header
       xhr.setRequestHeader("Content-Type", "application/json");
 
+      // JavaScript object
+      const myData = {
+        dataArchiveId: archive_id
+      };
+
+      // Converts JavaScript objects to JSON string
+      const data = JSON.stringify(myData);
+
+      // Send request with data
+      xhr.send(data);
+
       // Handle response
       xhr.onload = function () {
         if (xhr.status === 200) {
@@ -35,17 +46,6 @@ for (let i = 0; i < deleteCell.length; i++) {
           console.log("Error occurred!" + "\nxhr.status: " + xhr.status);
         }
       };
-
-      // JavaScript object
-      const myData = {
-        dataArchiveId: archive_id
-      };
-
-      // Converts JavaScript objects to JSON string
-      const data = JSON.stringify(myData);
-
-      // Send request with data
-      xhr.send(data);
     }
     // ============================ Delete Archive ============================ //
   });

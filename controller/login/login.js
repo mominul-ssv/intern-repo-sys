@@ -2,8 +2,8 @@ document.getElementById("student-login-btn").addEventListener("click", loginStud
 document.getElementById("faculty-login-btn").addEventListener("click", loginFaculty);
 document.getElementById("error-close-btn").addEventListener("click", closeError);
 
-const loginError = document.querySelector(".login-error");
-const errorText = document.querySelector("#error-text");
+let loginError = document.querySelector(".login-error");
+let errorText = document.querySelector("#error-text");
 
 function loginStudent(e) {
 
@@ -22,6 +22,18 @@ function loginStudent(e) {
 
     // Set request header
     xhr.setRequestHeader("Content-Type", "application/json");
+
+    // JavaScript object
+    const myData = {
+      dataStudentEmail: studentEmail,
+      dataStudentPassword: studentPassword
+    };
+
+    // Converts JavaScript objects to JSON string 
+    const data = JSON.stringify(myData);
+
+    // Send request with data
+    xhr.send(data);
 
     // Handle response
     xhr.onload = function () {
@@ -51,18 +63,6 @@ function loginStudent(e) {
       }
     };
 
-    // JavaScript object
-    const myData = {
-      dataStudentEmail: studentEmail,
-      dataStudentPassword: studentPassword
-    };
-
-    // Converts JavaScript objects to JSON string 
-    const data = JSON.stringify(myData);
-
-    // Send request with data
-    xhr.send(data);
-
   } else {
     loginError.style.display = "inline";
     errorText.innerText = "All fields must be filled.";
@@ -86,6 +86,18 @@ function loginFaculty(e) {
 
     // Set request header
     xhr.setRequestHeader("Content-Type", "application/json");
+
+    // JavaScript object
+    const myData = {
+      dataFacultyEmail: facultyEmail,
+      dataFacultyPassword: facultyPassword
+    };
+
+    // Converts JavaScript objects to JSON string 
+    const data = JSON.stringify(myData);
+
+    // Send request with data
+    xhr.send(data);
 
     // Handle response
     xhr.onload = function () {
@@ -115,18 +127,6 @@ function loginFaculty(e) {
       }
     };
 
-    // JavaScript object
-    const myData = {
-      dataFacultyEmail: facultyEmail,
-      dataFacultyPassword: facultyPassword
-    };
-
-    // Converts JavaScript objects to JSON string 
-    const data = JSON.stringify(myData);
-
-    // Send request with data
-    xhr.send(data);
-
   } else {
     loginError.style.display = "inline";
     errorText.innerText = "All fields must be filled.";
@@ -135,6 +135,5 @@ function loginFaculty(e) {
 }
 
 function closeError() {
-  let loginError = document.querySelector(".login-error");
   loginError.style.display = "none";
 }

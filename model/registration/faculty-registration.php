@@ -1,6 +1,8 @@
 <?php
 include('../../connection/db_connect.php');
 
+// stripslashes() can be used if you aren't inserting this data into a place (such as a database) 
+// that requires escaping. For example, if you're simply outputting data straight from an HTML form.
 $data = stripslashes(file_get_contents("php://input"));
 $myData = json_decode($data, true);
 
