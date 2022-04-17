@@ -27,7 +27,7 @@
         <nav class="nav">
 
           <a href="../archive/archive.php"><img class="nav__logo" src="../../assets/img/archive.png" alt="archive_logo"
-                 loading="lazy"></a>
+                 loading="lazy" height="2rem" width="2rem"></a>
 
           <h1 style="text-transform: uppercase;">Internship Archive</h1>
 
