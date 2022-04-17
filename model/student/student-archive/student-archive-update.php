@@ -14,6 +14,7 @@ $companyPosition = $myData['dataCompanyPosition'];
 $requiredSkills = $myData['dataRequiredSkills'];
 $startDate = $myData['dataStartDate'];
 $endDate = $myData['dataEndDate'];
+$facultyEmail = $myData['dataFacultyEmail'];
 $workDescription = $myData['dataWorkDescription'];
 
 $sql = "UPDATE student_archive SET 
@@ -26,6 +27,7 @@ company_position = :company_position,
 required_skills = :required_skills,
 start_date = :start_date, 
 end_date = :end_date, 
+faculty_email = :faculty_email,
 work_description = :work_description 
 WHERE archive_id = :archive_id";
 
@@ -40,6 +42,7 @@ $stm->bindValue(':company_position', $companyPosition);
 $stm->bindValue(':required_skills', $requiredSkills);
 $stm->bindValue(':start_date', $startDate);
 $stm->bindValue(':end_date', $endDate);
+$stm->bindValue(':faculty_email', $facultyEmail);
 $stm->bindValue(':work_description', $workDescription);
 $execute_success = $stm->execute();
 $stm->closeCursor();

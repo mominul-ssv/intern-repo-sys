@@ -9,6 +9,7 @@ let valueCompanyPosition = document.getElementsByClassName("value-company-positi
 let valueRequiredSkills = document.getElementsByClassName("value-required-skills");
 let valueStartDate = document.getElementsByClassName("value-start-date");
 let valueEndDate = document.getElementsByClassName("value-end-date");
+let valueFacultyEmail = document.getElementsByClassName("value-faculty-email");
 let valueWorkDescription = document.getElementsByClassName("value-work-description");
 
 for (let i = 0; i < updateCell.length; i++) {
@@ -24,6 +25,7 @@ for (let i = 0; i < updateCell.length; i++) {
     required_skills = valueRequiredSkills[i].getAttribute('data-required-skills');
     start_date = valueStartDate[i].getAttribute('data-start-date');
     end_date = valueEndDate[i].getAttribute('data-end-date');
+    faculty_email = valueFacultyEmail[i].getAttribute('data-faculty-email');
     work_description = valueWorkDescription[i].getAttribute('data-work-description');
 
     document.getElementById("archive-company-name").value = company_name;
@@ -35,6 +37,7 @@ for (let i = 0; i < updateCell.length; i++) {
     document.getElementById("archive-required-skills").value = required_skills;
     document.getElementById("archive-start-date").value = start_date;
     document.getElementById("archive-end-date").value = end_date;
+    document.getElementById("archive-faculty-email").value = faculty_email;
     document.getElementById("archive-work-description").value = work_description;
 
     // ============================ Update Archive ============================ //
@@ -53,6 +56,7 @@ for (let i = 0; i < updateCell.length; i++) {
       const required_skills_value = document.getElementById("archive-required-skills").value;
       const start_date_value = document.getElementById("archive-start-date").value;
       const end_date_value = document.getElementById("archive-end-date").value;
+      const end_faculty_email = document.getElementById("archive-faculty-email").value;
       const work_description_value = document.getElementById("archive-work-description").value;
 
       if (company_name_value.length !== 0
@@ -64,6 +68,7 @@ for (let i = 0; i < updateCell.length; i++) {
         && required_skills_value.length !== 0
         && start_date_value.length !== 0
         && end_date_value.length !== 0
+        && end_faculty_email.length !== 0
         && work_description_value.length !== 0) {
 
         // ===================================== UPDATE ===================================== //
@@ -98,6 +103,7 @@ for (let i = 0; i < updateCell.length; i++) {
           dataRequiredSkills: required_skills_value,
           dataStartDate: start_date_value,
           dataEndDate: end_date_value,
+          dataFacultyEmail: end_faculty_email,
           dataWorkDescription: work_description_value
         };
 
@@ -163,6 +169,12 @@ for (let i = 0; i < updateCell.length; i++) {
           document.getElementById("archive-end-date").style.border = "2.5px solid #00c853";
         } else {
           document.getElementById("archive-end-date").style.border = "2.5px solid #d50000";
+        }
+
+        if (end_faculty_email.length !== 0) {
+          document.getElementById("archive-faculty-email").style.border = "2.5px solid #00c853";
+        } else {
+          document.getElementById("archive-faculty-email").style.border = "2.5px solid #d50000";
         }
 
         if (work_description_value.length !== 0) {

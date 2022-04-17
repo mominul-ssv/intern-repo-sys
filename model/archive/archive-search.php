@@ -103,6 +103,10 @@ if (mysqli_num_rows($archives) > 0) {
             <td>' . $archive_cell['end_date'] . '</td>
           </tr>
           <tr>
+            <th>Verification Status</th>
+            <td>' . $archive_cell['verification_status'] . '</td>
+          </tr>
+          <tr>
             <th>Work Description</th>
             <td>' . $archive_cell['work_description'] . '</td>
           </tr>

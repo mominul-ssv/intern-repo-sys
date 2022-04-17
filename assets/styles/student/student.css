@@ -436,6 +436,12 @@ td {
           transform: translate(-50%, -50%) scale(1);
 }
 
+.popup .popup__content {
+  display: inline-block;
+  overflow: scroll;
+  height: 90vh;
+}
+
 .popup .popup__update-text {
   -webkit-box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0 1px 6px 0px rgba(0, 0, 0, 0.2);
@@ -804,7 +810,7 @@ select:-webkit-autofill {
   display: -ms-grid;
   display: grid;
   gap: 4px;
-      grid-template-areas: "cName cName cName cName" "cAddress cAddress cAddress cAddress" "cCity cCity cCountry cCountry" "cDepartment cDepartment cPosition cPosition" "rSkills rSkills rSkills rSkills" "sDate sDate eDate eDate" "wDescription wDescription wDescription wDescription";
+      grid-template-areas: "cName cName cName cName" "cAddress cAddress cAddress cAddress" "cCity cCity cCountry cCountry" "cDepartment cDepartment cPosition cPosition" "rSkills rSkills rSkills rSkills" "sDate sDate eDate eDate" "fEmail fEmail fEmail fEmail" "wDescription wDescription wDescription wDescription";
 }
 
 .grid-item-company-name {
@@ -870,8 +876,15 @@ select:-webkit-autofill {
   grid-area: eDate;
 }
 
-.grid-item-work-description {
+.grid-item-faculty-email {
   -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-area: fEmail;
+}
+
+.grid-item-work-description {
+  -ms-grid-row: 8;
   -ms-grid-column: 1;
   -ms-grid-column-span: 4;
   grid-area: wDescription;
@@ -954,6 +967,7 @@ select:-webkit-autofill {
   }
   .popup .popup__content {
     width: 80vw;
+    height: 90vh;
   }
 }
 
@@ -1029,10 +1043,7 @@ select:-webkit-autofill {
     width: 99%;
   }
   .popup .popup__content {
-    display: inline-block;
-    overflow: scroll;
     width: 90vw;
-    height: 90vh;
   }
   .popup .popup__update-text {
     font-size: large;

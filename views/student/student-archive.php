@@ -136,6 +136,14 @@
                       </div>
                     </div>
 
+                    <!-- faculty-email -->
+                    <div class="grid-item-faculty-email">
+                      <div class="card__group">
+                        <input type="email" id="faculty-email" class="card__input" placeholder=" ">
+                        <label for="faculty-email" class="card__label">Faculty Email</label>
+                      </div>
+                    </div>
+
                     <!-- description -->
                     <div class="grid-item-work-description">
                       <div class="card__group">
@@ -219,6 +227,14 @@
               <tr>
                 <th>End Date</th>
                 <td id="end-date"><?php echo $archive['end_date'] ?></td>
+              </tr>
+              <tr>
+                <th>Faculty Email</th>
+                <td id="end-date"><?php echo $archive['faculty_email'] ?></td>
+              </tr>
+              <tr>
+                <th>Verification Status</th>
+                <td id="end-date"><?php echo $archive['verification_status'] ?></td>
               </tr>
               <tr>
                 <th>Work Description</th>
@@ -331,6 +347,16 @@
                           <input type="hidden" class="value-end-date"
                                  data-end-date="<?php echo $archive['end_date'] ?>">
                           <label for="end-date" class="card__label">End Date</label>
+                        </div>
+                      </div>
+
+                      <!-- faculty-email -->
+                      <div class="grid-item-faculty-email">
+                        <div class="card__group">
+                          <input type="text" id="archive-faculty-email" class="card__input" placeholder=" ">
+                          <input type="hidden" class="value-faculty-email"
+                                 data-faculty-email="<?php echo $archive['faculty_email'] ?>">
+                          <label for="faculty-email" class="card__label">Faculty Email</label>
                         </div>
                       </div>
 

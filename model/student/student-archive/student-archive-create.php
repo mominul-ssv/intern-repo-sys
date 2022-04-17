@@ -17,7 +17,9 @@ $companyPosition = $myData['dataCompanyPosition'];
 $requiredSkills = $myData['dataRequiredSkills'];
 $startDate = $myData['dataStartDate'];
 $endDate = $myData['dataEndDate'];
+$facultyEmail = $myData['dataFacultyEmail'];
 $workDescription = $myData['dataWorkDescription'];
+$verificationStatus = "FALSE";
 
 $sql = "INSERT INTO student_archive(
   student_reg_id,
@@ -29,7 +31,9 @@ $sql = "INSERT INTO student_archive(
   company_position, 
   required_skills, 
   start_date, 
-  end_date, 
+  end_date,
+  faculty_email, 
+  verification_status,
   work_description) 
 VALUES(
   :student_reg_id,
@@ -42,6 +46,8 @@ VALUES(
   :required_skills, 
   :start_date, 
   :end_date, 
+  :faculty_email, 
+  :verification_status,
   :work_description)";
 
 $stm = $db->prepare($sql);
@@ -55,6 +61,8 @@ $stm->bindValue(':company_position', $companyPosition);
 $stm->bindValue(':required_skills', $requiredSkills);
 $stm->bindValue(':start_date', $startDate);
 $stm->bindValue(':end_date', $endDate);
+$stm->bindValue(':faculty_email', $facultyEmail);
+$stm->bindValue(':verification_status', $verificationStatus);
 $stm->bindValue(':work_description', $workDescription);
 $execute_success = $stm->execute();
 $stm->closeCursor();

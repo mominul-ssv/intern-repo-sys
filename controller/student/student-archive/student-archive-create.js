@@ -13,6 +13,7 @@ function studentArchiveCreate(e) {
   const requiredSkills = document.getElementById("required-skills").value;
   const startDate = document.getElementById("start-date").value;
   const endDate = document.getElementById("end-date").value;
+  const facultyEmail = document.getElementById("faculty-email").value;
   const workDescription = document.getElementById("work-description").value;
 
   if (companyName.length !== 0
@@ -24,6 +25,7 @@ function studentArchiveCreate(e) {
     && requiredSkills.length !== 0
     && startDate.length !== 0
     && endDate.length !== 0
+    && facultyEmail.length !== 0
     && workDescription.length !== 0) {
 
     // Creating xhr object
@@ -56,6 +58,7 @@ function studentArchiveCreate(e) {
       dataRequiredSkills: requiredSkills,
       dataStartDate: startDate,
       dataEndDate: endDate,
+      dataFacultyEmail: facultyEmail,
       dataWorkDescription: workDescription
     };
 
@@ -119,6 +122,12 @@ function studentArchiveCreate(e) {
       document.getElementById("end-date").style.border = "2.5px solid #00c853";
     } else {
       document.getElementById("end-date").style.border = "2.5px solid #d50000";
+    }
+
+    if (facultyEmail.length !== 0) {
+      document.getElementById("faculty-email").style.border = "2.5px solid #00c853";
+    } else {
+      document.getElementById("faculty-email").style.border = "2.5px solid #d50000";
     }
 
     if (workDescription.length !== 0) {
