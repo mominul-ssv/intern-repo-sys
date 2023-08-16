@@ -1,0 +1,9 @@
+// heroku
+mysql://b2f7c74777f801:5f2f6ec2@us-cdbr-east-05.cleardb.net/heroku_6378833cefe1623?reconnect=true
+
+username = b2f7c74777f801
+password = 5f2f6ec2
+host = us-cdbr-east-05.cleardb.net
+
+// localhost
+modify db_connect.php and archive-search.php files
