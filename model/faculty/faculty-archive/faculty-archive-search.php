@@ -1,20 +1,22 @@
 <?php
-
-//Get Heroku ClearDB connection information
-$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
-$cleardb_db = substr($cleardb_url["path"], 1);
-$active_group = 'default';
-$query_builder = TRUE;
-
-$connect = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-
 session_start();
 $faculty_reg = $_SESSION['faculty_reg_array'];
 $facultyEmail = $faculty_reg['email'];
 
+// // Get Heroku ClearDB connection information
+// $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+// $cleardb_server = $cleardb_url["host"];
+// $cleardb_username = $cleardb_url["user"];
+// $cleardb_password = $cleardb_url["pass"];
+// $cleardb_db = substr($cleardb_url["path"], 1);
+// $active_group = 'default';
+// $query_builder = TRUE;
+
+// $connect = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+// $output = '';
+
+// localhost
+$connect = mysqli_connect("localhost", "root", "", "cse482_project_db");
 $output = '';
 
 if (isset($_POST["query"])) {

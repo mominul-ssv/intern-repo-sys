@@ -9,10 +9,6 @@
 // $query_builder = TRUE;
 
 // $connect = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-
-// $output = '';
-
-// $connect = mysqli_connect("localhost", "root", "", "cse482_project_db");
 // $output = '';
 
 // localhost
